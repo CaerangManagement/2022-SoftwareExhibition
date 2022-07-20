@@ -122,7 +122,7 @@ router.get('/role', 로그인여부, (req, res) => {
 
 router.post('/role', (req, res) => {
   const pw = req.body.pw
-  if (pw == 123) {
+  if (pw == process.env.role_password) {
     
     User.findOneAndUpdate({ id: req.user.user.id },
       {
