@@ -17,9 +17,10 @@
 </head>
 
 <body>
-  <h1>로그인 실패</h1>
-  <div>동의사항을 선택해주셔야 합니다.</div>
-  <a href="/auth/kakao">재 로그인</a>
+  <h1>관리자 권한 신청</h1>
+  <input type="password" id="pw">
+  <button type="submit" id="submit">신청</button>
+
 
 
   <script src="http://code.jquery.com/jquery-latest.min.js"></script>
@@ -27,8 +28,25 @@
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
   <script>
+$('#submit').click(()=> {
+    let pw = $('#pw').val()
+    
+    $.ajax({
+      method: 'post',
+      url: '/auth/role',
+      data: {
+        pw: pw
+      }
+    }).done(function (결과) {
+      alert('관리자 계정으로 전환 되었습니다.')
+      location.href='/'
+    }).fail(function (a, b, c) {
+      alert('비밀번호가 일치하지 않습니다.')
+    });
 
+  })
   </script>
+
 </body>
 
 </html>

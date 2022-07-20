@@ -23,12 +23,22 @@
       <%=currentUser.user.nickname%>
     </div>
     <div>
-      <%=currentUser.user.email%>
+      이메일 : <%=currentUser.user.email%>
     </div>
+    <div>
+      등급 : <%=currentUser.user.role%>
+    </div>
+    <%if(currentUser.user.role==='일반'){%>
+      <a href="/auth/role">관리자권한 신청</a>
+      <%}%>
     <a href="/auth/logout">logout</a>
+    
     <%}else{%>
       <a href="/auth/kakao">login</a>
       <%}%>
+
+      
+
 
 
 

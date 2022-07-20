@@ -25,9 +25,13 @@ app.use(function(req,res,next){
    res.locals.currentUser = req.user;
    next();
  });
+
+
  app.get('/', (req, res) => {
    res.render('main')
 })
+
+
 
 
 app.listen(process.env.PORT, (요청, 응답) => {

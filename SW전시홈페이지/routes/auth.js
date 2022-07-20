@@ -5,6 +5,7 @@ const KakaoStrategy = require('passport-kakao').Strategy;
 const User = require('../models/user')
 const request = require('request')
 const session = require('express-session');
+
 require('dotenv').config()
 
 router.use(session({ secret: 'MySecret', resave: false, saveUninitialized: true }));
@@ -75,7 +76,7 @@ passport.use(
     // accessToken, refreshToken : 로그인 성공 후 카카오가 보내준 토큰
     // profile: 카카오가 보내준 유저 정보. profile의 정보를 바탕으로 회원가입
     async (accessToken, refreshToken, profile, done) => {
-      console.log(profile)
+      // console.log(profile)
       try {
         const exUser = await User.findOne({ id: profile.id });
         // 이미 가입된 카카오 프로필이면 성공
@@ -91,8 +92,7 @@ passport.use(
             id: profile.id,
             nickname: profile.displayName,
             email: profile._json.kakao_account.email,
-
-
+            role: '일반'
           });
           const tokenUser = {
             user: newUser,
@@ -108,6 +108,40 @@ passport.use(
   ),
 );
 
+function 로그인여부(요청, 응답, next) {
+  if (요청.user) {
+    next()
+  } else {
+    응답.redirect('/auth/kakao')
+  }
+}
+
+router.get('/role', 로그인여부, (req, res) => {
+  res.render('role')
+})
+
+router.post('/role', (req, res) => {
+  const pw = req.body.pw
+  if (pw == 123) {
+    
+    User.findOneAndUpdate({ id: req.user.user.id },
+      {
+        $set: {
+          role: '관리자'
+        }
+      }, (에러) => {
+        if (에러) { 
+          console.log(에러)
+          res.status(500).send('password is wrong') }
+        else { res.status(200).send('password is correct') }
+      }
+    )
+  }
+  else{
+    console.log('비번틀림')
+    res.status(500).send('password is wrong')
+  }
+})
 
 
 
