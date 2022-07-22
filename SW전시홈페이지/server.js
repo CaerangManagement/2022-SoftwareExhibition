@@ -11,9 +11,9 @@ const util = require('./util');
 app.use(methodOverride('_method'));
 require('dotenv').config()
 
+app.use(express.static(__dirname+'/public'));
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }))
-app.use(express.static(__dirname+'/public'));
 app.use(session({ secret: 'MySecret', resave: false, saveUninitialized: true }));
 app.use(flash());
 

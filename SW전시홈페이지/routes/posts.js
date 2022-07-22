@@ -3,9 +3,24 @@ var router = express.Router();
 var Post = require('../models/Post');
 var Comment = require('../models/Comment'); // 1
 var util = require('../util');
+const multer = require('multer');
+const path = require('path');
 
+router.use(express.static('public'));
 router.use(util.로그인여부)
 // Index 
+var storage = multer.diskStorage({
+  destination: function(req, file, cb){
+    cb(null, "public/images/");
+  },
+  filename: function(req, file, cb){
+    const ext = path.extname(file.originalname);
+    cb(null, path.basename(file.originalname, ext) + "-" +Date.now()+ext);
+  },
+});
+
+var upload = multer({storage: storage})
+
 router.get('/', async function(req, res){
   var page = Math.max(1, parseInt(req.query.page));
   var limit = Math.max(1, parseInt(req.query.limit));
@@ -44,14 +59,16 @@ router.get('/new', function(req, res){
 });
 
 // create
-router.post('/', function(req, res){
+router.post('/', upload.single("image") ,function(req, res){
   req.body.author = req.user.user.nickname;
+  req.body.image = `images/${req.file.filename}`;
   Post.create(req.body, function(err, post){
     if(err){
       req.flash('post', req.body);
       req.flash('errors', util.parseError(err));
       return res.redirect('/posts/new'+res.locals.getPostQueryString());
     }
+    console.log(post)
     res.redirect('/posts'+res.locals.getPostQueryString(false, { page:1, searchText:'' }));
   });
 });

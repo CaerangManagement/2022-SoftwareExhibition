@@ -5,6 +5,7 @@ var postSchema = mongoose.Schema({ // 1
   title:{type:String, required:[true,'Title is required!']},
   body:{type:String, required:[true,'Body is required!']},
   author:{type:String, required:true}, // 1
+  image:{type:String},
   createdAt:{type:Date, default:Date.now},
   updatedAt:{type:Date},
 });
