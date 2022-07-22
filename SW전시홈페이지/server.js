@@ -5,32 +5,34 @@ const mongoose = require('mongoose');
 const session = require('express-session');
 const passport = require('passport');
 const methodOverride = require('method-override');
+const flash = require('connect-flash')
+const util = require('./util');
+
 app.use(methodOverride('_method'));
 require('dotenv').config()
 
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }))
-
 app.use(express.static(__dirname+'/public'));
-// Passport setting
 app.use(session({ secret: 'MySecret', resave: false, saveUninitialized: true }));
+app.use(flash());
 
+//passport
 app.use(passport.initialize());
 app.use(passport.session());
-
-// Routes
-
-
-
-app.use('/auth', require('./routes/auth'))
-app.use('/posts', require('./routes/posts')); // 1
 
 app.use(function(req,res,next){
    res.locals.isAuthenticated = req.isAuthenticated();
    res.locals.currentUser = req.user;
-   // res.locals.util = util; // 1
+   res.locals.util = util; // 1
    next();
  });
+
+
+// Routes
+app.use('/auth', require('./routes/auth'))
+app.use('/posts', util.getPostQueryString, require('./routes/posts'));
+app.use('/comments', util.getPostQueryString, require('./routes/comments')); // 1
 
 
  app.get('/', (req, res) => {
