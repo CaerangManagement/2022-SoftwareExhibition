@@ -1,15 +1,39 @@
-var mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
-// schema
-var postSchema = mongoose.Schema({ // 1
-  title:{type:String, required:[true,'Title is required!']},
-  body:{type:String, required:[true,'Body is required!']},
-  author:{type:String, required:true}, // 1
-  image:{type:String},
-  createdAt:{type:Date, default:Date.now},
-  updatedAt:{type:Date},
+const Schema = mongoose.Schema;
+
+const commentSchema = new Schema({
+    contents: {
+        type : String,
+        required : true
+    },
+    author: {
+        type : String,
+        required : true
+    },
+    createdAt:{type:Date, default:Date.now},
+})
+ 
+const postSchema = new Schema({
+    title: {
+        type : String,
+        required : true
+    },
+    contents: {
+      type : String,
+      required : true
+    },
+    author: {
+        type : String,
+        required : true
+    },
+    image:{type:String},
+    createdAt:{type:Date, default:Date.now},
+    updatedAt:{type:Date},
+    comments: [commentSchema]
 });
+ 
 
-// model & export
-var Post = mongoose.model('post', postSchema);
+const Post = mongoose.model('post', postSchema);
+
 module.exports = Post;

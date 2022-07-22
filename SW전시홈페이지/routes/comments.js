@@ -8,30 +8,37 @@ var util = require('../util');
 router.use(util.로그인여부)
 // create
 router.post('/', function(req, res){ // 1
-  req.body.author = req.user.user.nickname; // 2
-  req.body.post = req.body.postId;
-  Comment.create(req.body, function(err, comment){
-    if(err){
-      req.flash('commentForm', { _id: null, form:req.body });                 // 3
-      req.flash('commentError', { _id: null, errors:util.parseError(err) });  // 3
-    }
-    return res.redirect('/posts/'+req.body.post+res.locals.getPostQueryString()); //4
+  let comment = new Comment();
+  comment.contents = req.body.contents;
+  comment.author = req.user.user.nickname;
+  console.log(comment)
+
+  Post.findOneAndUpdate({_id : req.body.id}, 
+    { $push: { comments : comment}}, function (에러, 결과) {
+      if(에러){
+          console.log(에러);
+          res.status(500).send('댓글작성 실패')
+      }
+      // res.redirect('/post/'+요청.body.id);\
+      res.status(200).send('댓글작성 성공')
   });
 });
 
 // destroy // 3
-router.delete('/:id', function(req, res){
-  const post_id = req.body.postId;
-  Comment.findOne({_id:req.params.id}, function(err, comment){
-    if(err) return res.json(err);
-
-    // save updated comment
-    comment.isDeleted = true;
-    comment.save(function(err, comment){
-      if(err) return res.json(err);
-      return res.redirect('/posts/'+post_id+res.locals.getPostQueryString());
-    });
-  });
+router.delete('/', function(req, res){
+  let c_id = req.body.c_index;
+  Post.findOneAndUpdate({_id:req.body.id},
+    { $pull: {comments:{_id:c_id}}}, (err)=>{
+      if(err){
+        console.log(err)
+        res.status(500).send('댓글삭제 실패')
+      }
+      else{
+        res.status(200).send('댓글삭제 성공')
+      }
+    })
+  
+  
 });
 
 module.exports = router;
