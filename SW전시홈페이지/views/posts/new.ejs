@@ -20,6 +20,11 @@
       <form action="/posts" method="post", enctype="multipart/form-data">
 
         <div class="form-group">
+          <label for="body">Team</label>
+          <input type="text" id="team" name="team" value="" class="form-control">
+        </div>
+
+        <div class="form-group">
           <label for="image">메인사진</label>
           <input type="file" id="image" name="image" class="form-control">
         </div>
@@ -33,6 +38,8 @@
           <label for="body">Body</label>
           <textarea id="body" name="contents" rows="5" class="form-control"></textarea>
         </div>
+
+        
 
         <div>
           <a class="btn btn-primary" href="/posts">Back</a>

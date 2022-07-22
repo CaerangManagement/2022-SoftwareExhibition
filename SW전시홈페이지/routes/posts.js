@@ -21,19 +21,21 @@ var storage = multer.diskStorage({
 
 var upload = multer({storage: storage})
 
-router.get('/', function(req, res){
-  Post.find({})                  // 1
-  .sort('-createdAt')            // 1
-  .exec(function(err, posts){    // 1
-    if(err) return res.json(err);
-    res.render('posts/index', {posts:posts});
-  });
-});
-
 // New
 router.get('/new', function(req, res){
   res.render('posts/new');
 });
+
+router.get('/:team', function(req, res){
+  Post.find({team:req.params.team})                  // 1
+  .sort('-createdAt')            // 1
+  .exec(function(err, posts){    // 1
+    if(err) return res.json(err);
+    res.render('posts/index', {posts:posts, team:req.params.team});
+  });
+});
+
+
 
 // create
 router.post('/', upload.single("image") ,function(req, res){
@@ -43,15 +45,16 @@ router.post('/', upload.single("image") ,function(req, res){
   post.image = `images/${req.file.filename}`;
   post.title = req.body.title;
   post.contents = req.body.contents;
+  post.team = req.body.team;
 
   console.log(post)
 
   post.save(function (err) {
     if(err){
       console.log(err);
-      res.redirect('/posts');
+      res.redirect(`/posts/${req.body.team}`);
     }
-    res.redirect('/posts');
+    res.redirect(`/posts/${req.body.team}`);
   });
 });
 

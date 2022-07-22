@@ -28,6 +28,7 @@ const postSchema = new Schema({
         required : true
     },
     image:{type:String},
+    team:{type:String, required:true},
     createdAt:{type:Date, default:Date.now},
     updatedAt:{type:Date},
     comments: [commentSchema]

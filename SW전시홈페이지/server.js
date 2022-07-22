@@ -31,8 +31,8 @@ app.use(function(req,res,next){
 
 // Routes
 app.use('/auth', require('./routes/auth'))
-app.use('/posts', util.getPostQueryString, require('./routes/posts'));
-app.use('/comments', util.getPostQueryString, require('./routes/comments')); // 1
+app.use('/posts',  require('./routes/posts'));
+app.use('/comments', require('./routes/comments')); // 1
 
 
  app.get('/', (req, res) => {

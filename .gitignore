@@ -107,3 +107,4 @@ dist
 node_modules/
 uploadedFiles
 *.txt
+images
