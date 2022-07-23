@@ -31,8 +31,11 @@ const postSchema = new Schema({
     team:{type:String, required:true},
     createdAt:{type:Date, default:Date.now},
     updatedAt:{type:Date},
-    comments: [commentSchema]
+    comments: [commentSchema],
+    like: {type:Number, default:0}
 });
+
+
  
 
 const Post = mongoose.model('post', postSchema);

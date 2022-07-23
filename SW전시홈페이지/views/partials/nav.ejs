@@ -11,3 +11,6 @@
     </div>
   </div>
 </nav>
+<%if(isAuthenticated) {%>
+    <input type="hidden" id="user_id" value="<%=currentUser.user.id%>">
+<%}%>
