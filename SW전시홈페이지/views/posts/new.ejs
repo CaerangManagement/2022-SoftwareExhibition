@@ -8,14 +8,7 @@
     <%- include('../partials/nav') %>
 
     <div class="container mb-3">
-
-      <nav aria-label="breadcrumb"> <!-- 1 -->
-        <ol class="breadcrumb p-1 pl-2 pr-2">
-          <li class="breadcrumb-item"><a href="/">Home</a></li>
-          <li class="breadcrumb-item"><a href="/posts">Board</a></li>
-          <li class="breadcrumb-item active" aria-current="page">New Post</li>
-        </ol>
-      </nav>
+      <h2 class="mb-3">Post 작성</h2>
 
       <form action="/posts" method="post", enctype="multipart/form-data">
 
@@ -42,7 +35,7 @@
         
 
         <div>
-          <a class="btn btn-primary" href="/posts">Back</a>
+          <a class="btn btn-primary" onClick="history.go(-1)">Back</a>
           <button type="submit" class="btn btn-primary">Submit</button>
         </div>
 

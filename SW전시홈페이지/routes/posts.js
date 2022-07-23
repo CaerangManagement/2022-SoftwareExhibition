@@ -21,10 +21,14 @@ var storage = multer.diskStorage({
 
 var upload = multer({storage: storage})
 
+
+
 // New
 router.get('/new', function(req, res){
   res.render('posts/new');
 });
+
+
 
 router.get('/:team', function(req, res){
   Post.find({team:req.params.team})                  // 1
@@ -35,7 +39,13 @@ router.get('/:team', function(req, res){
   });
 });
 
-
+// show
+router.get('/detail/:id', function(req, res){
+  Post.findOne({_id:req.params.id}, function(err, post){
+    if(err) return res.json(err);
+    res.render('posts/show', {post:post, team:post.team});
+  });
+});
 
 // create
 router.post('/', upload.single("image") ,function(req, res){
@@ -58,35 +68,32 @@ router.post('/', upload.single("image") ,function(req, res){
   });
 });
 
-// show
-router.get('/:id', function(req, res){
-  Post.findOne({_id:req.params.id}, function(err, post){
-    if(err) return res.json(err);
-    res.render('posts/show', {post:post});
-  });
-});
+
 
 // edit
-router.get('/:id/edit', function(req, res){
+router.get('/edit/:id', function(req, res){
   Post.findOne({_id:req.params.id}, function(err, post){
     if(err) return res.json(err);
-    res.render('posts/edit', {post:post});
+    res.render('posts/edit', {post:post, team:post.team});
   });
 });
 
 // update
-router.put('/:id', function(req, res){
+router.put('/:id', upload.single("image"), function(req, res){
   req.body.updatedAt = Date.now(); //2
+  
+  req.body.image = `images/${req.file.filename}`;
+
   Post.findOneAndUpdate({_id:req.params.id}, req.body, function(err, post){
     if(err) return res.json(err);
-    res.redirect("/posts/"+req.params.id);
+    res.redirect(`/posts/detail/${req.params.id}`);
   });
 });
 // destroy
-router.delete('/:id', function(req, res){
+router.delete('/:team/:id', function(req, res){
   Post.deleteOne({_id:req.params.id}, function(err){
     if(err) return res.json(err);
-    res.redirect('/posts');
+    res.redirect('/posts/'+req.params.team);
   });
 });
 

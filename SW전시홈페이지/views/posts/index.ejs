@@ -25,13 +25,13 @@
         <tbody>
           <% if(posts == null || posts.length == 0){ %>
             <tr>
-              <td colspan=100> There is no data to show :( </td>
+              <td colspan=5> There is no data to show :( </td>
             </tr>
           <% } %>
           <% posts.forEach(function(post) { %>
             <tr>
               <td>
-                <a href="/posts/<%= post._id %>"><div class="ellipsis"><%= post.title %></div></a>
+                <a href="/posts/detail/<%= post._id %>"><div class="ellipsis"><%= post.title %></div></a>
               </td>
               <td class="img"> <!-- 2 -->
                 <div class="ellipsis"><img src="<%= post.image%>" width="100px" height="100px" alt=""></div>

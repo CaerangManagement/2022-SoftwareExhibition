@@ -7,30 +7,28 @@
     <%- include('../partials/nav') %>
 
     <div class="container mb-3">
+      <h2 class="mb-3">Post 수정</h2>
+      <form action="/posts/<%= post._id %>?_method=put" method="post", enctype="multipart/form-data">
 
-      <nav aria-label="breadcrumb">
-        <ol class="breadcrumb p-1 pl-2 pr-2">
-          <li class="breadcrumb-item"><a href="/">Home</a></li>
-          <li class="breadcrumb-item"><a href="/posts">Board</a></li>
-          <li class="breadcrumb-item"><a href="/posts/<%= post._id %>"><%= post.title %></a></li>
-          <li class="breadcrumb-item active" aria-current="page">Edit Post</li>
-        </ol>
-      </nav>
-
-      <form action="/posts/<%= post._id %>?_method=put" method="post">
+        <div class="form-group">
+          <label for="image">메인사진</label>
+          <input type="file" id="image" name="image" class="form-control">
+        </div>
 
         <div class="form-group">
           <label for="title">Title</label>
-          <input type="text" id="title" name="title" value="<%= post.title %>" class="form-control">
+          <input type="text" id="title" name="title" value="" class="form-control">
         </div>
-
+        
         <div class="form-group">
           <label for="body">Body</label>
-            <textarea id="body" name="contents" rows="5" class="form-control"><%= post.contents %></textarea>
+          <textarea id="body" name="contents" rows="5" class="form-control"></textarea>
         </div>
 
+        
+
         <div>
-          <a class="btn btn-primary" href="/posts/<%= post._id %>">Back</a>
+          <a class="btn btn-primary" onClick="history.go(-1)">Back</a>
           <button type="submit" class="btn btn-primary">Submit</button>
         </div>
 
