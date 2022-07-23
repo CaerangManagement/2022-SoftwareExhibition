@@ -44,7 +44,10 @@ router.get('/:team', function (req, res) {
 router.get('/detail/:id', function (req, res) {
   Post.findOne({ _id: req.params.id }, function (err, post) {
     if (err) return res.json(err);
-    res.render('posts/show', { post: post, team: post.team });
+    Check.findOne({id:req.params.id+req.user.user.id}, (err, check)=>{
+      res.render('posts/show', { post: post, team: post.team , isLiked : check.isLiked});
+    })
+    
   });
 });
 

@@ -46,7 +46,15 @@
         <form action="/posts/<%=post.team %>/<%= post._id %>?_method=delete" method="post" class="d-inline">
           <a class="btn btn-primary" href="javascript:void(0)" onclick="confirm('Do you want to delete this?')?this.parentElement.submit():null;">Delete</a>
         </form>
-        <button class="like">좋아요 </button><span id="liked"> <%=post.like%></span>
+        <button class="like" id="like">
+          <% if(isLiked) { %>
+          좋아요취소
+            <%} else{ %>
+              좋아요
+            <%}%>
+        </button>
+        
+        <span id="liked"> <%=post.like%></span>
       </div>
       
 
@@ -117,6 +125,7 @@
         }).done(function (결과) {
           alert(결과)
           $("#liked").load(window.location.href + " #liked");
+          $("#like").load(window.location.href + " #like");
         }).fail(function (a, b, c) {
           alert('좋아요 실패')
           // $("#liked").load(window.location.href + " #liked");
