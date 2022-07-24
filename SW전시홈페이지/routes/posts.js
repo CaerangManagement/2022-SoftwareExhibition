@@ -8,7 +8,7 @@ const multer = require('multer');
 const path = require('path');
 
 router.use(express.static('public'));
-router.use(util.로그인여부)
+
 // Index 
 var storage = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -22,10 +22,8 @@ var storage = multer.diskStorage({
 
 var upload = multer({ storage: storage })
 
-
-
 // New
-router.get('/new', function (req, res) {
+router.get('/new', util.로그인여부, util.관리자여부, function (req, res) {
   res.render('posts/new');
 });
 
@@ -41,7 +39,7 @@ router.get('/:team', function (req, res) {
 });
 
 // show
-router.get('/detail/:id', function (req, res) {
+router.get('/detail/:id', util.로그인여부, function (req, res) {
   Post.findOne({ _id: req.params.id }, function (err, post) {
     if (err) return res.json(err);
     Check.findOne({id:req.params.id+req.user.user.id}, (err, check)=>{
@@ -52,7 +50,7 @@ router.get('/detail/:id', function (req, res) {
 });
 
 // create
-router.post('/', upload.single("image"), function (req, res) {
+router.post('/', util.로그인여부, util.관리자여부, upload.single("image"), function (req, res) {
   let post = new Post();
 
   post.author = req.user.user.nickname;
@@ -78,7 +76,7 @@ router.post('/', upload.single("image"), function (req, res) {
 
 
 // edit
-router.get('/edit/:id', function (req, res) {
+router.get('/edit/:id', util.로그인여부, util.관리자여부, function (req, res) {
   Post.findOne({ _id: req.params.id }, function (err, post) {
     if (err) return res.json(err);
     res.render('posts/edit', { post: post, team: post.team });
@@ -86,7 +84,7 @@ router.get('/edit/:id', function (req, res) {
 });
 
 // update
-router.put('/:id', upload.single("image"), function (req, res) {
+router.put('/:id', util.로그인여부, util.관리자여부, upload.single("image"), function (req, res) {
   req.body.updatedAt = Date.now(); //2
 
   if (req.file) {
@@ -100,7 +98,7 @@ router.put('/:id', upload.single("image"), function (req, res) {
   });
 });
 // destroy
-router.delete('/:team/:id', function (req, res) {
+router.delete('/:team/:id', util.로그인여부, util.관리자여부, function (req, res) {
   Post.deleteOne({ _id: req.params.id }, function (err) {
     if (err) return res.json(err);
     res.redirect('/posts/' + req.params.team);
@@ -110,7 +108,7 @@ router.delete('/:team/:id', function (req, res) {
 
 
 //좋아요기능
-router.post('/like', (req, res) => {
+router.post('/like', util.로그인여부, (req, res) => {
   let check_id = req.body.post_id+req.body.user_id
 
   Check.findOne({id:check_id}, (err, check) => {

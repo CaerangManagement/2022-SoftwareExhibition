@@ -18,7 +18,8 @@ router.get('/kakao', passport.authenticate('kakao'));
 router.get('/kakao/callback', passport.authenticate('kakao', {
   failureRedirect: '/',
 }), (req, res) => {
-  res.redirect('/');
+  //로그인 성공시 직전페이지로 이동
+  res.write("<script>history.back()</script>");
 });
 
 passport.serializeUser((data, done) => {
@@ -106,18 +107,7 @@ passport.use(
   ),
 );
 
-function 로그인여부(요청, 응답, next) {
-  if (요청.user) {
-    next()
-  } else {
-    응답.redirect('/auth/kakao')
-  }
-}
-
-router.get('/role', 로그인여부, (req, res) => {
-  res.render('role')
-})
-
+//관리자 권한 신청 
 router.post('/role', (req, res) => {
   const pw = req.body.pw
   if (pw == process.env.role_password) {

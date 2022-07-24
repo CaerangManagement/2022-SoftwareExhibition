@@ -4,10 +4,8 @@ var Comment = require('../models/Comment');
 var Post = require('../models/Post');
 var util = require('../util');
 
-
-router.use(util.로그인여부)
 // create
-router.post('/', function(req, res){ // 1
+router.post('/', util.로그인여부, function(req, res){ // 1
   let comment = new Comment();
   comment.contents = req.body.contents;
   comment.author = req.user.user.nickname;
@@ -25,7 +23,7 @@ router.post('/', function(req, res){ // 1
 });
 
 // destroy // 3
-router.delete('/', function(req, res){
+router.delete('/', util.로그인여부, function(req, res){
   let c_id = req.body.c_index;
   Post.findOneAndUpdate({_id:req.body.id},
     { $pull: {comments:{_id:c_id}}}, (err)=>{
