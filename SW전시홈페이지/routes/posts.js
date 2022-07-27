@@ -7,7 +7,6 @@ const util = require('../util');
 const multer = require('multer');
 const path = require('path');
 
-router.use(express.static('public'));
 
 // Index 
 var storage = multer.diskStorage({
@@ -42,8 +41,14 @@ router.get('/:team', function (req, res) {
 router.get('/detail/:id', util.로그인여부, function (req, res) {
   Post.findOne({ _id: req.params.id }, function (err, post) {
     if (err) return res.json(err);
+
     Check.findOne({id:req.params.id+req.user.user.id}, (err, check)=>{
-      res.render('posts/show', { post: post, team: post.team , isLiked : check.isLiked});
+      if(check){
+        res.render('posts/show', { post: post, team: post.team , isLiked : check.isLiked});
+      }
+      else{
+        res.render('posts/show', { post: post, team: post.team , isLiked : false});
+      }
     })
     
   });

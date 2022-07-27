@@ -105,6 +105,7 @@ dist
 
 
 node_modules/
+.elasticbeanstalk/
 uploadedFiles
 *.txt
 images

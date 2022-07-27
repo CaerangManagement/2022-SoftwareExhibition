@@ -19,7 +19,7 @@ router.get('/kakao/callback', passport.authenticate('kakao', {
   failureRedirect: '/',
 }), (req, res) => {
   //로그인 성공시 직전페이지로 이동
-  res.write("<script>history.back()</script>");
+  res.redirect('/')
 });
 
 passport.serializeUser((data, done) => {
