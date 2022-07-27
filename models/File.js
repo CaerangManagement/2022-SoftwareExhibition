@@ -1,6 +1,7 @@
 var mongoose = require('mongoose');
 
 // schemaa
+// haha
 var fileSchema = mongoose.Schema({ // 1
   originalFileName:{type:String},
   serverFileName:{type:String},
