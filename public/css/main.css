@@ -1,0 +1,139 @@
+body {
+  background-color : black;
+  width : 100%;
+}
+
+
+#section1_container {
+  position : relative;
+  height : 100vh;
+  margin : auto;
+  
+}
+
+.typing-txt {
+  position : absolute;
+  top : 22%;
+  right : 25%;
+}
+
+.typing-txt {
+  visibility : hidden;
+  width : 8.7ch;
+  animation : typing 2s steps(22), blink .5s step-end infinite alternate;
+  white-space : nowrap;
+  overflow : hidden;
+  font-weight : bold;
+  font-size : 5em;
+  animation-delay : 0.8s;
+  animation-duration : 1s;
+  animation-fill-mode : both;
+}
+
+
+#section1_container img {
+  position : relative;
+  width : 300px;
+  height : 300px;
+  padding-right : 10px;
+  border : 0;
+  margin-top : 10%;
+  margin-left : 3%
+}
+
+#section2_container {
+  background-color: antiquewhite;
+  width : 100vw;
+  height : 100vh;
+  position : relative;
+  display : flex;
+  margin : auto;
+  text-align : center;
+}
+
+#section2_container ul li {
+  position : relative;
+  padding : 50px;
+  margin : 50px 40px 0 68px;
+}
+
+#section2_container ul li img {
+  border-radius : 50%;
+}
+
+#section1_container img {
+  animation : fadein 2s;
+  animation-name : fadein, runleft;
+  animation-delay : 0s, 1s;
+  animation-duration : 1s, 1s;
+  animation-fill-mode : both;
+}
+
+#section3_container {
+  position : relative;
+  height : 100vh;
+  width : 100vw;
+  background-color : yellowgreen;
+}
+
+
+
+@keyframes typing {
+  from {
+      visibility : visible;
+      color : black;
+      width : 0;
+  }
+  to {
+      visibility : visible;
+      color : white;
+  }
+}
+
+@keyframes blink {
+  50% {
+      border-color : transparent
+  }
+}
+
+@keyframes runleft {
+  to {
+      transform : translate(-400px, 0);
+  }
+}
+
+@keyframes fadein {
+  from {
+      opacity : 0;
+  }
+  to {
+      opacity : 1;
+  }
+}
+
+@-moz-keyframes fadein {
+  from {
+      opacity : 0;
+  }
+  to {
+      opacity : 1;
+  }
+}
+
+@-webkit-keyframes fadein {
+  from {
+      opacity : 0;
+  }
+  to {
+      opacity : 1;
+  }
+}
+
+@-o-keyframes fadein {
+  from {
+      opacity : 0;
+  }
+  to {
+      opacity : 1;
+  }
+}
