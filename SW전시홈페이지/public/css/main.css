@@ -3,6 +3,7 @@ body {
   background-repeat : no-repeat;
   background-size : auto;
 }
+
 #section1_container {
   position : relative;
   height : 100vh;
@@ -29,7 +30,6 @@ body {
   animation-fill-mode : both;
 }
 
-
 #section1_container img {
   position : relative;
   width : 300px;
@@ -39,6 +39,13 @@ body {
   margin-left : 41%;
 }
 
+#section1_container img {
+  animation-name : fadein, runleft;
+  animation-delay : 0s, 1s;
+  animation-duration : 1s, 1s;
+  animation-fill-mode : both;
+}
+
 #section2_container {
   background-image: url("/img/background2.jpg");
   background-repeat : no-repeat;
@@ -46,34 +53,256 @@ body {
 
   width : 100vw;
   height : 100vh;
-  position : relative;
   display : flex;
-  justify-content: space-evenly;
-  margin : auto;
-  text-align : center;
+  justify-content: space-around;
+  align-items : center;
+  font-family : 'BMJUA';
 }
 
-#section2_container a {
-  position : relative;
-  margin-top : 50px;
-  right : 1%;
-}
-
-#section2_container a img {
-  border-radius : 50%;
+#section2_container h1 {
+  font-family : arial;
   position : absolute;
+  top : 120%;
+  text-align : center;
+  font-weight : bold;
 }
 
-#section2_container a img:hover {
-  width : 150px;
-  height : 150px;
+@font-face { 
+  font-family: 'BMJUA'; 
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff') format('woff'); 
+  font-weight: normal; 
+  font-style: normal; 
 }
 
-#section1_container img {
-  animation-name : fadein, runleft;
-  animation-delay : 0s, 1s;
-  animation-duration : 1s, 1s;
-  animation-fill-mode : both;
+.team1_select {
+  position : relative;
+  width : 250px;
+  height : 250px;
+
+  border : 5px solid whitesmoke;
+  box-shadow : 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.team1_select .team1_img img{
+  width : 240px;
+  height : 240px;
+}
+
+.team1_select .img1_info {
+  color : #fff;
+  position : absolute;
+  left : 0;
+  bottom : 0;
+  background : rgba(0, 0, 0, 0.5);
+  padding : 15px;
+  
+  width : 240px;
+  opacity : 0;
+  transition : opacity 0.35s ease-in-out;
+}
+
+.team1_select:hover .img1_info {
+  opacity : 1;
+}
+
+.team1_select .img1_info h3 {
+  font-size : 21px;
+  padding-bottom : 0.4em;
+  overflow : hidden;
+  text-overflow : ellipsis;
+  white-space : nowrap;
+  text-transform : uppercase;
+}
+
+.team1_select .img1_info p {
+  font-size : 17px;
+  text-overflow : ellipsis;
+  white-space : nowrap;
+  text-transform : uppercase;
+}
+
+.team2_select {
+  position : relative;
+  width : 250px;
+  height : 250px;
+
+  border : 5px solid whitesmoke;
+  box-shadow : 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.team2_select .team2_img img{
+  width : 240px;
+  height : 240px;
+}
+
+.team2_select .img2_info {
+  color : #fff;
+  position : absolute;
+  left : 0;
+  bottom : 0;
+  background : rgba(0, 0, 0, 0.5);
+  padding : 15px;
+  width : 240px;
+  opacity : 0;
+  transition : opacity 0.35s ease-in-out;
+}
+
+.team2_select:hover .img2_info {
+  opacity : 1;
+}
+
+.team2_select .img2_info h3 {
+  font-size : 21px;
+  padding-bottom : 0.4em;
+  overflow : hidden;
+  text-overflow : ellipsis;
+  white-space : nowrap;
+  text-transform : uppercase;
+}
+
+.team2_select .img2_info p {
+  font-size : 17px;
+  text-overflow : ellipsis;
+  white-space : nowrap;
+  text-transform : uppercase;
+}
+
+.team3_select {
+  position : relative;
+  width : 250px;
+  height : 250px;
+
+  border : 5px solid whitesmoke;
+  box-shadow : 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.team3_select .team3_img img{
+  width : 240px;
+  height : 240px;
+}
+
+.team3_select .img3_info {
+  color : #fff;
+  position : absolute;
+  left : 0;
+  bottom : 0;
+  background : rgba(0, 0, 0, 0.5);
+  padding : 15px;
+  width : 240px;
+  opacity : 0;
+  transition : opacity 0.35s ease-in-out;
+}
+
+.team3_select:hover .img3_info {
+  opacity : 1;
+}
+
+.team3_select .img3_info h3 {
+  font-size : 21px;
+  padding-bottom : 0.4em;
+  overflow : hidden;
+  text-overflow : ellipsis;
+  white-space : nowrap;
+  text-transform : uppercase;
+}
+
+.team3_select .img3_info p {
+  font-size : 17px;
+  text-overflow : ellipsis;
+  white-space : nowrap;
+  text-transform : uppercase;
+}
+
+.team4_select {
+  position : relative;
+  width : 250px;
+  height : 250px;
+
+  border : 5px solid whitesmoke;
+  box-shadow : 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.team4_select .team4_img img{
+  width : 240px;
+  height : 240px;
+}
+
+.team4_select .img4_info {
+  color : #fff;
+  position : absolute;
+  left : 0;
+  bottom : 0;
+  background : rgba(0, 0, 0, 0.5);
+  padding : 15px;
+  width : 240px;
+  opacity : 0;
+  transition : opacity 0.35s ease-in-out;
+}
+
+.team4_select:hover .img4_info {
+  opacity : 1;
+}
+
+.team4_select .img4_info h3 {
+  font-size : 21px;
+  padding-bottom : 0.4em;
+  overflow : hidden;
+  text-overflow : ellipsis;
+  white-space : nowrap;
+  text-transform : uppercase;
+}
+
+.team4_select .img4_info p {
+  font-size : 17px;
+  text-overflow : ellipsis;
+  white-space : nowrap;
+  text-transform : uppercase;
+}
+
+.team5_select {
+  position : relative;
+  width : 250px;
+  height : 250px;
+
+  border : 5px solid whitesmoke;
+  box-shadow : 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.team5_select .team5_img img{
+  width : 240px;
+  height : 240px;
+}
+
+.team5_select .img5_info {
+  color : #fff;
+  position : absolute;
+  left : 0;
+  bottom : 0;
+  background : rgba(0, 0, 0, 0.5);
+  padding : 15px;
+  width : 240px;
+  opacity : 0;
+  transition : opacity 0.35s ease-in-out;
+}
+
+.team5_select:hover .img5_info {
+  opacity : 1;
+}
+
+.team5_select .img5_info h3 {
+  font-size : 21px;
+  padding-bottom : 0.4em;
+  overflow : hidden;
+  text-overflow : ellipsis;
+  white-space : nowrap;
+  text-transform : uppercase;
+}
+
+.team5_select .img5_info p {
+  font-size : 17px;
+  text-overflow : ellipsis;
+  white-space : nowrap;
+  text-transform : uppercase;
 }
 
 #section3_container {
