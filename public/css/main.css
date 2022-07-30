@@ -1,82 +1,320 @@
 body {
-  background-color : black;
-  width : 100%;
+  background-image: url("/img/background.jpg");
+  background-repeat : no-repeat;
+  background-size : auto;
 }
-
 
 #section1_container {
   position : relative;
   height : 100vh;
   margin : auto;
-  
 }
 
-.typing-txt {
+#section1_container p {
   position : absolute;
-  top : 22%;
-  right : 25%;
+  top : 35%;
+  left : 53%;
 }
 
 .typing-txt {
   visibility : hidden;
   width : 8.7ch;
-  animation : typing 2s steps(22), blink .5s step-end infinite alternate;
+  animation : typing 2s steps(22), blink .5s step-start infinite alternate;
   white-space : nowrap;
   overflow : hidden;
   font-weight : bold;
+  text-shadow : 2px 2px 4px black;
   font-size : 5em;
-  animation-delay : 0.8s;
+  animation-delay : 1s;
   animation-duration : 1s;
   animation-fill-mode : both;
 }
-
 
 #section1_container img {
   position : relative;
   width : 300px;
   height : 300px;
-  padding-right : 10px;
   border : 0;
-  margin-top : 10%;
-  margin-left : 3%
-}
-
-#section2_container {
-  background-color: antiquewhite;
-  width : 100vw;
-  height : 100vh;
-  position : relative;
-  display : flex;
-  margin : auto;
-  text-align : center;
-}
-
-#section2_container ul li {
-  position : relative;
-  padding : 50px;
-  margin : 50px 40px 0 68px;
-}
-
-#section2_container ul li img {
-  border-radius : 50%;
+  margin-top : 12%;
+  margin-left : 41%;
 }
 
 #section1_container img {
-  animation : fadein 2s;
   animation-name : fadein, runleft;
   animation-delay : 0s, 1s;
   animation-duration : 1s, 1s;
   animation-fill-mode : both;
 }
 
+#section2_container {
+  background-image: url("/img/background2.jpg");
+  background-repeat : no-repeat;
+  background-size : auto;
+
+  width : 100vw;
+  height : 100vh;
+  display : flex;
+  justify-content: space-around;
+  align-items : center;
+  font-family : 'BMJUA';
+}
+
+#section2_container h1 {
+  font-family : arial;
+  position : absolute;
+  top : 120%;
+  text-align : center;
+  font-weight : bold;
+  color : white;
+  text-shadow : 0px 0px 3px darkBlue;
+}
+
+@font-face { 
+  font-family: 'BMJUA'; 
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff') format('woff'); 
+  font-weight: normal; 
+  font-style: normal; 
+}
+
+.team1_select {
+  position : relative;
+  width : 250px;
+  height : 250px;
+
+  border : 5px solid whitesmoke;
+  box-shadow : 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.team1_select .team1_img img{
+  width : 240px;
+  height : 240px;
+}
+
+.team1_select .img1_info {
+  color : #fff;
+  position : absolute;
+  left : 0;
+  bottom : 0;
+  background : rgba(0, 0, 0, 0.5);
+  padding : 15px;
+  
+  width : 240px;
+  opacity : 0;
+  transition : opacity 0.35s ease-in-out;
+}
+
+.team1_select:hover .img1_info {
+  opacity : 1;
+}
+
+.team1_select .img1_info h3 {
+  font-size : 21px;
+  padding-bottom : 0.4em;
+  overflow : hidden;
+  text-overflow : ellipsis;
+  white-space : nowrap;
+  text-transform : uppercase;
+}
+
+.team1_select .img1_info p {
+  font-size : 17px;
+  text-overflow : ellipsis;
+  white-space : nowrap;
+  text-transform : uppercase;
+}
+
+.team2_select {
+  position : relative;
+  width : 250px;
+  height : 250px;
+
+  border : 5px solid whitesmoke;
+  box-shadow : 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.team2_select .team2_img img{
+  width : 240px;
+  height : 240px;
+}
+
+.team2_select .img2_info {
+  color : #fff;
+  position : absolute;
+  left : 0;
+  bottom : 0;
+  background : rgba(0, 0, 0, 0.5);
+  padding : 15px;
+  width : 240px;
+  opacity : 0;
+  transition : opacity 0.35s ease-in-out;
+}
+
+.team2_select:hover .img2_info {
+  opacity : 1;
+}
+
+.team2_select .img2_info h3 {
+  font-size : 21px;
+  padding-bottom : 0.4em;
+  overflow : hidden;
+  text-overflow : ellipsis;
+  white-space : nowrap;
+  text-transform : uppercase;
+}
+
+.team2_select .img2_info p {
+  font-size : 17px;
+  text-overflow : ellipsis;
+  white-space : nowrap;
+  text-transform : uppercase;
+}
+
+.team3_select {
+  position : relative;
+  width : 250px;
+  height : 250px;
+
+  border : 5px solid whitesmoke;
+  box-shadow : 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.team3_select .team3_img img{
+  width : 240px;
+  height : 240px;
+}
+
+.team3_select .img3_info {
+  color : #fff;
+  position : absolute;
+  left : 0;
+  bottom : 0;
+  background : rgba(0, 0, 0, 0.5);
+  padding : 15px;
+  width : 240px;
+  opacity : 0;
+  transition : opacity 0.35s ease-in-out;
+}
+
+.team3_select:hover .img3_info {
+  opacity : 1;
+}
+
+.team3_select .img3_info h3 {
+  font-size : 21px;
+  padding-bottom : 0.4em;
+  overflow : hidden;
+  text-overflow : ellipsis;
+  white-space : nowrap;
+  text-transform : uppercase;
+}
+
+.team3_select .img3_info p {
+  font-size : 17px;
+  text-overflow : ellipsis;
+  white-space : nowrap;
+  text-transform : uppercase;
+}
+
+.team4_select {
+  position : relative;
+  width : 250px;
+  height : 250px;
+
+  border : 5px solid whitesmoke;
+  box-shadow : 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.team4_select .team4_img img{
+  width : 240px;
+  height : 240px;
+}
+
+.team4_select .img4_info {
+  color : #fff;
+  position : absolute;
+  left : 0;
+  bottom : 0;
+  background : rgba(0, 0, 0, 0.5);
+  padding : 15px;
+  width : 240px;
+  opacity : 0;
+  transition : opacity 0.35s ease-in-out;
+}
+
+.team4_select:hover .img4_info {
+  opacity : 1;
+}
+
+.team4_select .img4_info h3 {
+  font-size : 21px;
+  padding-bottom : 0.4em;
+  overflow : hidden;
+  text-overflow : ellipsis;
+  white-space : nowrap;
+  text-transform : uppercase;
+}
+
+.team4_select .img4_info p {
+  font-size : 17px;
+  text-overflow : ellipsis;
+  white-space : nowrap;
+  text-transform : uppercase;
+}
+
+.team5_select {
+  position : relative;
+  width : 250px;
+  height : 250px;
+
+  border : 5px solid whitesmoke;
+  box-shadow : 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.team5_select .team5_img img{
+  width : 240px;
+  height : 240px;
+}
+
+.team5_select .img5_info {
+  color : #fff;
+  position : absolute;
+  left : 0;
+  bottom : 0;
+  background : rgba(0, 0, 0, 0.5);
+  padding : 15px;
+  width : 240px;
+  opacity : 0;
+  transition : opacity 0.35s ease-in-out;
+}
+
+.team5_select:hover .img5_info {
+  opacity : 1;
+}
+
+.team5_select .img5_info h3 {
+  font-size : 21px;
+  padding-bottom : 0.4em;
+  overflow : hidden;
+  text-overflow : ellipsis;
+  white-space : nowrap;
+  text-transform : uppercase;
+}
+
+.team5_select .img5_info p {
+  font-size : 17px;
+  text-overflow : ellipsis;
+  white-space : nowrap;
+  text-transform : uppercase;
+}
+
 #section3_container {
   position : relative;
   height : 100vh;
   width : 100vw;
-  background-color : yellowgreen;
+  background-image: url("/img/background3.jpg");
+  background-repeat : no-repeat;
+  background-size : auto;
 }
-
-
 
 @keyframes typing {
   from {
@@ -98,38 +336,11 @@ body {
 
 @keyframes runleft {
   to {
-      transform : translate(-400px, 0);
+      transform : translate(-350px, 0);
   }
 }
 
 @keyframes fadein {
-  from {
-      opacity : 0;
-  }
-  to {
-      opacity : 1;
-  }
-}
-
-@-moz-keyframes fadein {
-  from {
-      opacity : 0;
-  }
-  to {
-      opacity : 1;
-  }
-}
-
-@-webkit-keyframes fadein {
-  from {
-      opacity : 0;
-  }
-  to {
-      opacity : 1;
-  }
-}
-
-@-o-keyframes fadein {
   from {
       opacity : 0;
   }

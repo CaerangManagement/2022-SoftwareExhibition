@@ -1,11 +1,11 @@
 header {
-  margin-left: 60%;
-
-  width: 580px;
+  position : sticky;
+  margin-left: 52%;
+  width: 650px;
   height: 70px;
   padding-left: 3rem;
   color: black;
-  background-color: rgb(34, 34, 34);
+  background-color: rgb(42, 42, 42);
   font-weight: bold;
   display: flex;
   justify-content: space-between;
@@ -14,31 +14,17 @@ header {
   border-bottom-right-radius: 3em;
 }
 
-li {
-  list-style : none;
-  display : flex;
-  justify-content: space-evenly;
-}
-
-#login a:nth-child(1):hover {
+#login a:nth-child():hover {
   color : white;
 }
 
-#login a:nth-child(2):hover {
-  color : white;
-}
-
-#login a:nth-child(3):hover {
-  color : white;
-}
-
-#login a {
+#login span a {
   text-decoration : none;
   color : black;
   height : 70px;
-  float : right;
-  line-height : 45px;
+  
+  line-height : 65px;
+  margin-top : 1%;
   margin-right :55px;
   padding-left : 1px;
-  padding-top : 14px;
 }
