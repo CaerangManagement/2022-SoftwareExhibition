@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Logs
 logs
 *.log
@@ -109,3 +110,11 @@ node_modules/
 uploadedFiles
 *.txt
 images
+=======
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+.env
+>>>>>>> 9174b71b90f37372020447c2f1c6541bef3c6012
