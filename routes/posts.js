@@ -11,7 +11,7 @@ const path = require('path');
 // Index 
 var storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, "public/images/");
+    cb(null, "public/picture/");
   },
   filename: function (req, file, cb) {
     const ext = path.extname(file.originalname);
@@ -33,7 +33,7 @@ router.get('/:team', function (req, res) {
     .sort('-createdAt')            // 1
     .exec(function (err, posts) {    // 1
       if (err) return res.json(err);
-      res.render('posts/index', { posts: posts, team: req.params.team });
+      res.render('posts/index', { posts: posts, team: req.params.team.toUpperCase() });
     });
 });
 
@@ -64,7 +64,7 @@ router.post('/', util.로그인여부, util.관리자여부, upload.single("imag
   post.team = req.body.team;
 
   if (req.file) {
-    post.image = `images/${req.file.filename}`;
+    post.image = `picture/${req.file.filename}`;
   }
 
   console.log(post)
@@ -93,7 +93,7 @@ router.put('/:id', util.로그인여부, util.관리자여부, upload.single("im
   req.body.updatedAt = Date.now(); //2
 
   if (req.file) {
-    req.body.image = `images/${req.file.filename}`;
+    req.body.image = `picture/${req.file.filename}`;
   }
 
 
