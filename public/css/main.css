@@ -8,6 +8,7 @@ body {
   position : relative;
   height : 100vh;
   margin : auto;
+  z-index : -1;
 }
 
 #section1_container p {
@@ -57,10 +58,11 @@ body {
   justify-content: space-around;
   align-items : center;
   font-family : 'BMJUA';
+  z-index : -1;
 }
 
 #section2_container h1 {
-  font-family : arial;
+  font-family : "Times New Roman";
   position : absolute;
   top : 120%;
   text-align : center;
@@ -314,6 +316,7 @@ body {
   background-image: url("/img/background3.jpg");
   background-repeat : no-repeat;
   background-size : auto;
+  z-index : -1;
 }
 
 @keyframes typing {
