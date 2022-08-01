@@ -3,6 +3,12 @@
     <span><a href="#section3_container" class="scroll_move">ACTIVITIES</a></span>
     <span><a href="#section2_container" class="scroll_move">TEAM</a></span>
     <span><a href="#section1_container" class="scroll_move">HOME</a></span>
-    <span><a href="/auth/kakao"><img src="/img/login.png" alt="카카오 로그인"></a></span>
+    
+    <%if(isAuthenticated) {%>
+    <span><a href="#" class="scroll_move"><%=currentUser.user.nickname%></a></span>
+    <span><a href="/auth/logout" class="scroll_move">LogOut</a></span>
+    <%} else{%>
+    <span><a href="/auth/kakao" class="scroll_move">LogIn</a></span>
+    <%}%>
   </nav>
 </header>
