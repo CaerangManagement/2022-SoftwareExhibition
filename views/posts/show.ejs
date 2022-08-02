@@ -1,116 +1,131 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <%- include('../partials/head') %>
-  </head>
-  <body>
-    <%- include('../partials/nav') %>
+
+<head>
+  <%- include('../partials/head') %>
+</head>
+
+<body>
+  <%- include('../partials/nav') %>
 
     <div class="container mb-3">
-      
+
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb p-1 pl-2 pr-2">
           <li class="breadcrumb-item"><a href="/">Home</a></li>
-          <li class="breadcrumb-item active" aria-current="page"><%= post.title %></li>
+          <li class="breadcrumb-item active" aria-current="page">
+            <%= post.title %>
+          </li>
         </ol>
       </nav>
 
       <div class="card">
-
-        <h5 class="card-header p-2"><%= post.title %></h5>
-        <div class="row"> <!-- 1 -->
-          <div class="col-md-7 col-lg-8 col-xl-9 order-sm-2 order-md-1"> <!-- 1 -->
-            <div class="post-body p-2"><img src="/<%=post.image%>" width="150px", height="150px" alt="이미지"></div>
+        <h5 class="card-header p-2">
+          <%= post.title %>
+        </h5>
+        <div class="row">
+          <!-- 1 -->
+          <div class="col-md-7 col-lg-8 col-xl-9 order-sm-2 order-md-1">
+            <!-- 1 -->
+            <div class="post-body p-2"><img src="/<%=post.image%>" width="150px" , height="150px" alt="이미지"></div>
           </div>
 
-          <div class="col-md-7 col-lg-8 col-xl-9 order-sm-2 order-md-1"> <!-- 1 -->
-            <div class="post-body p-2"><%= post.contents %></div>
+          <div class="col-md-7 col-lg-8 col-xl-9 order-sm-2 order-md-1">
+            <!-- 1 -->
+            <div class="post-body p-2">
+              <%= post.contents %>
+            </div>
           </div>
 
-          <div class="col-md-5 col-lg-4 col-xl-3 order-sm-1 order-md-2"> <!-- 1 -->
-            <div class="post-info card m-2 p-2"> 
+          <div class="col-md-5 col-lg-4 col-xl-3 order-sm-1 order-md-2">
+            <!-- 1 -->
+            <div class="post-info card m-2 p-2">
               <div><span>작성일</span> : <span data-date-time="<%= post.createdAt %>"></span></div> <!-- 2 -->
               <% if(post.updatedAt) { %>
                 <div><span>수정일</span> : <span data-date-time="<%= post.updatedAt %>"></span></div> <!-- 2 -->
-              <% } %>
+                <% } %>
             </div>
           </div>
-          
         </div>
-        
       </div>
+
+      <!-- 컨테이너 끝 (글 보여주는부분) -->
 
       <div class="mt-3">
         <a class="btn btn-primary" onClick="history.go(-1)">Back</a>
-        <%if(currentUser.user.role == '관리자'){%>
-        <a class="btn btn-primary" href="/posts/edit/<%=post._id%>">Edit</a>
-        <form action="/posts/<%=post.team %>/<%= post._id %>?_method=delete" method="post" class="d-inline">
-          <a class="btn btn-primary" href="javascript:void(0)" onclick="confirm('Do you want to delete this?')?this.parentElement.submit():null;">Delete</a>
-        </form>
-        <%}%>
-        <button class="like" id="like">
-          <% if(isLiked) { %>
-          좋아요취소
-            <%} else{ %>
-              좋아요
-            <%}%>
-        </button>
-        
-        <span id="liked"> <%=post.like%></span>
+        <%if(currentUser.user.role=='관리자' ){%>
+          <a class="btn btn-primary" href="/posts/edit/<%=post._id%>">Edit</a>
+          <form action="/posts/<%=post.team %>/<%= post._id %>?_method=delete" method="post" class="d-inline">
+            <a class="btn btn-primary" href="javascript:void(0)"
+              onclick="confirm('Do you want to delete this?')?this.parentElement.submit():null;">Delete</a>
+          </form>
+          <%}%>
+            <button class="like" id="like">
+              <% if(isLiked) { %>
+                좋아요취소
+                <%} else{ %>
+                  좋아요
+                  <%}%>
+            </button>
+
+            <span id="liked">
+              <%=post.like%>
+            </span>
       </div>
-      
+
+      <!-- 글 수정 및 삭제 좋아요 등등 끝 -->
+
+      <!-- 이 밑에는 댓글부분 -->
 
       <h4 class="mt-3">Comments</h4>
       <div id="comment_section"></div>
       <table class="table table-striped">
-      <tfoot>
-        <input type="hidden" id="id" value="<%=post._id%>">
-        <input type="hidden" id="author" value="<%=post.author%>">
-        <td colspan="4">
-          <div class="form-floating mb-2">
-            <textarea class="form-control" placeholder="Leave a comment here" id="contents"
-              name="contents"></textarea>
-            <label for="contents">Comments</label>
-          </div>
-          <button type="submit" class="btn btn-success" id="add_comments">작성</button>
-          <br>
-          
-      <% if(post.comments !=null){ %>
-        <% for(let i=0; i<post.comments.length; i++){ %>
-          <tr>
-            <td>작성자 : <%=post.comments[i].author%>
-            </td>
-            <td class="c_date" data-date-time="<%= post.comments[i].createdAt %>">
-              <%=post.comments[i].createdAt %>
-            </td>
-          <tr>
-            <td>
-              <%=post.comments[i].contents %>
-            </td>
-            <% if(post.comments[i].author==currentUser.user.nickname) { %>
-              <td>
-                <button type="submit" class="btn btn-warning delete_comments"
-                  data-id="<%= post.comments[i]._id %>">삭제</button>
-              </td>
-              <% }else{ %>
-                <td></td>
-                <%}%>
-          </tr>
-        
+        <tfoot>
+          <input type="hidden" id="id" value="<%=post._id%>">
+          <input type="hidden" id="author" value="<%=post.author%>">
+          <td colspan="4">
+            <div class="form-floating mb-2">
+              <textarea class="form-control" placeholder="Leave a comment here" id="contents"
+                name="contents"></textarea>
+              <label for="contents">Comments</label>
+            </div>
+            <button type="submit" class="btn btn-success" id="add_comments">작성</button>
+            <br>
+
+            <% if(post.comments !=null){ %>
+              <% for(let i=0; i<post.comments.length; i++){ %>
+                <tr>
+                  <td>작성자 : <%=post.comments[i].author%>
+                  </td>
+                  <td class="c_date" data-date-time="<%= post.comments[i].createdAt %>">
+                    <%=post.comments[i].createdAt %>
+                  </td>
+                <tr>
+                  <td>
+                    <%=post.comments[i].contents %>
+                  </td>
+                  <% if(post.comments[i].author==currentUser.user.nickname) { %>
+                    <td>
+                      <button type="submit" class="btn btn-warning delete_comments"
+                        data-id="<%= post.comments[i]._id %>">삭제</button>
+                    </td>
+                    <% }else{ %>
+                      <td></td>
+                      <%}%>
+                </tr>
 
 
 
-          </tr>
-          <% }} %>
+
+                </tr>
+                <% }} %>
         </tfoot>
       </table>
-    </div>
-    </div>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"></script>
-  
+
 
     <script>
       $('.like').click(function () {
@@ -149,10 +164,10 @@
           }
         }).done(function (결과) {
           alert('댓글작성 성공')
-          location.href='/posts/detail/'+post_id
+          location.href = '/posts/detail/' + post_id
         }).fail(function (a, b, c) {
           alert('댓글작성 실패')
-          location.href='/posts/detail/'+post_id
+          location.href = '/posts/detail/' + post_id
         });
       })
 
@@ -161,26 +176,27 @@
         let comment_index = e.target.dataset.id;
 
         let isdelete = confirm('삭제 하시겠습니까?')
-        if(isdelete) {
-        $.ajax({
-          method: 'DELETE',
-          url: '/comments',
-          data: {
-            id: post_id,
-            c_index: comment_index,
-          }
-        }).done(function (결과) {
-          alert('댓글삭제 성공')
-          location.href='/posts/detail/'+post_id
-        }).fail(function (a, b, c) {
-          alert('댓글삭제 실패')
-          location.href='/posts/detail/'+post_id
-        });
-      }
+        if (isdelete) {
+          $.ajax({
+            method: 'DELETE',
+            url: '/comments',
+            data: {
+              id: post_id,
+              c_index: comment_index,
+            }
+          }).done(function (결과) {
+            alert('댓글삭제 성공')
+            location.href = '/posts/detail/' + post_id
+          }).fail(function (a, b, c) {
+            alert('댓글삭제 실패')
+            location.href = '/posts/detail/' + post_id
+          });
+        }
       })
 
-      
-    
+
+
     </script>
-  </body>
+</body>
+
 </html>
