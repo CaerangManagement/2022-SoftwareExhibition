@@ -1,8 +1,18 @@
 <header>
   <nav id="login">
     <span><a href="#section1_container" class="scroll_move">HOME</a></span>
+<<<<<<< HEAD
     <span><a href="#section2_container" class="scroll_move">TEAM</a></span>
     <span><a href="#section3_container" class="scroll_move">ACTIVITIES</a></span>
     <span><a href="/auth/kakao">LOGIN</a></span>
+=======
+    
+    <%if(isAuthenticated) {%>
+    <span><a href="#" class="scroll_move"><%=currentUser.user.nickname%></a></span>
+    <span><a href="/auth/logout" class="scroll_move">LogOut</a></span>
+    <%} else{%>
+    <span><a href="/auth/kakao" class="scroll_move">LogIn</a></span>
+    <%}%>
+>>>>>>> 6f9dc07b1f370042a8ac04b1620592f50fcb3285
   </nav>
 </header>
