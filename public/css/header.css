@@ -1,14 +1,8 @@
 header {
   position : fixed;
-<<<<<<< HEAD
-  margin-left: 60%;
-  width: 35%;
+  margin-left: 50%;
+  width: 45%;
   height: 10%;
-=======
-  margin-left: 52%;
-  width: 650px;
-  height: 70px;
->>>>>>> 6f9dc07b1f370042a8ac04b1620592f50fcb3285
   padding-left: 3rem;
   color: black;
   background-color: bisque;
