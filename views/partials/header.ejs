@@ -5,10 +5,10 @@
     <span><a href="#section1_container" class="scroll_move">HOME</a></span>
     
     <%if(isAuthenticated) {%>
-    <span><a href="#" class="scroll_move"><%=currentUser.user.nickname%></a></span>
-    <span><a href="/auth/logout" class="scroll_move">LogOut</a></span>
+    <span><a><%=currentUser.user.nickname%></a></span>
+    <span><a href="/auth/logout">LogOut</a></span>
     <%} else{%>
-    <span><a href="/auth/kakao" class="scroll_move">LogIn</a></span>
+    <span><a href="/auth/kakao">LogIn</a></span>
     <%}%>
   </nav>
 </header>

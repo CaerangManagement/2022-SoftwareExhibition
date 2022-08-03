@@ -21,7 +21,20 @@
 
 <body>
   <%- include('./partials/header') %>
-    s
+  <%if(isAuthenticated) {%>
+    <div>
+      <%=currentUser.user.nickname%> 님
+    </div>
+    <div>
+      등급 : <%=currentUser.user.role%>
+    </div>
+    <%if(currentUser.user.role==='일반'){%>
+      <br>
+      <a id="role">관리자권한 신청</a>
+      <%} else {%>
+      <a id="back">일반으로 돌아가기</a>
+          <%}}%>
+    
     <section>
       <div id="section1_container">
         <img src="/img/TitleLogo.png" alt="씨애랑 로고 이미지">
@@ -81,31 +94,7 @@
       </div>
 
     </section>
-
-
-    <%if(isAuthenticated) {%>
-      <div>
-        <%=currentUser.user.nickname%>
-      </div>
-      <div>
-        이메일 : <%=currentUser.user.email%>
-      </div>
-      <div>
-        등급 : <%=currentUser.user.role%>
-      </div>
-      <%if(currentUser.user.role==='일반'){%>
-        <br>
-        <a id="role">관리자권한 신청</a>
-        <%}%>
-          <a href="/auth/logout">logout</a>
-
-          <%}else{%>
-            <a href="/auth/kakao">login</a>
-            <%}%>
-
-              <a href="/posts/tag">태그</a>
-              <a href="/posts/laon">라온</a>
-
+    
 
 
               <script src="http://code.jquery.com/jquery-latest.min.js"></script>

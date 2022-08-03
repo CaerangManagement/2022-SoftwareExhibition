@@ -131,6 +131,29 @@ router.post('/role', (req, res) => {
   }
 })
 
+//일반 권한 신청
+router.post('/back', (req, res) => {
+  const pw = req.body.pw
+  if (pw == process.env.role_password) {
+    
+    User.findOneAndUpdate({ id: req.user.user.id },
+      {
+        $set: {
+          role: '일반'
+        }
+      }, (에러) => {
+        if (에러) { 
+          console.log(에러)
+          res.status(500).send('password is wrong') }
+        else { res.status(200).send('password is correct') }
+      }
+    )
+  }
+  else{
+    console.log('비번틀림')
+    res.status(500).send('password is wrong')
+  }
+})
 
 
 
