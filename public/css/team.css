@@ -68,7 +68,7 @@ section {
 
 .itemImg {
   width: 98%;
-  height: 70%;
+  height: 300px;
   display: block;
   margin: 2% auto;
   
@@ -81,8 +81,8 @@ section {
 }
 
 .item{
-  width: 32%;
-  height: 73%;
+  width: 25%;
+  height: 410px;
   display: inline-block;
   background-color: rgba(255, 255, 255, 0.5);
   padding: 0 2%;
@@ -90,15 +90,16 @@ section {
 }
 
 
-.item h4{
+.item h3{
   font-weight: 700;
-  margin: 3% 0;
+  margin: 5% 0;
   text-align: center;
 }
 .con{
   width: 7%;
   height: 7%;
   margin-left: 2%;
+  margin-top: 1%;
   
 }
 
