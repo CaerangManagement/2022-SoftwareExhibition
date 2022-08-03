@@ -10,7 +10,8 @@
 </head>
 
 <body>
-  <%- include('../partials/header') %>
+  <div id="all">
+    <%- include('../partials/header') %>
     <div id="top">
       <img id="teamTitle" src="/img/TagLogo.png">
       <span id="teamName">Team <%=team%></span>
@@ -18,41 +19,28 @@
 
     <section>
       <div id="itemList">
-        <table>
-          <% if(posts==null || posts.length==0){ %>
-            <span>There is no data to show :( </span>
-            <% } else{%>
-
-              <% posts.forEach(function(post, index) { %>
-  
-                  <td>
-                    <div class="item">
-                      <h4>
-                        <%= post.title %>
-                      </h4>
-                      <img class="itemImg" src="/<%= post.image%>" data-id="<%= post._id %>"><br>
-                      <div class="cons">
-                        <img class="con" src="/img/heart.png">
-                        <span class="heartCount"><strong>
-                            <%=post.like%>
-                          </strong></span>
-                        <img class="con" src="/img/comment.png">
-                        <span class="commentCount"><strong>
-                            <%= post.comments.length%>
-                          </strong></span>
-                      </div>
-                    </div>
-                  </td>
-                  
-                <% })} %>
-             
-
-
-
-
-        </table>
+        <% if(posts==null || posts.length==0){ %>
+          <span>There is no data to show :( </span>
+          <% } else{%>
+            <% posts.forEach(function(post, index) { %>
+              <div class="item">
+                <h4>
+                  <%= post.title %>
+                </h4>
+                <img class="itemImg" src="/<%= post.image%>" data-id="<%= post._id %>">
+                <div class="cons">
+                  <img class="con" src="/img/heart.png">
+                  <span class="heartCount"><strong>
+                      <%=post.like%>
+                    </strong></span>
+                  <img class="con" src="/img/comment.png">
+                  <span class="commentCount"><strong>
+                      <%= post.comments.length%>
+                    </strong></span>
+                </div>
+              </div>
+              <% })} %>
       </div>
-
     </section>
 
 
@@ -64,6 +52,8 @@
         </div>
         <%}}%>
           <script src="../js/team.js"></script>
+  </div>
+  
 </body>
 
 </html>
