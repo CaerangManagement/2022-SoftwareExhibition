@@ -3,6 +3,81 @@ html, body{
     height: 100%
   }
 
-.container.mb-3{
-    padding-top: 10%;
+section{
+    padding: 10% 0;
+    display: flex;
+    justify-content: center;
+}
+.card{
+    width: 100%;
+    text-align: center;
+    padding: 0 15%;
+}
+.detailTitle {
+    text-align: left;
+    width: 85%;
+    margin-left: 15%;
+}
+.detailImg{
+    width: 90%;
+    height: 500px;
+}
+.post{
+    margin: 5% 0;
+    text-align: left;
+    font-size: 1.3rem;
+   
+}
+.date{
+    text-align: right;
+}
+.menu{
+    text-align: right;
+}
+.like{
+    text-align: left;
+    
+}
+.delete{
+    display: inline-block;
+
+}
+.comment{
+    margin: 10% 0;
+}
+.comment_set{
+    width: 100%;
+}
+
+textarea{
+    width: 90%;
+    height: 150px;
+    margin-bottom: 10px;
+}
+.comment_set{
+    margin-bottom: 50px;
+    background-color: lightgoldenrodyellow;
+    border-top: 1px solid black;
+    border-collapse: collapse;
+}
+
+th{
+    border-bottom: 1px solid black;
+    height: 40px;
+}
+td{
+    height: 30px;
+}
+
+.author{
+    width: 10%;
+}
+.text{
+    width: 60%;
+}
+.c_date{
+    width: 20%;
+}
+.c_delete{
+    width: 10%;
 }
