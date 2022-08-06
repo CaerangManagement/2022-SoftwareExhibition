@@ -21,20 +21,6 @@
 
 <body>
   <%- include('./partials/header') %>
-  <%if(isAuthenticated) {%>
-    <div>
-      <%=currentUser.user.nickname%> 님
-    </div>
-    <div>
-      등급 : <%=currentUser.user.role%>
-    </div>
-    <%if(currentUser.user.role==='일반'){%>
-      <br>
-      <a id="role">관리자권한 신청</a>
-      <%} else {%>
-      <a id="back">일반으로 돌아가기</a>
-          <%}}%>
-    
     <section>
       <div id="section1_container">
         <img src="/img/TitleLogo.png" alt="씨애랑 로고 이미지">
@@ -110,10 +96,22 @@
               <label for = "slide4">&nbsp;</label>
             </div>
           </div>
-  
       </div>
-
     </section>
+    <footer>
+      <%if(isAuthenticated) {%>
+        <div>
+          <span><%=currentUser.user.nickname%> 님</span>
+        </div>
+        <div>
+          <span>등급 : <%=currentUser.user.role%></span>
+        </div>
+        <%if(currentUser.user.role==='일반'){%>
+          <a id="role">관리자권한 신청</a>
+        <%} else {%>
+          <span><a id="back">일반으로 돌아가기</a></span>
+      <%}}%>
+    </footer>
     
 
 
