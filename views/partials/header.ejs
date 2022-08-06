@@ -1,22 +1,18 @@
 <header>
   <nav id="login">
     <span><a href="#section1_container" class="scroll_move">HOME</a></span>
-
     <span><a href="#section2_container" class="scroll_move">TEAM</a></span>
     <span><a href="#section3_container" class="scroll_move">ACTIVITIES</a></span>
-    <span><a href="/auth/kakao">LOGIN</a></span>
 
     
     <%if(isAuthenticated) {%>
 
-    <span><a href="#" class="scroll_move"><%=currentUser.user.nickname%>님</a></span>
-    <span><a href="/auth/logout" class="scroll_move">LogOut</a></span>
-
-    <span><a><%=currentUser.user.nickname%></a></span>
+    <span><a href="#" class="scroll_move">안녕하세요! <%=currentUser.user.nickname%>님</a></span>
     <span><a href="/auth/logout">LogOut</a></span>
 
+
     <%} else{%>
-    <span><a href="/auth/kakao">LogIn</a></span>
+    <span><a href="/auth/kakao">LOGIN</a></span>
     <%}%>
 
   </nav>
