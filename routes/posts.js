@@ -42,6 +42,7 @@ router.get('/detail/:id', util.로그인여부, function (req, res) {
   Post.findOne({ _id: req.params.id }, function (err, post) {
     if (err) return res.json(err);
 
+    post.contents = post.contents.replaceAll(/(\r\n|\n|\n\n)/gim, '<br>');
     Check.findOne({id:req.params.id+req.user.user.id}, (err, check)=>{
       if(check){
         res.render('posts/show', { post: post, team: post.team , isLiked : check.isLiked});
@@ -58,16 +59,22 @@ router.get('/detail/:id', util.로그인여부, function (req, res) {
 router.post('/', util.로그인여부, util.관리자여부, upload.single("image"), function (req, res) {
   let post = new Post();
 
+  var setTextareaReplace = function(text) {
+    text = text.split(' ').join('&nbsp;'); //replaceAll() 함수 효과
+    text = text.replace(/(\r\n|\n|\n\n)/gim, '<br>');
+    return text;
+  };
+
   post.author = req.user.user.nickname;
   post.title = req.body.title;
-  post.contents = req.body.contents;
+  post.contents = setTextareaReplace(req.body.contents)
+  // post.contents = req.body.contents;
   post.team = req.body.team;
 
   if (req.file) {
     post.image = `picture/${req.file.filename}`;
   }
 
-  console.log(post)
 
   post.save(function (err) {
     if (err) {
@@ -84,6 +91,8 @@ router.post('/', util.로그인여부, util.관리자여부, upload.single("imag
 router.get('/edit/:id', util.로그인여부, util.관리자여부, function (req, res) {
   Post.findOne({ _id: req.params.id }, function (err, post) {
     if (err) return res.json(err);
+    post.contents = post.contents.replace(/(<br>|<br\/>|<br \/>)/gim, '\r\n');
+    post.contents = post.contents.replace(/(&nbsp;)/gim, ' ');
     res.render('posts/edit', { post: post, team: post.team });
   });
 });
@@ -96,12 +105,20 @@ router.put('/:id', util.로그인여부, util.관리자여부, upload.single("im
     req.body.image = `picture/${req.file.filename}`;
   }
 
+  var setTextareaReplace = function(text) {
+    text = text.split(' ').join('&nbsp;'); //replaceAll() 함수 효과
+    text = text.replace(/(\r\n|\n|\n\n)/gim, '<br>');
+    return text;
+  };
+
+  req.body.contents = setTextareaReplace(req.body.contents) 
 
   Post.findOneAndUpdate({ _id: req.params.id }, req.body, function (err, post) {
     if (err) return res.json(err);
     res.redirect(`/posts/detail/${req.params.id}`);
   });
 });
+
 // destroy
 router.delete('/:team/:id', util.로그인여부, util.관리자여부, function (req, res) {
   Post.deleteOne({ _id: req.params.id }, function (err) {
@@ -120,19 +137,15 @@ router.post('/like', util.로그인여부, (req, res) => {
     if (check!=null) { //check 스키마가 존재할때 -> 이미 한번 눌렀었던것 
           if (check.isLiked === true) { //그값이 True이면
             //업데이트로 isliked false로 수정
-            console.log(req.body.post_id, 1)
             Post.findOneAndUpdate({ _id: req.body.post_id },
               { $inc: { like: -1 } }, (err, post)=>{
-                console.log(err, post)
                 change(false)
                 res.status(200).send('좋아요취소')
               })
           }
           else {
-            console.log(req.body.post_id, 2)
             Post.findOneAndUpdate({ _id: req.body.post_id },
               { $inc: { like: 1 } }, (err, post)=>{
-                console.log(err, post)
                 change(true)
                 res.status(200).send('좋아요')
               })
@@ -143,15 +156,13 @@ router.post('/like', util.로그인여부, (req, res) => {
       check.id = check_id;
       check.isLiked = true;
 
-      console.log(req.body.post_id, 3)
       check.save((err) => {
         if (err) { console.log(err) }
       })
 
       Post.findOneAndUpdate({ _id: req.body.post_id },
         { $inc: { like: 1 } }, (err, post)=>{
-          console.log(err, post)
-          res.status(200).send('첫좋아요')
+          res.status(200).send('좋아요')
         })
     }
   })

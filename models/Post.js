@@ -35,7 +35,6 @@ const postSchema = new Schema({
     like: {type:Number, default:0}
 });
 
-
  
 
 const Post = mongoose.model('post', postSchema);
