@@ -4,30 +4,30 @@ header {
   height: 10%;
   padding-left: 3rem;
   color: black;
-  background : linear-gradient(white,lightgray);
+  background : linear-gradient(white, beige);
   font-weight: bold;
   font-family : courier;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  opacity : 0.7;
+  opacity : 0.5;
   z-index : 1;
 }
 
 #login a:nth-child(1):hover {
-  color : white;
+  color : lightcoral;
 }
 
 #login a:nth-child(2):hover {
-  color : white;
+  color : lightcoral;
 }
 
 #login a:nth-child(3):hover {
-  color : white;
+  color : lightcoral;
 }
 
 #login a:nth-child(4):hover {
-  color : white;
+  color : lightcoral;
 }
 
 #login span a {
