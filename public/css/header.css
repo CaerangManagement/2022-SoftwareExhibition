@@ -1,42 +1,39 @@
 header {
   position : fixed;
-  margin-left: 50%;
-  width: 45%;
+  width: 100%;
   height: 10%;
   padding-left: 3rem;
   color: black;
-  background-color: bisque;
+  background : linear-gradient(white,lightgray);
   font-weight: bold;
   font-family : courier;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom-left-radius: 3em;
-  border-bottom-right-radius: 3em;
+  opacity : 0.7;
   z-index : 1;
 }
 
 #login a:nth-child(1):hover {
-  color : goldenrod;
+  color : white;
 }
 
 #login a:nth-child(2):hover {
-  color : goldenrod;
+  color : white;
 }
 
 #login a:nth-child(3):hover {
-  color : goldenrod;
+  color : white;
 }
 
 #login a:nth-child(4):hover {
-  color : goldenrod;
+  color : white;
 }
 
 #login span a {
   text-decoration : none;
   color : black;
   height : 70px;
-  
   line-height : 65px;
   margin-top : 1%;
   margin-right :55px;
