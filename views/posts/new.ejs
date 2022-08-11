@@ -3,40 +3,47 @@
 <html>
   <head>
     <%- include('../partials/head') %>
+    <link rel="stylesheet" type="text/css" href="/css/header.css">
+    <link rel="stylesheet" type="text/css" href="/css/new.css">
   </head>
   <body>
-    <%- include('../partials/nav') %>
+    <%- include('../partials/header') %>
 
-    <div class="container mb-3">
-      <h2 class="mb-3">Post 작성</h2>
+    <seciton>
+      <div class="post">
+        <h2 class="mb-3">Post 작성</h2>
+        <form action="/posts" method="post", enctype="multipart/form-data">
 
-      <form action="/posts" method="post", enctype="multipart/form-data">
+          <div class="form-group">
+            <label for="team">Team</label>
+              <select name="team" id="team">
+                <option value="tag">태그</option>
+                <option value="laon">라온</option>
+                <option value="tenser">텐서</option>
+                <option value="latte">라뗴</option>
+                <option value="core">코어</option>
+              </select>
+          </div>
+  
+          <div class="form-group">
+            <label for="image">메인사진</label>
+            <input type="file" id="image" name="image" class="form-control">
+          </div>
+  
+          <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" id="title" name="title" value="" class="form-control">
+          </div>
+          
+          <div class="form-group">
+            <label for="body">Body</label>
+            <textarea id="body" name="contents" rows="10" class="form-control" cols="100" wrap="hard"></textarea>
+          </div>
 
-        <div class="form-group">
-          <label for="team">Team</label>
-            <select name="team" id="team">
-              <option value="tag">태그</option>
-              <option value="laon">라온</option>
-              <option value="tenser">텐서</option>
-              <option value="latte">라뗴</option>
-              <option value="core">코어</option>
-            </select>
-        </div>
+      </div>
+      
 
-        <div class="form-group">
-          <label for="image">메인사진</label>
-          <input type="file" id="image" name="image" class="form-control">
-        </div>
-
-        <div class="form-group">
-          <label for="title">Title</label>
-          <input type="text" id="title" name="title" value="" class="form-control">
-        </div>
-        
-        <div class="form-group">
-          <label for="body">Body</label>
-          <textarea id="body" name="contents" rows="10" class="form-control" cols="100" wrap="hard"></textarea>
-        </div>
+      
 
         
 
@@ -47,6 +54,6 @@
 
       </form>
 
-    </div>
+    </seciton>
   </body>
 </html>
