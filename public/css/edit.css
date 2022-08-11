@@ -22,6 +22,10 @@ table{
   border-bottom: 1px solid black;
   margin-bottom: 30px;
 }
+select{
+    width: 20%;
+    height: 30px;
+  }
 th{
   padding: 15px 10px;
   
@@ -32,10 +36,6 @@ td{
   border-left: 1px solid lightgray;
 }
 
-select{
-  width: 20%;
-  height: 30px;
-}
 
 #title{
   width: 50%;
@@ -55,6 +55,10 @@ select{
   height: 40px;
   background-color: blanchedalmond;
   padding: 10px 15px;
+}
+
+#body{
+    width: 70%;
 }
 
 

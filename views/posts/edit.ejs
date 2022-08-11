@@ -1,39 +1,65 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <%- include('../partials/head') %>
-  </head>
-  <body>
-    <%- include('../partials/nav') %>
 
-    <div class="container mb-3">
-      <h2 class="mb-3">Post 수정</h2>
-      <form action="/posts/<%= post._id %>?_method=put" method="post", enctype="multipart/form-data">
+<head>
+  <%- include('../partials/head') %>
+    <link rel="stylesheet" type="text/css" href="/css/header.css">
+    <link rel="stylesheet" type="text/css" href="/css/edit.css">
+</head>
 
-        <div class="form-group">
-          <label for="image">메인사진</label>
-          <input type="file" id="image" name="image" class="form-control">
-        </div>
+<body>
+  <%- include('../partials/header') %>
 
-        <div class="form-group">
-          <label for="title">Title</label>
-          <input type="text" id="title" name="title" value="<%=post.title%>" class="form-control">
-        </div>
-        
-        <div class="form-group">
-          <label for="body">Body</label>
-          <textarea id="body" name="contents" rows="5" class="form-control" cols="20" wrap="hard"><%=post.contents%></textarea>
-        </div>
+    <seciton>
+      <div class="post">
+        <h2 class="title">Post 수정</h2>
+        <form action="/posts/<%= post._id %>?_method=put" method="post" , enctype="multipart/form-data">
 
-        
+          <table>
+            <tr>
+              <th><span>팀명</span></th>
+              <td>
+                <select name="team" id="team">
+                  <option value="tag">태그</option>
+                  <option value="laon">라온</option>
+                  <option value="tenser">텐서</option>
+                  <option value="latte">라뗴</option>
+                  <option value="core">코어</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <th><span>메인사진</span></th>
+              <td>
+                <input type="file" id="image" name="image" class="form-control">
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <span>제목</span>
+              </th>
 
-        <div>
-          <a class="btn btn-primary" onClick="history.go(-1)">Back</a>
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </div>
+              <td>
+                <input type="text" id="title" name="title" value="<%=post.title%>" class="form-control">
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <span>내용</span>
+              </th>
+              <td>
+                <textarea id="body" name="contents" rows="5" class="form-control" cols="20"
+                  wrap="hard"><%=post.contents%></textarea>
+              </td>
+            </tr>
+          </table>
 
-      </form>
-
-    </div>
-  </body>
+          <div>
+            <a class="back-btn" onClick="history.go(-1)">Back</a>
+            <button type="submit" class="submit-btn">Submit</button>
+          </div>
+        </form>
+      </div>
+    </seciton>
+</body>
 </html>
