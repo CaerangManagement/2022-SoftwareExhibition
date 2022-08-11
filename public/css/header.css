@@ -6,7 +6,7 @@ header {
   color: black;
   background : linear-gradient(white, beige);
   font-weight: bold;
-  font-family : courier;
+  font-family : 'Source Sans Pro';
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -38,4 +38,18 @@ header {
   margin-top : 1%;
   margin-right :55px;
   padding-left : 1px;
+}
+
+@media screen and (max-width:768px) {
+  #login {
+    flex-direction : column;
+    align-items : flex-start;
+    padding : 8px 24px;
+  }
+
+  #login span a {
+    flex-direction : column;
+    align-items : center;
+    width : 100%;
+  }
 }
