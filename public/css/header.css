@@ -6,6 +6,7 @@ header {
   background-color : white;
   opacity : 1;
   z-index : 1;
+  border-bottom : 2px solid whitesmoke;
 }
 
 .header_title {
