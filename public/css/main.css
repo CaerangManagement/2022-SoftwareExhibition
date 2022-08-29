@@ -52,12 +52,13 @@ body {
   margin : auto;
   z-index : -1;
   background-color : whitesmoke;
+  border-bottom : 1px solid white;
 }
 
 #section2_container h1 {
   font-family : "Times New Roman";
   position : relative;
-  padding-top : 10%;
+  padding-top : 8%;
   text-align : center;
   font-weight : bold;
   color : black;
@@ -78,7 +79,7 @@ body {
 #section3_container h1 {
   font-family : "Times New Roman";
   position : absolute;
-  top : 217%;
+  top : 214%;
   text-align : center;
   font-weight : bold;
   color : black;
@@ -333,7 +334,7 @@ body {
   font-family : "Times New Roman";
   position : absolute;
   left : 42%;
-  top : 15%;
+  top : 12%;
   text-align : center;
   font-weight : bold;
   color : black;
@@ -365,11 +366,10 @@ ul.imgs li{
 }
 
 ul.imgs li img{
-  width : 70%;
-  height : 70%;
+  width : 100%;
+  height : 100%;
   border-radius: 30px;
   border: 5px solid rgba(0,0,0,0.3);
-  margin-top : 15%;
 }
 
 .bullets{
@@ -407,27 +407,27 @@ ul.imgs li img{
 .slider input[type=radio]:nth-child(1):checked~ul.imgs>li:nth-child(1){
   left: 0;
   transition: 0.75s;
-  z-index:1;
+  z-index:101;
   box-shadow: 14px -5px 35px -21px rgba(0,0,0,0.66);
 }
 .slider input[type=radio]:nth-child(1):checked~ul.imgs>li:nth-child(2){
   left: 90px;
   transition: 0.75s;
-  z-index:0;
+  z-index:100;
   transform: scale(0.9);
   box-shadow: 14px -5px 35px -21px rgba(0,0,0,0.66);
 }
 .slider input[type=radio]:nth-child(1):checked~ul.imgs>li:nth-child(3){
   left: 170px;
   transition: 0.75s;
-  z-index:-1;
+  z-index:99;
   transform: scale(0.8);
   box-shadow: 14px -5px 35px -21px rgba(0,0,0,0.66);
 }
 .slider input[type=radio]:nth-child(1):checked~ul.imgs>li:nth-child(4){
   left: 230px;
   transition: 0.75s;
-  z-index:-2;
+  z-index:98;
   transform: scale(0.7);
   box-shadow: 14px -5px 35px -21px rgba(0,0,0,0.66);
 }
@@ -436,28 +436,28 @@ ul.imgs li img{
 .slider input[type=radio]:nth-child(2):checked~ul.imgs>li:nth-child(1){
   left: -90px;
   transition: 0.75s;
-  z-index:0;
+  z-index:100;
   transform: scale(0.9);
   box-shadow: 14px -5px 35px -21px rgba(0,0,0,0.66);
 }
 .slider input[type=radio]:nth-child(2):checked~ul.imgs>li:nth-child(2){
   left: 0;
   transition: 0.75s;
-  z-index:1;
+  z-index:101;
   box-shadow: 14px -5px 35px -21px rgba(0,0,0,0.66);
 }
 
 .slider input[type=radio]:nth-child(2):checked~ul.imgs>li:nth-child(3){
   left: 90px;
   transition: 0.75s;
-  z-index:0;
+  z-index:100;
   transform: scale(0.9);
   box-shadow: 14px -5px 35px -21px rgba(0,0,0,0.66);
 }
 .slider input[type=radio]:nth-child(2):checked~ul.imgs>li:nth-child(4){
   left: 170px;
   transition: 0.75s;
-  z-index:-1;
+  z-index:99;
   transform: scale(0.8);
   box-shadow: 14px -5px 35px -21px rgba(0,0,0,0.66);
 }
@@ -466,27 +466,27 @@ ul.imgs li img{
 .slider input[type=radio]:nth-child(3):checked~ul.imgs>li:nth-child(1){
   left: -170px;
   transition: 0.75s;
-  z-index:-1;
+  z-index:99;
   transform: scale(0.8);
   box-shadow: 14px -5px 35px -21px rgba(0,0,0,0.66);
 }
 .slider input[type=radio]:nth-child(3):checked~ul.imgs>li:nth-child(2){
   left: -90px;
   transition: 0.75s;
-  z-index:0;
+  z-index:100;
   transform: scale(0.9);
   box-shadow: 14px -5px 35px -21px rgba(0,0,0,0.66);
 }
 .slider input[type=radio]:nth-child(3):checked~ul.imgs>li:nth-child(3){
   left: 0;
   transition: 0.75s;
-  z-index:1;
+  z-index:101;
   box-shadow: 14px -5px 35px -21px rgba(0,0,0,0.66);
 }
 .slider input[type=radio]:nth-child(3):checked~ul.imgs>li:nth-child(4){
   left: 90px;
   transition: 0.75s;
-  z-index:0;
+  z-index:100;
   transform: scale(0.9);
   box-shadow: 14px -5px 35px -21px rgba(0,0,0,0.66);
 }
@@ -496,28 +496,28 @@ ul.imgs li img{
 .slider input[type=radio]:nth-child(4):checked~ul.imgs>li:nth-child(1){
   left: -230px;
   transition: 0.75s;
-  z-index:-2;
+  z-index:98;
   transform: scale(0.7);
   box-shadow: 14px -5px 35px -21px rgba(0,0,0,0.66);
 }
 .slider input[type=radio]:nth-child(4):checked~ul.imgs>li:nth-child(2){
   left: -170px;
   transition: 0.75s;
-  z-index:-1;
+  z-index:99;
   transform: scale(0.8);
   box-shadow: 14px -5px 35px -21px rgba(0,0,0,0.66);
 }
 .slider input[type=radio]:nth-child(4):checked~ul.imgs>li:nth-child(3){
   left: -90px;
   transition: 0.75s;
-  z-index:0;
+  z-index:100;
   transform: scale(0.9);
   box-shadow: 14px -5px 35px -21px rgba(0,0,0,0.66);
 }
 .slider input[type=radio]:nth-child(4):checked~ul.imgs>li:nth-child(4){
   left: 0;
   transition: 0.75s;
-  z-index:1;
+  z-index:101;
   box-shadow: 14px -5px 35px -21px rgba(0,0,0,0.66);
 }
 
