@@ -112,7 +112,6 @@ router.put('/:id', util.로그인여부, util.관리자여부, upload.single("im
   };
 
   req.body.contents = setTextareaReplace(req.body.contents) 
-
   Post.findOneAndUpdate({ _id: req.params.id }, req.body, function (err, post) {
     if (err) return res.json(err);
     res.redirect(`/posts/detail/${req.params.id}`);

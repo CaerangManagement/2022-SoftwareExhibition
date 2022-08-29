@@ -1,12 +1,14 @@
 <header>
   <nav id="login">
+    <span><div class = "header_title">C AERANG</div></span>
     <span><a href="#section1_container" class="scroll_move">HOME</a></span>
-    <span><a href="#section2_container" class="scroll_move">TEAM</a></span>
-    <span><a href="#section3_container" class="scroll_move">ACTIVITIES</a></span>
+    <span><a href="#section2_container" class="scroll_move">INTRODUCE</a></span>
+    <span><a href="#section3_container" class="scroll_move">TEAM</a></span>
+    <span><a href="#section4_container" class="scroll_move">ACTIVITIES</a></span>
     
     <%if(isAuthenticated) {%>
 
-    <span><a href="#">안녕하세요! <%=currentUser.user.nickname%>님</a></span>
+    <span><div class = "login_user">안녕하세요! <%=currentUser.user.nickname%>님</div></span>
     <span><a href="/auth/logout">LogOut</a></span>
 
 

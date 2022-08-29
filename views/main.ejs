@@ -18,7 +18,11 @@
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   <link rel="stylesheet" type="text/css" href="./css/main.css">
   <link rel="stylesheet" type="text/css" href="/css/header.css">
+  <link rel="stylesheet" type="text/css" href="/css/footer.css">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
   <%- include('./partials/head') %>
 
 </head>
@@ -32,6 +36,10 @@
       </div>
 
       <div id = "section2_container">
+        <h1>INTRODUCE</h1>
+      </div>
+
+      <div id = "section3_container">
         <h1>TEAM &nbsp;&nbsp;&nbsp;EXPLANATION</h1>
         <div class = "team1_select">
           <div class = "team1_img">
@@ -79,8 +87,8 @@
           </div>
         </div>
       </div>
-      <div id="section3_container">
-        <div id="section3_container">
+
+      <div id="section4_container">
           <h1>ACTIVITIES</h1>
           <div class = "slider">
             <input type = "radio" name = "slide" id = "slide1" checked>
@@ -98,9 +106,9 @@
               <label for = "slide2">&nbsp;</label>
               <label for = "slide3">&nbsp;</label>
               <label for = "slide4">&nbsp;</label>
-            </div>
           </div>
-      </div>
+    </div>
+
     </section>
     <footer>
       <%if(isAuthenticated) {%>

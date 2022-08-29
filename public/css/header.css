@@ -2,45 +2,44 @@ header {
   position : fixed;
   width: 100%;
   height: 10%;
-  padding-left: 3rem;
-  color: black;
-  background : linear-gradient(white, beige);
-  font-weight: bold;
-  font-family : 'Source Sans Pro';
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  opacity : 0.5;
+  color: white;
+  background-color : white;
+  opacity : 1;
   z-index : 1;
 }
 
-#login a:nth-child(1):hover {
-  color : lightcoral;
+.header_title {
+  color : black;
+  font-size : 30px;
+  font-family: 'Pacifico', cursive;
 }
 
-#login a:nth-child(2):hover {
-  color : lightcoral;
+.login_user {
+  font-size : 5%;
+  color : black;
+  font-weight : bold;
+  font-family : 'Arial';
 }
 
-#login a:nth-child(3):hover {
-  color : lightcoral;
-}
-
-#login a:nth-child(4):hover {
-  color : lightcoral;
+#login {
+  padding-left : 1%;
+  font-weight: bold;
+  font-family : 'Source Sans Pro';
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height : 70px;
 }
 
 #login span a {
   text-decoration : none;
+  display : flex;
   color : black;
-  height : 70px;
   line-height : 65px;
-  margin-top : 1%;
-  margin-right :55px;
-  padding-left : 1px;
+  margin-left : 5%;
 }
 
-@media screen and (max-width:768px) {
+/*@media screen and (max-width:3500px) {
   #login {
     flex-direction : column;
     align-items : flex-start;
@@ -53,3 +52,4 @@ header {
     width : 100%;
   }
 }
+*/
