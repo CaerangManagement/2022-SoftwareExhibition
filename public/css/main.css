@@ -51,19 +51,43 @@ body {
   height : 100vh;
   margin : auto;
   z-index : -1;
-  background-color : whitesmoke;
-  border-bottom : 1px solid white;
+  background-color : white;
+  border-bottom : 1px solid whitesmoke;
 }
 
-#section2_container h1 {
-  font-family : "Times New Roman";
-  position : relative;
-  padding-top : 8%;
+.section2_image {
   text-align : center;
-  font-weight : bold;
-  color : black;
-  text-shadow : 0px 0px 3px whitesmoke;
+  justify-content: space-evenly;
+  display : flex;
+  padding-top : 10%;
 }
+
+.section2_image img {
+  width : 50%;
+  height : 100%;
+  border-radius : 2rem;
+}
+
+.section2_example {
+  display : flex;
+  justify-content: space-around;
+}
+
+.section2_example p {
+  font-family : "Gill Sans";
+  font-size : 40%;
+  font-weight : bold;
+}
+
+.section2_plus {
+  display : flex;
+  justify-content: space-evenly;
+}
+
+.section2_plus p {
+  text-align : center;
+}
+
 
 
 #section3_container {
