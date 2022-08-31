@@ -14,7 +14,7 @@ body {
   height: 100%;
   content: "";
   position: absolute;
-  background-image: url("/img/background.jpg");
+  
   background-repeat: no-repeat;
   background-size : auto;
   top: 0%;
@@ -79,10 +79,10 @@ section {
 }
 
 .item{
-  width: 25%;
+  width: 22%;
   height: 420px;
   display: inline-block;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color : whitesmoke;
   padding: 0 2%;
   margin: 50px 20px;
 }
@@ -107,10 +107,12 @@ section {
   bottom : 100px; 
   right : 100px;
   text-decoration: none;
-  background-color: #e9ec7c;
-  font-size: 25px;
+  background-color : rgb(205, 205, 205);
+  font-size: 18px;
+  text-align: center;
   padding: 10px;
   color: black;
+  border-radius: 30%;
   
 
 
