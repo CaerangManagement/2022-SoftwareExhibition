@@ -24,7 +24,6 @@ header {
   
   #login {
     padding-left : 1%;
-    font-weight: bold;
     font-family : 'Source Sans Pro';
     display: flex;
     justify-content: space-around;

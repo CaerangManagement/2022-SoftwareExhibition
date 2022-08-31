@@ -2,11 +2,11 @@
     <nav id="login">
       <span><div class = "header_title">C AERANG</div></span>
       <span><a href="http://localhost/">HOME</a></span>
-      <span><a href="/posts/new">WRITE</a></span>
       
       
       <%if(isAuthenticated) {%>
-  
+
+      <span><a href="/posts/new">WRITE</a></span>
       <span><div class = "login_user">안녕하세요! <%=currentUser.user.nickname%>님</div></span>
       <span><a href="/auth/logout">LogOut</a></span>
   
