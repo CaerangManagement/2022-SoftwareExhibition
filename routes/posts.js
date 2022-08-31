@@ -46,6 +46,7 @@ router.get('/detail/:id', util.로그인여부, function (req, res) {
     Check.findOne({id:req.params.id+req.user.user.id}, (err, check)=>{
       if(check){
         res.render('posts/show', { post: post, team: post.team , isLiked : check.isLiked});
+        console.log(check)
       }
       else{
         res.render('posts/show', { post: post, team: post.team , isLiked : false});
@@ -130,8 +131,8 @@ router.delete('/:team/:id', util.로그인여부, util.관리자여부, function
 
 //좋아요기능
 router.post('/like', util.로그인여부, (req, res) => {
-  let check_id = req.body.post_id+req.body.user_id
-
+  let check_id = req.body.post_id + req.user.user.id
+  console.log(check_id)
   Check.findOne({id:check_id}, (err, check) => {
     if (check!=null) { //check 스키마가 존재할때 -> 이미 한번 눌렀었던것 
           if (check.isLiked === true) { //그값이 True이면

@@ -27,26 +27,23 @@
             <%- post.contents %>
 
             <div class="menu">
+              <div class="like">
+                <% if(isLiked) { %>
+                  <img src="/img/like.png" class="like_btn" width="29px" height="29px">
+                  <% } else { %>
+                    <img src="/img/unlike.png" class="like_btn" width="30px" height="30px">
+                  <% } %>
+                  <span id="liked">
+                    <%=post.like%>
+                  </span>
+              </div>
               <%if(currentUser.user.role=='관리자' ){%>
-                <div class="like">
-                  <%}%>
-                    <button id="like_btn">
-                      <% if(isLiked) { %>
-                        좋아요취소
-                        <%} else{ %>
-                          좋아요
-                          <%}%>
-                    </button>
-                    <span id="liked">
-                      <%=post.like%>
-                    </span>
-                </div>
-    
                 <a class="edit" href="/posts/edit/<%=post._id%>">Edit</a>
                 <form action="/posts/<%=post.team %>/<%= post._id %>?_method=delete" method="post" class="delete">
                   <a class="delete_btn" href="javascript:void(0)"
                     onclick="confirm('Do you want to delete this?')?this.parentElement.submit():null;">Delete</a>
                 </form>
+              <% }%>
             </div>
           </div>
         </div>
@@ -129,11 +126,9 @@
           }
         }).done(function (결과) {
           alert(결과)
-          $("#liked").load(window.location.href + " #liked");
-          $("#like").load(window.location.href + " #like");
+          location.reload()
         }).fail(function (a, b, c) {
           alert('좋아요 실패')
-          // $("#liked").load(window.location.href + " #liked");
         });
       })
 
