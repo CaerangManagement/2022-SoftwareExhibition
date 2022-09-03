@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <%- include('../partials/head') %>
+    <link rel="stylesheet" type="text/css" href="/css/header.css">
+    <link rel="stylesheet" type="text/css" href="/css/edit.css">
+</head>
+
+<body>
+  <%- include('../partials/header') %>
+
+    <seciton>
+      <div class="post">
+        <h2 class="title">Post 수정</h2>
+        <form action="/posts/<%= post._id %>?_method=put" method="post" , enctype="multipart/form-data">
+
+          <table>
+            <tr>
+              <th><span>팀명</span></th>
+              <td>
+                <select name="team" id="team">
+                  <option value="tag">태그</option>
+                  <option value="raon">라온</option>
+                  <option value="tenser">텐서</option>
+                  <option value="latte">라뗴</option>
+                  <option value="core">코어</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <th><span>메인사진</span></th>
+              <td>
+                <input type="file" id="image" name="image" class="form-control">
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <span>제목</span>
+              </th>
+
+              <td>
+                <input type="text" id="title" name="title" value="<%=post.title%>" class="form-control">
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <span>내용</span>
+              </th>
+              <td>
+                <textarea id="body" name="contents" rows="5" class="form-control" cols="20"
+                  wrap="hard"><%=post.contents%></textarea>
+              </td>
+            </tr>
+          </table>
+
+          <div>
+            <a class="back-btn" onClick="history.go(-1)">Back</a>
+            <button type="submit" class="submit-btn">Submit</button>
+          </div>
+        </form>
+      </div>
+    </seciton>
+</body>
+</html>

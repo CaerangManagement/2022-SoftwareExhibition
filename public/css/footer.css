@@ -1,0 +1,13 @@
+footer {
+    width : 100%;
+    
+    display : flex;
+    justify-content: space-around;
+    font-family : 'Gill Sans MT';
+    color : white;
+    background-color : black;
+}
+
+span {
+    display : flex;
+}

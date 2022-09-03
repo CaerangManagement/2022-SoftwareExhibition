@@ -1,0 +1,99 @@
+html, body{
+    width: 100%;
+    height: 100%
+  }
+
+section{
+    padding: 10% 0;
+    display: flex;
+    justify-content: center;
+}
+.card{
+    width: 100%;
+    text-align: center;
+    padding: 0 15%;
+}
+#content{
+    width: 80%;
+    margin: auto;
+}
+.detailTitle {
+    text-align: left;
+    width: 85%;
+   
+}
+.detailImg{
+    width: 100%;
+    height: 500px;
+}
+.post{
+    margin-top: 30px;
+    text-align: start;
+    font-size: 1.3rem;
+   
+}
+.date{
+    text-align: right;
+}
+.menu{
+    text-align: right;
+    margin-top: 50px;
+}
+.like{
+    text-align: left;
+    
+}
+.delete{
+    display: inline-block;
+
+}
+.edit{
+    text-decoration: none;
+    margin-right: 2.5%;
+    color: black;
+}
+.delete_btn{
+    text-decoration: none;
+    color: black;
+}
+.comment{
+    margin: 10% 0;
+}
+.comment_set{
+    width: 100%;
+}
+
+textarea{
+    width: 90%;
+    height: 150px;
+    margin-bottom: 10px;
+}
+.comment_set{
+    margin-bottom: 50px;
+    background-color: whitesmoke;
+    border-top: 1px solid black;
+    border-collapse: collapse;
+}
+
+th{
+    border-bottom: 1px solid black;
+    height: 50px;
+}
+td{
+    height: 40px;
+    background-color: white;
+    border-bottom: 1px solid rgb(197, 196, 196);
+}
+
+.author{
+    width: 10%;
+}
+.text{
+    width: 60%;
+}
+.c_date{
+    width: 20%;
+}
+.c_delete{
+    width: 10%;
+}

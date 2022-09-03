@@ -1,0 +1,119 @@
+html{
+  width: 100%;
+  min-height: 100vh;
+  position:relative;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  
+}
+#all{
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  
+  background-repeat: no-repeat;
+  background-size : auto;
+  top: 0%;
+  left: 0%;
+  right: 0%;
+  left: 0%;
+  bottom: 0%;
+  z-index: -1;
+  overflow: auto;
+}
+
+td div {
+  width: 100%;
+  height: 100%;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  opacity: 1;
+}
+
+#teamTitle {
+  width: 23%;
+  height: 23%;
+
+}
+#itemList{
+  padding: 0 10%;
+  
+
+  
+}
+
+#top {
+  padding: 5% 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+}
+
+#teamName {
+  font-size: 4rem;
+  font-weight: 700;
+  margin: 0 4%;
+  
+}
+
+.itemImg {
+  width: 98%;
+  height: 70%;
+  display: block;
+  margin: 2% auto;
+  
+}
+
+.cons{
+  margin-left: 2%;
+  margin-top: 4%;
+
+}
+
+.item{
+  width: 22%;
+  height: 420px;
+  display: inline-block;
+  background-color : whitesmoke;
+  padding: 0 2%;
+  margin: 50px 20px;
+}
+
+
+.item h4{
+  font-weight: 700;
+  margin: 3% 0;
+  text-align: center;
+}
+.con{
+  width: 7%;
+  height: 7%;
+  margin-left: 2%;
+  
+}
+
+.btn-primary{
+  width: 100px;
+  height: 30px;
+  position : fixed;
+  bottom : 100px; 
+  right : 100px;
+  text-decoration: none;
+  background-color : rgb(205, 205, 205);
+  font-size: 18px;
+  text-align: center;
+  padding: 10px;
+  color: black;
+  border-radius: 30%;
+  
+
+
+}
