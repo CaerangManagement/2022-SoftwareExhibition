@@ -42,7 +42,7 @@ router.get('/detail/:id', util.로그인여부, function (req, res) {
   Post.findOne({ _id: req.params.id }, function (err, post) {
     if (err) return res.json(err);
 
-    post.contents = post.contents.replaceAll(/(\r\n|\n|\n\n)/gim, '<br>');
+    post.contents = post.contents.replace(/(\r\n|\n|\n\n)/gim, '<br>');
     Check.findOne({id:req.params.id+req.user.user.id}, (err, check)=>{
       if(check){
         res.render('posts/show', { post: post, team: post.team , isLiked : check.isLiked});
