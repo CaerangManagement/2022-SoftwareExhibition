@@ -3,7 +3,7 @@ html, body{
     height: 100%
   }
 
-  seciton {
+  section{
     padding: 10% 0;
     display: flex;
     justify-content: center;
@@ -24,8 +24,6 @@ table{
 }
 th{
   padding: 15px 10px;
-  
- 
 }
 td{
   padding: 15px 10px;
@@ -55,6 +53,14 @@ select{
   height: 40px;
   background-color: blanchedalmond;
   padding: 10px 15px;
+}
+
+/*미디어 쿼리*/
+@media (max-width:768px){
+  .post{
+    padding: 0;
+    margin: 10% 20%;
+  }
 }
 
 

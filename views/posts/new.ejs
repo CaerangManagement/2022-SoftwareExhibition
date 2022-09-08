@@ -4,14 +4,16 @@
 
 <head>
   <%- include('../partials/head') %>
-    <link rel="stylesheet" type="text/css" href="/css/header.css">
+    <link rel="stylesheet" type="text/css" href="/css/team_header.css">
     <link rel="stylesheet" type="text/css" href="/css/new.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
-  <%- include('../partials/header') %>
+  <%- include('../partials/team_header') %>
 
-    <seciton>
+    <section>
       <div class="post">
         <h2 class="title">Post 작성</h2>
         <form action="/posts" method="post" , enctype="multipart/form-data">
@@ -65,7 +67,7 @@
       </div>
 
 
-    </seciton>
+    </section>
 </body>
 
 </html>
