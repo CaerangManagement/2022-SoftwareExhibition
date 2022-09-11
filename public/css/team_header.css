@@ -16,7 +16,7 @@ header {
   }
   
   .login_user {
-    font-size : 5%;
+    font-size : 70%;
     color : black;
     font-weight : bold;
     font-family : 'Arial';
@@ -24,7 +24,7 @@ header {
   
   #login {
     padding-left : 1%;
-    font-family : 'Source Sans Pro';
+    font-weight : bold;
     display: flex;
     justify-content: space-around;
     align-items: center;

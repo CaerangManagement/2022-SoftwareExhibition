@@ -13,19 +13,18 @@ header {
   color : black;
   font-size : 30px;
   font-family: 'Pacifico', cursive;
+  font-weight : bold;
 }
 
 .login_user {
-  font-size : 5%;
+  font-size : 70%;
   color : black;
-  font-weight : bold;
-  font-family : 'Arial';
+  
+  font-family : 'Source Sans Pro';
 }
 
 #login {
   padding-left : 1%;
-  font-weight: bold;
-  font-family : 'Source Sans Pro';
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -34,6 +33,7 @@ header {
 
 #login span a {
   text-decoration : none;
+  font-family :'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   display : flex;
   color : black;
   line-height : 65px;
