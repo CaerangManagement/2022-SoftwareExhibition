@@ -83,7 +83,9 @@ td{
     height: 40px;
     background-color: white;
     border-bottom: 1px solid rgb(197, 196, 196);
+    padding: 5px;
 }
+
 
 .author{
     width: 10%;
@@ -97,3 +99,11 @@ td{
 .c_delete{
     width: 10%;
 }
+
+/*미디어 쿼리*/
+@media (max-width:768px){
+    td{
+      font-size: 14px;
+    }
+  
+  }

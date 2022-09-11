@@ -8,6 +8,8 @@
     <link rel="stylesheet" type="text/css" href="/css/team.css">
     <link rel="stylesheet" type="text/css" href="/css/team_header.css">
 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
 </head>
 
 <body>
@@ -30,7 +32,7 @@
                 </h3>
                 <img class="itemImg" src="/<%= post.image%>" data-id="<%= post._id %>">
                 <div class="cons">
-                  <img class="con" src="/img/like.png">
+                  <img class="con" src="/img/like.png" style="margin-bottom:3px;">
                   <span class="heartCount"><strong>
                       <%=post.like%>
                     </strong></span>

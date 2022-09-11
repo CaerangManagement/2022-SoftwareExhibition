@@ -5,11 +5,13 @@
   <%- include('../partials/head') %>
     <link rel="stylesheet" type="text/css" href="/css/team_header.css">
     <link rel="stylesheet" type="text/css" href="/css/show.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
   <%- include('../partials/team_header') %>
-
+pd
     <section>
       <div class="card">
         <div class="date">
@@ -29,7 +31,7 @@
             <div class="menu">
               <div class="like">
                 <% if(isLiked) { %>
-                  <img src="/img/like.png" class="like_btn" width="30px" height="30px">
+                  <img src="/img/detail_like.png" class="like_btn" width="30px">
                   <% } else { %>
                     <img src="/img/unlike.png" class="like_btn" width="30px" height="30px">
                   <% } %>
@@ -59,7 +61,7 @@
             <input type="hidden" id="author" value="<%=post.author%>">
             <thead>
               <th>작성자</th>
-              <th>내용</th>
+              <th id="comment_content">내용</th>
               <th>작성일</th>
               <th></th>
               

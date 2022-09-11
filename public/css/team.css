@@ -44,9 +44,9 @@ section {
 }
 #itemList{
   padding: 0 10%;
+  justify-content: space-evenly;
   
 
-  
 }
 
 #top {
@@ -79,7 +79,7 @@ section {
 }
 
 .item{
-  width: 22%;
+  width: 24.5%;
   height: 420px;
   display: inline-block;
   background-color : whitesmoke;
@@ -114,8 +114,11 @@ section {
   color: black;
   border-radius: 30%;
 
-  
-  
-
-
+}
+/*미디어 쿼리*/
+@media (max-width:768px){
+  .item{
+    width: 39%;
+    height: 420px;
+  }
 }
