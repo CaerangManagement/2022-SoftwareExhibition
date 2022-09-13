@@ -1,6 +1,5 @@
 body {
   z-index : -3;
-
 }
 
 #section1_container {
@@ -25,7 +24,6 @@ body {
 #titlelg img {
   position : absolute;
   width : 17%;
-  height : 36%;
   top : 35%;
   margin-left : 41%;
   z-index : 0;
@@ -40,30 +38,33 @@ body {
 
 #section1_container p {
   position : absolute;
-  top : 47%;
+  top : 45%;
   left : 53%;
   z-index : 0;
+  width : 40%;
 }
 
 .typing-txt {
   visibility : hidden;
-  width : 8.7ch;
   animation : typing 2s steps(22), blink .5s step-start infinite alternate;
   white-space : nowrap;
   overflow : hidden;
   font-weight : bold;
   text-shadow : 2px 2px 4px black;
-  font-size : 5em;
+  font-size : 500%;
   animation-delay : 1s;
   animation-duration : 1s;
   animation-fill-mode : both;
 }
 
 #section2_container {
+  background-image : url('/img/section2_background.jpg');
+  background-repeat: no-repeat;
+  background-size : cover;
   position : relative;
   height : 100vh;
   margin : auto;
-  z-index : -1;
+  z-index : -2;
   background-color : white;
   border-bottom : 1px solid whitesmoke;
   border-top : 1px solid whitesmoke;
@@ -73,7 +74,7 @@ body {
 
 .section2_box1 {
   opacity : 0;
-  margin-top : 8.5%;
+  margin-top : 10%;
 }
 
 .section2_box2 {
@@ -88,37 +89,60 @@ body {
 
 #section2_container img {
   border-radius: 2rem;
+  width : 100%;
 }
 
 #section2_container p {
   text-align : center;
-  font-size: 100%;
-  
+  color : white;
 }
 
 #p_main1 {
   font-weight : bold;
   font-family : 'sans serif';
-  font-size : 190%;
-  padding-top : 16.5%;
+  font-size : 300%;
+  padding-top : 20%;
+  color : white;
 }
 
 #p_main2 {
   font-weight : bold;
   font-family : 'sans serif';
-  font-size : 190%;
-  padding-top : 13%;
+  font-size : 300%;
+  padding-top : 20%;
+  color : white;
 }
 
 #p_main3 {
   font-weight : bold;
   font-family : 'sans serif';
   padding-top : 20%;
-  font-size : 190%;
+  font-size : 300%;
+  color : white;
+}
+
+.section2_box1 #p_plus1 p {
+  font-size : 250%;
+  font-family : 'Arial';
+  font-weight : bold;
+}
+
+#p_plus2 p {
+  font-size : 250%;
+  font-family : 'Arial';
+  font-weight : bold;
+}
+
+#p_plus3 p {
+  font-size : 250%;
+  font-family : 'Arial';
+  font-weight : bold;
 }
 
 #section3_container {
-  background-color : whitesmoke;
+  background-image : url('/img/section3_background.jpg');
+  background-repeat: no-repeat;
+  background-size : cover;
   height : 100vh;
   display : flex;
   justify-content: space-around;
@@ -146,16 +170,14 @@ body {
 
 .team1_select {
   position : relative;
-  width : 250px;
-  height : 250px;
+  width : 17%;
   opacity : 0;
   border : 5px solid whitesmoke;
   box-shadow : 1px 1px 3px rgba(0, 0, 0, 0.4);
 }
 
 .team1_select .team1_img img{
-  width : 240px;
-  height : 240px;
+  width : 100%;
 }
 
 .team1_select .img1_info {
@@ -166,7 +188,7 @@ body {
   background : rgba(0, 0, 0, 0.5);
   padding : 15px;
   
-  width : 240px;
+  width : 100%;
   opacity : 0;
   transition : opacity 0.35s ease-in-out;
 }
@@ -176,7 +198,7 @@ body {
 }
 
 .team1_select .img1_info h3 {
-  font-size : 21px;
+  font-size : 150%;
   padding-bottom : 0.4em;
   overflow : hidden;
   text-overflow : ellipsis;
@@ -185,7 +207,7 @@ body {
 }
 
 .team1_select .img1_info p {
-  font-size : 17px;
+  font-size : 100%;
   text-overflow : ellipsis;
   white-space : nowrap;
   text-transform : uppercase;
@@ -193,16 +215,14 @@ body {
 
 .team2_select {
   position : relative;
-  width : 250px;
-  height : 250px;
+  width : 17%;
   opacity : 0;
   border : 5px solid whitesmoke;
   box-shadow : 1px 1px 3px rgba(0, 0, 0, 0.4);
 }
 
 .team2_select .team2_img img{
-  width : 240px;
-  height : 240px;
+  width : 100%;
 }
 
 .team2_select .img2_info {
@@ -212,7 +232,7 @@ body {
   bottom : 0;
   background : rgba(0, 0, 0, 0.5);
   padding : 15px;
-  width : 240px;
+  width : 100%;
   opacity : 0;
   transition : opacity 0.35s ease-in-out;
 }
@@ -222,7 +242,7 @@ body {
 }
 
 .team2_select .img2_info h3 {
-  font-size : 21px;
+  font-size : 150%;
   padding-bottom : 0.4em;
   overflow : hidden;
   text-overflow : ellipsis;
@@ -231,7 +251,7 @@ body {
 }
 
 .team2_select .img2_info p {
-  font-size : 17px;
+  font-size : 100%;
   text-overflow : ellipsis;
   white-space : nowrap;
   text-transform : uppercase;
@@ -239,16 +259,14 @@ body {
 
 .team3_select {
   position : relative;
-  width : 250px;
-  height : 250px;
+  width : 17%;
   opacity : 0;
   border : 5px solid whitesmoke;
   box-shadow : 1px 1px 3px rgba(0, 0, 0, 0.4);
 }
 
 .team3_select .team3_img img{
-  width : 240px;
-  height : 240px;
+  width : 100%;
 }
 
 .team3_select .img3_info {
@@ -258,7 +276,7 @@ body {
   bottom : 0;
   background : rgba(0, 0, 0, 0.5);
   padding : 15px;
-  width : 240px;
+  width : 100%;
   opacity : 0;
   transition : opacity 0.35s ease-in-out;
 }
@@ -268,7 +286,7 @@ body {
 }
 
 .team3_select .img3_info h3 {
-  font-size : 21px;
+  font-size : 150%;
   padding-bottom : 0.4em;
   overflow : hidden;
   text-overflow : ellipsis;
@@ -277,7 +295,7 @@ body {
 }
 
 .team3_select .img3_info p {
-  font-size : 17px;
+  font-size : 100%;
   text-overflow : ellipsis;
   white-space : nowrap;
   text-transform : uppercase;
@@ -285,16 +303,14 @@ body {
 
 .team4_select {
   position : relative;
-  width : 250px;
-  height : 250px;
+  width : 17%;
   opacity : 0;
   border : 5px solid whitesmoke;
   box-shadow : 1px 1px 3px rgba(0, 0, 0, 0.4);
 }
 
 .team4_select .team4_img img{
-  width : 240px;
-  height : 240px;
+  width : 100%;
 }
 
 .team4_select .img4_info {
@@ -304,7 +320,7 @@ body {
   bottom : 0;
   background : rgba(0, 0, 0, 0.5);
   padding : 15px;
-  width : 240px;
+  width : 100%;
   opacity : 0;
   transition : opacity 0.35s ease-in-out;
 }
@@ -314,7 +330,7 @@ body {
 }
 
 .team4_select .img4_info h3 {
-  font-size : 21px;
+  font-size : 150%;
   padding-bottom : 0.4em;
   overflow : hidden;
   text-overflow : ellipsis;
@@ -323,7 +339,7 @@ body {
 }
 
 .team4_select .img4_info p {
-  font-size : 17px;
+  font-size : 100%;
   text-overflow : ellipsis;
   white-space : nowrap;
   text-transform : uppercase;
@@ -331,16 +347,14 @@ body {
 
 .team5_select {
   position : relative;
-  width : 250px;
-  height : 250px;
+  width : 17%;
   opacity : 0;
   border : 5px solid whitesmoke;
   box-shadow : 1px 1px 3px rgba(0, 0, 0, 0.4);
 }
 
 .team5_select .team5_img img{
-  width : 240px;
-  height : 240px;
+  width : 100%;
 }
 
 .team5_select .img5_info {
@@ -350,7 +364,7 @@ body {
   bottom : 0;
   background : rgba(0, 0, 0, 0.5);
   padding : 15px;
-  width : 240px;
+  width : 100%;
   opacity : 0;
   transition : opacity 0.35s ease-in-out;
 }
@@ -360,7 +374,7 @@ body {
 }
 
 .team5_select .img5_info h3 {
-  font-size : 21px;
+  font-size : 150%;
   padding-bottom : 0.4em;
   overflow : hidden;
   text-overflow : ellipsis;
@@ -369,23 +383,81 @@ body {
 }
 
 .team5_select .img5_info p {
-  font-size : 17px;
+  font-size : 100%;
   text-overflow : ellipsis;
   white-space : nowrap;
   text-transform : uppercase;
+}
+
+@media screen and (min-width:200px) and (max-width:768px) {
+  
+  #section3_container {
+    width : 100%;
+    flex-direction : column;
+    align-items : flex-start;
+    padding : 8px 24px;
+    font-size : 80%;
+  }
+
+  #section3_container h1 {
+    opacity : 0;
+  }
+
+  .team1_select {
+    margin-left : 35%;
+    flex-direction : column;
+    text-align: center;
+    align-items: center;
+    width : 30%;
+  }
+
+  .team2_select {
+    margin-left : 35%;
+    flex-direction : column;
+    text-align: center;
+    align-items : center;
+    width : 30%;
+  }
+
+  .team3_select {
+    margin-left : 35%;
+    flex-direction : column;
+    text-align: center;
+    align-items : center;
+    width : 30%;
+  }
+
+  .team4_select {
+    margin-left : 35%;
+    flex-direction : column;
+    text-align: center;
+    align-items : center;
+    width : 30%;
+  }
+
+  .team5_select {
+    margin-left : 35%;
+    flex-direction : column;
+    text-align: center;
+    align-items : center;
+    width : 30%;
+  }
 }
 
 #section4_container {
   position : relative;
   height : 100vh;
   background-color : white;
+  background-image : url('/img/section4_background.jpg');
+  background-repeat: no-repeat;
+  background-size : cover;
 }
 
 #section4_container h1 {
   font-family : "Times New Roman";
   position : absolute;
-  left : 42%;
-  top : 12%;
+  left : 43%;
+  top : 17%;
   text-align : center;
   font-weight : bold;
   color : black;
@@ -412,31 +484,30 @@ ul.imgs li{
   position: absolute;
   list-style: none;
   padding: 0;
-  margin-top : 50%;
-  border-radius: 30px;
+  margin-top : 45%;
+  border-radius: 3rem;
 }
 
 ul.imgs li img{
   width : 100%;
-  height : 100%;
   border-radius: 30px;
   border: 5px solid rgba(0,0,0,0.3);
 }
 
 .bullets{
   position: absolute;
-  left: 50%;
-  top : 300%;
+  left: 53%;
+  top : 290%;
   transform: translateX(-50%);
   z-index: 2;
+  width : 30%;
 }
 
 .bullets label{
   display: inline-block;
   border-radius: 50%;
   background-color: rgba(0,0,0,0.55);
-  width: 20px;
-  height: 20px;
+  width: 20%;
   cursor: pointer;
 }
 

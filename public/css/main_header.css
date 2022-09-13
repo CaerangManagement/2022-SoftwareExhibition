@@ -11,7 +11,7 @@ header {
 
 .header_title {
   color : black;
-  font-size : 30px;
+  font-size : 200%;
   font-family: 'Pacifico', cursive;
   font-weight : bold;
 }
@@ -19,8 +19,7 @@ header {
 .login_user {
   font-size : 70%;
   color : black;
-  
-  font-family : 'Source Sans Pro';
+  font-family : 'Arial';
 }
 
 #login {
@@ -33,23 +32,25 @@ header {
 
 #login span a {
   text-decoration : none;
-  font-family :'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family :'Arial';
   display : flex;
   color : black;
   line-height : 65px;
   margin-left : 5%;
 }
 
-@media screen and (min-width:512px) and (max-width:1024px) {
-  #login {
-    flex-direction : column;
-    align-items : flex-start;
-    padding : 8px 24px;
+@media screen and (min-width:100px) and (max-width:1024px) {
+  .header_title {
+    display : block;
+    font-size : 150%;
+    float: left;
   }
 
-  #login span a {
-    flex-direction : column;
-    align-items : center;
-    width : 100%;
+  #login span {
+    display : none;
+  }
+
+  .login_user {
+    display : none;
   }
 }
