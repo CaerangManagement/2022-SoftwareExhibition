@@ -19,6 +19,7 @@ header {
 .login_user {
   font-size : 70%;
   color : black;
+  font-weight : bold;
   font-family : 'Arial';
 }
 
@@ -32,7 +33,6 @@ header {
 
 #login span a {
   text-decoration : none;
-  font-family :'Arial';
   display : flex;
   color : black;
   line-height : 65px;

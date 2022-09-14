@@ -94,7 +94,7 @@ body {
 
 #section2_container p {
   text-align : center;
-  color : white;
+  color : gold;
 }
 
 #p_main1 {
@@ -102,7 +102,7 @@ body {
   font-family : 'sans serif';
   font-size : 300%;
   padding-top : 20%;
-  color : white;
+  color : gold;
 }
 
 #p_main2 {
@@ -110,7 +110,7 @@ body {
   font-family : 'sans serif';
   font-size : 300%;
   padding-top : 20%;
-  color : white;
+  color : gold;
 }
 
 #p_main3 {
@@ -118,25 +118,22 @@ body {
   font-family : 'sans serif';
   padding-top : 20%;
   font-size : 300%;
-  color : white;
+  color : gold;
 }
 
-.section2_box1 #p_plus1 p {
-  font-size : 250%;
-  font-family : 'Arial';
-  font-weight : bold;
+#p_plus1 p {
+  font-size : 200%;
+  font-family : 'Cute Font', cursive;
 }
 
 #p_plus2 p {
-  font-size : 250%;
-  font-family : 'Arial';
-  font-weight : bold;
+  font-size : 200%;
+  font-family : 'Cute Font', cursive;
 }
 
 #p_plus3 p {
-  font-size : 250%;
-  font-family : 'Arial';
-  font-weight : bold;
+  font-size : 200%;
+  font-family : 'Cute Font', cursive;
 }
 
 #section3_container {
@@ -152,7 +149,7 @@ body {
 }
 
 #section3_container h1 {
-  font-family : "Times New Roman";
+  font-family : 'Dancing Script', cursive;;
   position : absolute;
   top : 214%;
   text-align : center;
@@ -454,10 +451,10 @@ body {
 }
 
 #section4_container h1 {
-  font-family : "Times New Roman";
+  font-family : 'Antonio', sans-serif;
   position : absolute;
-  left : 43%;
-  top : 17%;
+  left : 46%;
+  top : 15%;
   text-align : center;
   font-weight : bold;
   color : black;

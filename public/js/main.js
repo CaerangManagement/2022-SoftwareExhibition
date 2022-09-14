@@ -103,7 +103,7 @@ $(document).ready(function() {
       var bottom_of_window = $(window).scrollTop() + $(window).height();
 
       if(bottom_of_window > bottom_of_object) {
-        $(this).animate({'translate':''}, 1000);
+        $(this).animate({'transition':'20px'}, 1000);
       }
     });
   });
