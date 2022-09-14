@@ -16,7 +16,19 @@
   <div id="all">
     <%- include('../partials/team_header') %>
     <div id="top">
-      <img id="teamTitle" src="/img/TagLogo.png">
+      
+      <% if(team == "TAG"){ %>
+        <img id="teamTitle" src="/img/TagLogo.png">
+      <%} else if(team == "RAON"){%>
+        <img id="teamTitle" src="/img/RaonLogo.png">
+      <%} else if(team == "LATTE"){%>
+        <img id="teamTitle" src="/img/LatteLogo.png">
+      <%} else if(team == "TENSOR"){%>
+        <img id="teamTitle" src="/img/TensorLogo.png">
+      <%} else if(team == "CORE"){%>
+        <img id="teamTitle" src="/img/CoreLogo.png">
+      <%}%>
+
       <span id="teamName">Team <%=team%></span>
     </div>
 
