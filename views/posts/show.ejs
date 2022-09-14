@@ -115,9 +115,11 @@ pd
 
 
     <script>
-      $('.like').click(function () {
+      
+      $('.like_btn').click(function () {
         let post_id = $('#id').val();
         let user_id = $('#user_id').val()
+        
 
         $.ajax({
           method: 'post',
@@ -127,11 +129,16 @@ pd
             user_id: user_id,
           }
         }).done(function (결과) {
+          
           alert(결과)
           location.reload()
+          
+          
         }).fail(function (a, b, c) {
           alert('좋아요 실패')
         });
+
+        
       })
 
       $('#add_comments').click(function () {

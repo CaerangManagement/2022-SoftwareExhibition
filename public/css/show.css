@@ -43,6 +43,10 @@ section{
     text-align: left;
     
 }
+.like_btn{
+    cursor: pointer;
+    
+}
 .delete{
     display: inline-block;
 
