@@ -1,4 +1,7 @@
-## 2022-SoftwareExhibition 개발 팀 <김나은, 박주영, 하승진>
+## 2022-SoftwareExhibition 개발 팀 <김나은, 박주영, 하승진> 
+
+## <a href="https://caerang.co.kr">홈페이지 바로가기</a>
+
 
 ## SW전시회의 내용들을 관리하고 보여주는 웹 사이트 개발을 목표로 함. <지속 가능성 추구>
 <br>
