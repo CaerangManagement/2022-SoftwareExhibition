@@ -13,18 +13,18 @@ header {
     color : black;
     font-size : 30px;
     font-family: 'Pacifico', cursive;
+    font-weight : bold;
   }
   
   .login_user {
     font-size : 70%;
     color : black;
     font-weight : bold;
-    font-family : 'Arial';
+    font-family : 'Cute Font', cursive;
   }
   
   #login {
     padding-left : 1%;
-    font-weight : bold;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -32,6 +32,7 @@ header {
   }
   
   #login span a {
+    font-family : 'Arial';
     text-decoration : none;
     display : flex;
     color : black;
@@ -39,17 +40,14 @@ header {
     margin-left : 5%;
   }
   
-  /*@media screen and (max-width:3500px) {
-    #login {
-      flex-direction : column;
-      align-items : flex-start;
-      padding : 8px 24px;
+  /*@media screen and (min-width:100px) and (max-width:1024px) {
+    .header_title {
+      display : block;
+      font-size : 150%;
+      float: left;
     }
   
-    #login span a {
-      flex-direction : column;
-      align-items : center;
-      width : 100%;
+    .login_delete {
+      display : none;
     }
-  }
-  */
+  }*/

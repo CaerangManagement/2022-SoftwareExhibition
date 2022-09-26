@@ -13,14 +13,14 @@ header {
   color : black;
   font-size : 200%;
   font-family: 'Pacifico', cursive;
-  font-weight : bold;
+  font-weight: bold;
 }
 
 .login_user {
   font-size : 70%;
   color : black;
   font-weight : bold;
-  font-family : 'Arial';
+  font-family : 'Cute Font', cursive;
 }
 
 #login {
@@ -32,6 +32,7 @@ header {
 }
 
 #login span a {
+  font-family : 'Arial';
   text-decoration : none;
   display : flex;
   color : black;
@@ -46,11 +47,7 @@ header {
     float: left;
   }
 
-  #login span {
-    display : none;
-  }
-
-  .login_user {
+  .login_delete {
     display : none;
   }
 }
