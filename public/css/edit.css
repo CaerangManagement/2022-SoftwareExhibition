@@ -42,24 +42,45 @@ td{
   height: 25px;
 }
 
+
 .submit-btn{
-  width: 12%;
-  height: 40px;
+  width: 70px;
+  height: 35px;
   text-align: center;
   float: right;
   background-color: blanchedalmond;
   border: none;
 }
 .back-btn{
-  width: 8%;
+  width: 70px;
   height: 40px;
   background-color: blanchedalmond;
-  padding: 10px 15px;
+  padding: 7px 15px;
 }
 
 #body{
     width: 70%;
 }
 
+/*미디어 쿼리*/
+@media (max-width:768px){
+  td{
+    font-size: 14px;
+  }
 
+}
+@media (max-width:415px){
+  .post{
+    padding-top : 10%;
+  }
+  .title{
+    font-size: 30px;
+  }
+  #title{
+    width: 100%;
+  }
+  #body{
+    width: 100%;
+  }
+}
 

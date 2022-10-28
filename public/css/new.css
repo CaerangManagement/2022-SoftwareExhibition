@@ -62,6 +62,15 @@ select{
     margin: 10% 20%;
   }
 }
+@media (max-width:415px){
+  .post{
+    padding: 15% 5%;
+    
+  }
+  table{
+    width: 50%;
+  }
+}
 
 
 
