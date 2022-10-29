@@ -4,7 +4,6 @@ header {
   height: 10%;
   color: white;
   background-color : white;
-  opacity : 1;
   z-index : 1;
   border-bottom : 2px solid whitesmoke;
 }
@@ -17,7 +16,7 @@ header {
 }
 
 .login_user {
-  font-size : 70%;
+  font-size : 100%;
   color : black;
   font-weight : bold;
   font-family : 'Cute Font', cursive;

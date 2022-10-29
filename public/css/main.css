@@ -4,7 +4,7 @@ body {
 
 #section1_container {
   position : relative;
-  height : 100vh;
+  height : 90vh;
   margin : auto;
   z-index : -2;
   background-color : white;
@@ -18,7 +18,7 @@ body {
   margin : 0 auto;
   padding-top : 17%;
   z-index : -1;
-  opacity : 0.2;
+  opacity : 0.1;
 }
 
 #titlelg img {
@@ -51,6 +51,7 @@ body {
   overflow : hidden;
   font-weight : bold;
   text-shadow : 2px 2px 4px black;
+  font-family: 'Arial';
   font-size : 500%;
   animation-delay : 1s;
   animation-duration : 1s;
@@ -66,7 +67,7 @@ body {
   }
   .typing-txt {
     position : absolute;
-    font-size : 230%;
+    font-size : 220%;
   }
 }
 #section2_container {
@@ -82,26 +83,40 @@ body {
   border-top : 1px solid whitesmoke;
   display : flex;
   justify-content: space-evenly;
+  opacity : 0.85;
 }
 
 .section2_box1 {
   opacity : 0;
-  margin-top : 10%;
+  width : 33%;
+  height : 100%;
+  border-right : 0.4px solid white;
+  background-color: transparent;
+  filter:brightness(1);
+  z-index : -1;
 }
 
 .section2_box2 {
   opacity : 0;
-  margin-top : 10%;
+  width : 34%;
+  height : 100%;
+  border-right : 0.4px solid white;
+  z-index : -1;
+}
+
+.section2_box2 :hover {
+  background-color: rgb(37, 36, 36);
 }
 
 .section2_box3 {
   opacity : 0;
-  margin-top : 10%;
+  width : 33%;
+  height : 100%;
+  z-index : -1;
 }
 
-#section2_container img {
-  border-radius: 2rem;
-  width : 100%;
+.section2_box3 :hover {
+  background-color: rgb(37, 36, 36);
 }
 
 #section2_container p {
@@ -109,26 +124,80 @@ body {
   color : white;
 }
 
+#p_title {
+  font-size :300%;
+  font-family: 'NanumSquare';
+  font-weight: bold;
+  line-height : 300px;
+}
 #p_main1 {
   font-weight : bold;
   font-family : 'sans serif';
   font-size : 300%;
-  padding-top : 20%;
+  padding-top : 312px;
   color : white;
+}
+
+.hash_box1 {
+  display : flex;
+  background-color: transparent;
+  justify-content: space-evenly;
+  margin-top : 110px;
+}
+
+.hash_box2 {
+  display : flex;
+  background-color: transparent;
+  justify-content: space-evenly;
+  margin-top : 110px;
+}
+
+.hash_box3 {
+  display : flex;
+  background-color: transparent;
+  justify-content: space-evenly;
+  margin-top : 110px;
+}
+
+#box1_hash1 {
+  width : 80px;
+  height :30px;
+  border-radius : 10px;
+  border : 1px solid white;
+}
+
+#box1_hash2 {
+  width : 80px;
+  height :30px;
+  border-radius : 10px;
+  border : 1px solid white;
+}
+
+#box1_hash3 {
+  width : 80px;
+  height :30px;
+  border-radius : 10px;
+  border : 1px solid white;
+}
+
+#box1_hash4 {
+  width : 80px;
+  height :30px;
+  border-radius : 10px;
+  border : 1px solid white;
 }
 
 #p_main2 {
   font-weight : bold;
   font-family : 'sans serif';
   font-size : 300%;
-  padding-top : 20%;
   color : white;
 }
 
 #p_main3 {
   font-weight : bold;
   font-family : 'sans serif';
-  padding-top : 20%;
+  padding-top : 320px;
   font-size : 300%;
   color : white;
 }
@@ -136,79 +205,30 @@ body {
 #p_plus1 p {
   font-size : 150%;
   font-family: 'NanumSquare';
+  color : rgb(185, 185, 185);
 }
 
 #p_plus2 p {
   font-size : 150%;
   font-family: 'NanumSquare';
+  color : rgb(185, 185, 185);
 }
 
 #p_plus3 p {
   font-size : 150%;
   font-family: 'NanumSquare';
+  color : rgb(185, 185, 185);
 }
 
-@media screen and (min-width:200px) and (max-width:600px) {
-  #section2_container {
-    width : 100%;
-    flex-direction : column;
-    align-items : flex-start;
-    padding : 8px 24px;
-    font-size : 80%;
-  }
-
-  .section2_box1 {
-    width : 35%;
-    margin-left : 30%;
-    flex-direction : column;
+@media screen and (min-width:200px) and (max-width:1200px) {
+  #p_title {
+    font-size : 50px;
     text-align: center;
-    align-items: center;
-  }
-  .section2_box2 {
-    margin-left : 30%;
-    width : 35%;
-    flex-direction : column;
-    text-align: center;
-    align-items: center;
-  }
-  .section2_box3 {
-    margin-left : 30%;
-    width : 35%;
-    flex-direction : column;
-    text-align: center;
-    align-items: center;
-  }
-
-  #p_main1 {
-    font-size : 100%;
-    padding-top : 0;
-  }
-  #p_plus1 {
-    font-size: 60%;
-    padding-top : 0;
-  }
-  #p_main2 {
-    font-size : 100%;
-    padding-top : 0;
-  }
-  #p_plus2 {
-    font-size: 60%;
-    padding-top : 0;
-  }
-  #p_main3 {
-    font-size : 100%;
-    padding-top : 0;
-  }
-  #p_plus3 {
-    font-size: 60%;
-    padding-top : 0;
   }
 }
 
 #section3_container {
-  background-image : url('/img/section3_background.jpg');
-  background-repeat: no-repeat;
-  background-size : cover;
+  background-color: white;
   height : 100vh;
   display : flex;
   justify-content: space-around;
@@ -218,13 +238,12 @@ body {
 }
 
 #section3_container h1 {
-  font-family : 'Dancing Script', cursive;;
+  font-family : 'NanumSquare';
   position : absolute;
-  top : 214%;
+  top : 210%;
   text-align : center;
   font-weight : bold;
   color : black;
-  text-shadow : 0px 0px 3px whitesmoke;
 }
 
 @font-face { 
@@ -238,7 +257,7 @@ body {
   position : relative;
   width : 17%;
   opacity : 0;
-  border : 5px solid whitesmoke;
+  border : 5px solid rgb(249, 246, 246);
   box-shadow : 1px 1px 3px rgba(0, 0, 0, 0.4);
 }
 
@@ -273,7 +292,7 @@ body {
 }
 
 .team1_select .img1_info p {
-  font-size : 100%;
+  font-size : 130%;
   text-overflow : ellipsis;
   white-space : nowrap;
   text-transform : uppercase;
@@ -283,7 +302,7 @@ body {
   position : relative;
   width : 17%;
   opacity : 0;
-  border : 5px solid whitesmoke;
+  border : 5px solid rgb(249, 246, 246);
   box-shadow : 1px 1px 3px rgba(0, 0, 0, 0.4);
 }
 
@@ -317,7 +336,7 @@ body {
 }
 
 .team2_select .img2_info p {
-  font-size : 100%;
+  font-size : 130%;
   text-overflow : ellipsis;
   white-space : nowrap;
   text-transform : uppercase;
@@ -327,7 +346,7 @@ body {
   position : relative;
   width : 17%;
   opacity : 0;
-  border : 5px solid whitesmoke;
+  border : 5px solid rgb(249, 246, 246);
   box-shadow : 1px 1px 3px rgba(0, 0, 0, 0.4);
 }
 
@@ -361,7 +380,7 @@ body {
 }
 
 .team3_select .img3_info p {
-  font-size : 100%;
+  font-size : 130%;
   text-overflow : ellipsis;
   white-space : nowrap;
   text-transform : uppercase;
@@ -371,11 +390,11 @@ body {
   position : relative;
   width : 17%;
   opacity : 0;
-  border : 5px solid whitesmoke;
+  border : 5px solid rgb(249, 246, 246);
   box-shadow : 1px 1px 3px rgba(0, 0, 0, 0.4);
 }
 
-.team4_select .team4_img img{
+.team4_select .team4_img img {
   width : 100%;
 }
 
@@ -405,7 +424,7 @@ body {
 }
 
 .team4_select .img4_info p {
-  font-size : 100%;
+  font-size : 130%;
   text-overflow : ellipsis;
   white-space : nowrap;
   text-transform : uppercase;
@@ -415,7 +434,7 @@ body {
   position : relative;
   width : 17%;
   opacity : 0;
-  border : 5px solid whitesmoke;
+  border : 5px solid rgb(249, 246, 246);
   box-shadow : 1px 1px 3px rgba(0, 0, 0, 0.4);
 }
 
@@ -449,13 +468,13 @@ body {
 }
 
 .team5_select .img5_info p {
-  font-size : 100%;
+  font-size : 130%;
   text-overflow : ellipsis;
   white-space : nowrap;
   text-transform : uppercase;
 }
 
-@media screen and (min-width:200px) and (max-width:550px) {
+@media screen and (min-width:200px) and (max-width:700px) {
   
   #section3_container {
     width : 100%;
@@ -533,15 +552,19 @@ body {
   .team1_select .img1_info p{
     display : none;
   }
+
   .team2_select .img2_info p{
     display : none;
   }
+
   .team3_select .img3_info p{
     display : none;
   }
+
   .team4_select .img4_info p{
     display : none;
   }
+
   .team5_select .img5_info p{
     display : none;
   }
@@ -551,20 +574,28 @@ body {
   position : relative;
   height : 100vh;
   background-color : white;
-  background-image : url('/img/section4_background.jpg');
-  background-repeat: no-repeat;
-  background-size : cover;
 }
 
 #section4_container h1 {
-  font-family : 'Antonio', sans-serif;
+  font-family : 'NanumSquare';
   position : absolute;
-  left : 46%;
-  top : 15%;
+  left : 70%;
+  top : 35%;
   text-align : center;
   font-weight : bold;
   color : black;
-  text-shadow : 0px 0px 3px lightgray;
+  text-shadow : 2px 2px 5px lightgray;
+}
+
+#section4_container h3 {
+  font-family : 'NanumSquare';
+  position : absolute;
+  left : 75%;
+  top : 42%;
+  text-align : center;
+  font-weight : bold;
+  color : rgb(59, 58, 58);
+  text-shadow : 2px 2px 5px lightgray;
 }
 
 
@@ -600,33 +631,42 @@ ul.imgs li img{
 
 .bullets{
   position: absolute;
-  left: 53%;
+  left: 48%;
   top : 290%;
   transform: translateX(-50%);
   z-index: 2;
-  width : 30%;
+  width : 27%;
 }
+
+
 
 .bullets label{
   display: inline-block;
   border-radius: 50%;
-  background-color: rgba(0,0,0,0.55);
+  background-color: lightgray;
   width: 20%;
   cursor: pointer;
 }
 
-@media screen and (min-width:150px) and (max-width:1000px) {
+@media screen and (min-width:150px) and (max-width:1050px) {
+  #section4_container h3 {
+    visibility: hidden;
+  }
   #section4_container h1  {
     position : absolute;
+    top : 20%;
     left : 40%; 
   }
+
   ul.imgs li {
     position : absolute;
     margin-top : 250px;
   }
+
   ul.imgs li img {
     width : 300px;
   }
+
   .bullets {
     width : 100px;
     height : 80px;
@@ -640,11 +680,9 @@ ul.imgs li img{
     opacity : 0;
   }
   .slider input[type=radio]:nth-child(1):checked~ul.imgs>li:nth-child(3){
-    
     opacity : 0;
   }
   .slider input[type=radio]:nth-child(1):checked~ul.imgs>li:nth-child(4){
-    
     opacity : 0;
   }
 
@@ -691,16 +729,16 @@ ul.imgs li img{
 
 /* 현재 선택된 불릿 배경 흰색으로 구분 표시 */
 .slider input[type=radio]:nth-child(1):checked~.bullets>label:nth-child(1){
-  background-color: beige;
+  background-color: rgb(61, 60, 60);
 }
 .slider input[type=radio]:nth-child(2):checked~.bullets>label:nth-child(2){
-  background-color: beige;
+  background-color: rgb(61, 60, 60);
 }
 .slider input[type=radio]:nth-child(3):checked~.bullets>label:nth-child(3){
-  background-color: beige;
+  background-color: rgb(61, 60, 60);
 }
 .slider input[type=radio]:nth-child(4):checked~.bullets>label:nth-child(4){
-  background-color: beige;
+  background-color: rgb(61, 60, 60);
 }
 
 /* 1 */
@@ -739,7 +777,7 @@ ul.imgs li img{
   z-index:100;
   transform: scale(0.9);
   box-shadow: 14px -5px 35px -21px rgba(0,0,0,0.66);
-  opacity : 0.65;
+  opacity : 0.45;
 }
 .slider input[type=radio]:nth-child(2):checked~ul.imgs>li:nth-child(2){
   left: 0;

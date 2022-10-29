@@ -1,4 +1,5 @@
 header {
+    top : 0;
     position : fixed;
     width: 100%;
     height: 10%;
@@ -10,13 +11,15 @@ header {
   }
   
   .header_title {
+    margin-bottom: 30px;
     color : black;
     font-size : 30px;
-    font-family: 'Pacifico', cursive;
+    font-family: 'Pacifico';
     font-weight : bold;
   }
   
   .login_user {
+    margin-bottom: 30px;
     font-size : 70%;
     color : black;
     font-weight : bold;
@@ -28,7 +31,6 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height : 70px;
   }
   
   #login span a {
@@ -38,16 +40,48 @@ header {
     color : black;
     line-height : 65px;
     margin-left : 5%;
+    margin-bottom : 30px;
   }
   
-  /*@media screen and (min-width:100px) and (max-width:1024px) {
+  @media screen and (min-width:100px) and (max-width:414px) {
+    header {
+      position : fixed;
+      width: 100%;
+      height: 5%;
+      color: white;
+      background-color : white;
+      opacity : 1;
+      z-index : 1;
+      border-bottom : 2px solid whitesmoke;
+    }
     .header_title {
-      display : block;
-      font-size : 150%;
-      float: left;
+      color : black;
+      font-size : 15px;
+      font-family: 'Pacifico', cursive;
+      font-weight : bold;
     }
-  
-    .login_delete {
-      display : none;
+
+    .login_user {
+      font-size : 70%;
+      color : black;
+      font-weight : bold;
+      font-family : 'Cute Font', cursive;
     }
-  }*/
+    
+    #login {
+      padding-left : 1%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height : 70px;
+    }
+    
+    #login span a {
+      font-family : 'Arial';
+      text-decoration : none;
+      display : flex;
+      color : black;
+      line-height : 65px;
+      margin-left : 5%;
+    }
+  }
