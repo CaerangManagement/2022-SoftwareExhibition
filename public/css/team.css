@@ -14,7 +14,6 @@ body {
   height: 100%;
   content: "";
   position: absolute;
-  
   background-repeat: no-repeat;
   background-size : auto;
   top: 0%;
@@ -50,11 +49,13 @@ section {
 }
 
 #top {
-  padding: 5% 20%;
+  margin: 0 20%;
+  margin-top: 10%;
   display: flex;
   justify-content: center;
   align-items: center;
   opacity: 1;
+  clear: both;
 }
 
 #teamName {
@@ -103,22 +104,62 @@ section {
 .btn-primary{
   width: 100px;
   height: 30px;
-  position : fixed;
-  bottom : 100px; 
-  right : 100px;
+  position : relative;
+  left : 1300px;
+  margin-bottom: 50px;
   text-decoration: none;
-  background-color : rgb(205, 205, 205);
+  background-color : rgb(237, 244, 178);
   font-size: 18px;
+  font-weight: 300;
   text-align: center;
-  padding: 10px;
+  padding: 20px 40px;
   color: black;
   border-radius: 30%;
+  
 
 }
 /*미디어 쿼리*/
-@media (max-width:768px){
+@media (max-width:820px){
   .item{
     width: 39%;
     height: 420px;
+  }
+}
+@media (max-width:415px){
+  .item{
+    width: 85%;
+    height: 350px;
+    margin : 20px;
+  }
+  #teamTitle{
+    width: 25%;
+    height: 25%;
+  }
+  #teamName{
+    font-size: 20px;
+    
+  }
+  #top {
+    margin-top: 25%;
+    margin-bottom: 5%;
+   
+  }
+  .btn-primary{
+    width: 50px;
+    height: 20px;
+    position : relative;
+    left : 160px;
+    margin-bottom: 50px;
+    text-decoration: none;
+    background-color : rgb(237, 244, 178);
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center;
+    padding: 10px 20px;
+    color: black;
+    border-radius: 30%;
+    margin: 10px 0px;
+    
+  
   }
 }

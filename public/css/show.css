@@ -111,3 +111,26 @@ td{
     }
   
   }
+  @media (max-width:415px){
+    .detailTitle{
+      font-size: 17px;
+      margin-top: 20px;
+    }
+    .detailImg{
+        width: 100%;
+        height: 300px;
+    }
+    .edit{
+       font-size: 17px;
+    }
+    .delete{
+        font-size: 17px;
+    }
+    .card{
+        padding: 0 5%;
+    }
+    section{
+        padding-top: 30%;
+    }
+     
+  }
