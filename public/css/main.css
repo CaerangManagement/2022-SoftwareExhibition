@@ -1,5 +1,6 @@
 body {
   z-index : -3;
+  overflow-x: hidden;
 }
 
 #section1_container {
@@ -229,345 +230,305 @@ body {
 
 #section3_container {
   background-color: white;
-  height : 100vh;
-  display : flex;
+  height : 1700px;
+  display : block;
   justify-content: space-around;
   align-items : center;
-  font-family : 'BMJUA';
+  font-family : 'NanumSquare';
   z-index : -1;
 }
 
-#section3_container h1 {
-  font-family : 'NanumSquare';
-  position : absolute;
-  top : 210%;
-  text-align : center;
-  font-weight : bold;
-  color : black;
-}
-
-@font-face { 
-  font-family: 'BMJUA'; 
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff') format('woff'); 
-  font-weight: normal; 
-  font-style: normal; 
+.section3_box1 {
+  display : flex;
+  justify-content: center;
+  margin-top: 50px;
 }
 
 .team1_select {
+  width : 700px;
+  height : 500px;
+  background-color: black;
+}
+
+.team1_select img{
+  position: relative;
+  width : 300px;
+  height : 300px;
+  top : 200px;
+  left : 200px;
+}
+
+.img1_info {
+  position: relative;
+  bottom : 300px;
+  left: 60px;
+  width: 600px;
+  height : 200px;
+  background-color: black;
+}
+
+.img1_info img{
   position : relative;
-  width : 17%;
-  opacity : 0;
-  border : 5px solid rgb(249, 246, 246);
-  box-shadow : 1px 1px 3px rgba(0, 0, 0, 0.4);
+  top : 44px;
+  margin-left : 10px;
+  width : 50px;
+  height: 50px;
 }
 
-.team1_select .team1_img img{
-  width : 100%;
+.img1_info h1{
+  color: white;
+  position : relative;
+  top : 0;
+  left : 300px;
+  font-weight: bolder;
+  font-family: 'Arial';
 }
 
-.team1_select .img1_info {
-  color : #fff;
-  position : absolute;
-  left : 0;
-  bottom : 0;
-  background : rgba(0, 0, 0, 0.5);
-  padding : 15px;
-  
-  width : 100%;
-  opacity : 0;
-  transition : opacity 0.35s ease-in-out;
+#p_11 {
+  position : relative;
+  top : 0;
+  left : 190px;
+  font-weight: bolder;
+  color : darkred;
+  font-size : 15px;
 }
 
-.team1_select:hover .img1_info {
-  opacity : 1;
+#p_12 {
+  color: white;
+  position : relative;
+  top : 0;
+  left : 190px;
+  font-weight: bolder;
+  font-size : 24px;
 }
 
-.team1_select .img1_info h3 {
-  font-size : 150%;
-  padding-bottom : 0.4em;
-  overflow : hidden;
-  text-overflow : ellipsis;
-  white-space : nowrap;
-  text-transform : uppercase;
-}
-
-.team1_select .img1_info p {
-  font-size : 130%;
-  text-overflow : ellipsis;
-  white-space : nowrap;
-  text-transform : uppercase;
+.section3_box2 {
+  display : flex;
+  justify-content: space-evenly;
+  margin-top: 30px;
 }
 
 .team2_select {
+  width : 700px;
+  height : 500px;
+  background-color: white;
+}
+
+.team2_select img{
+  position: relative;
+  width : 300px;
+  height : 300px;
+  top : 200px;
+  left : 200px;
+}
+
+.img2_info {
+  position: relative;
+  bottom : 300px;
+  left: 60px;
+  width: 600px;
+  height : 200px;
+}
+
+.img2_info img{
   position : relative;
-  width : 17%;
-  opacity : 0;
-  border : 5px solid rgb(249, 246, 246);
-  box-shadow : 1px 1px 3px rgba(0, 0, 0, 0.4);
+  top : 44px;
+  width : 50px;
+  height: 50px;
 }
 
-.team2_select .team2_img img{
-  width : 100%;
+.img2_info h1{
+  position : relative;
+  top : 0;
+  left : 270px;
+  font-weight: bolder;
+  font-family: 'Arial';
 }
 
-.team2_select .img2_info {
-  color : #fff;
-  position : absolute;
-  left : 0;
-  bottom : 0;
-  background : rgba(0, 0, 0, 0.5);
-  padding : 15px;
-  width : 100%;
-  opacity : 0;
-  transition : opacity 0.35s ease-in-out;
+#p_21 {
+  position : relative;
+  top : 0;
+  left : 200px;
+  font-weight: bolder;
+  color : orange;
+  font-size : 15px;
 }
 
-.team2_select:hover .img2_info {
-  opacity : 1;
-}
-
-.team2_select .img2_info h3 {
-  font-size : 150%;
-  padding-bottom : 0.4em;
-  overflow : hidden;
-  text-overflow : ellipsis;
-  white-space : nowrap;
-  text-transform : uppercase;
-}
-
-.team2_select .img2_info p {
-  font-size : 130%;
-  text-overflow : ellipsis;
-  white-space : nowrap;
-  text-transform : uppercase;
+#p_22 {
+  position : relative;
+  top : 0;
+  left : 210px;
+  font-weight: bolder;
+  font-size : 24px;
 }
 
 .team3_select {
+  width : 700px;
+  height : 500px;
+  background-color: whitesmoke;
+}
+
+.team3_select img{
+  position: relative;
+  width : 300px;
+  height : 300px;
+  top : 200px;
+  left : 200px;
+}
+
+.img3_info {
+  position: relative;
+  bottom : 300px;
+  left: 60px;
+  width: 600px;
+  height : 200px;
+}
+
+.img3_info img{
   position : relative;
-  width : 17%;
-  opacity : 0;
-  border : 5px solid rgb(249, 246, 246);
-  box-shadow : 1px 1px 3px rgba(0, 0, 0, 0.4);
+  top : 44px;
+  left : 170px;
+  width : 50px;
+  height: 50px;
 }
 
-.team3_select .team3_img img{
-  width : 100%;
+.img3_info h1{
+  position : relative;
+  top : 0;
+  left : 240px;
+  font-weight: bolder;
+  font-family: 'Arial';
 }
 
-.team3_select .img3_info {
-  color : #fff;
-  position : absolute;
-  left : 0;
-  bottom : 0;
-  background : rgba(0, 0, 0, 0.5);
-  padding : 15px;
-  width : 100%;
-  opacity : 0;
-  transition : opacity 0.35s ease-in-out;
+#p_31 {
+  position : relative;
+  top : 0;
+  left : 120px;
+  font-weight: bolder;
+  color : green;
+  font-size : 15px;
 }
 
-.team3_select:hover .img3_info {
-  opacity : 1;
+#p_32 {
+  position : relative;
+  top : 0;
+  left : 160px;
+  font-weight: bolder;
+  font-size : 24px;
 }
 
-.team3_select .img3_info h3 {
-  font-size : 150%;
-  padding-bottom : 0.4em;
-  overflow : hidden;
-  text-overflow : ellipsis;
-  white-space : nowrap;
-  text-transform : uppercase;
-}
-
-.team3_select .img3_info p {
-  font-size : 130%;
-  text-overflow : ellipsis;
-  white-space : nowrap;
-  text-transform : uppercase;
+.section3_box3 {
+  display : flex;
+  justify-content: space-evenly;
+  margin-top: 30px;
 }
 
 .team4_select {
+  width : 700px;
+  height : 500px;
+  background-color: whitesmoke;
+}
+
+.team4_select img{
+  position: relative;
+  width : 300px;
+  height : 300px;
+  top : 200px;
+  left : 200px;
+}
+
+.img4_info {
+  position: relative;
+  bottom : 300px;
+  left: 60px;
+  width: 600px;
+  height : 200px;
+}
+
+.img4_info img{
   position : relative;
-  width : 17%;
-  opacity : 0;
-  border : 5px solid rgb(249, 246, 246);
-  box-shadow : 1px 1px 3px rgba(0, 0, 0, 0.4);
+  top : 44px;
+  width : 50px;
+  height: 50px;
 }
 
-.team4_select .team4_img img {
-  width : 100%;
+.img4_info h1{
+  position : relative;
+  top : 0;
+  left : 270px;
+  font-weight: bolder;
+  font-family: 'Arial';
 }
 
-.team4_select .img4_info {
-  color : #fff;
-  position : absolute;
-  left : 0;
-  bottom : 0;
-  background : rgba(0, 0, 0, 0.5);
-  padding : 15px;
-  width : 100%;
-  opacity : 0;
-  transition : opacity 0.35s ease-in-out;
+#p_41 {
+  position : relative;
+  top : 0;
+  left : 230px;
+  font-weight: bolder;
+  color : green;
+  font-size : 15px;
 }
 
-.team4_select:hover .img4_info {
-  opacity : 1;
-}
-
-.team4_select .img4_info h3 {
-  font-size : 150%;
-  padding-bottom : 0.4em;
-  overflow : hidden;
-  text-overflow : ellipsis;
-  white-space : nowrap;
-  text-transform : uppercase;
-}
-
-.team4_select .img4_info p {
-  font-size : 130%;
-  text-overflow : ellipsis;
-  white-space : nowrap;
-  text-transform : uppercase;
+#p_42 {
+  position : relative;
+  top : 0;
+  left : 180px;
+  font-weight: bolder;
+  font-size : 24px;
 }
 
 .team5_select {
+  width : 700px;
+  height : 500px;
+  background-color: white;
+}
+
+.team5_select img{
+  position: relative;
+  width : 300px;
+  height : 300px;
+  top : 200px;
+  left : 200px;
+}
+
+.img5_info {
+  position: relative;
+  bottom : 300px;
+  left: 60px;
+  width: 600px;
+  height : 200px;
+}
+
+.img5_info img{
   position : relative;
-  width : 17%;
-  opacity : 0;
-  border : 5px solid rgb(249, 246, 246);
-  box-shadow : 1px 1px 3px rgba(0, 0, 0, 0.4);
+  top : 44px;
+  width : 50px;
+  height: 50px;
 }
 
-.team5_select .team5_img img{
-  width : 100%;
+.img5_info h1{
+  position : relative;
+  top : 0;
+  left : 270px;
+  font-weight: bolder;
+  font-family: 'Arial';
 }
 
-.team5_select .img5_info {
-  color : #fff;
-  position : absolute;
-  left : 0;
-  bottom : 0;
-  background : rgba(0, 0, 0, 0.5);
-  padding : 15px;
-  width : 100%;
-  opacity : 0;
-  transition : opacity 0.35s ease-in-out;
+#p_51 {
+  position : relative;
+  top : 0;
+  left : 215px;
+  font-weight: bolder;
+  color : orange;
+  font-size : 15px;
 }
 
-.team5_select:hover .img5_info {
-  opacity : 1;
-}
-
-.team5_select .img5_info h3 {
-  font-size : 150%;
-  padding-bottom : 0.4em;
-  overflow : hidden;
-  text-overflow : ellipsis;
-  white-space : nowrap;
-  text-transform : uppercase;
-}
-
-.team5_select .img5_info p {
-  font-size : 130%;
-  text-overflow : ellipsis;
-  white-space : nowrap;
-  text-transform : uppercase;
-}
-
-@media screen and (min-width:200px) and (max-width:700px) {
-  
-  #section3_container {
-    width : 100%;
-    flex-direction : column;
-    align-items : flex-start;
-    padding : 8px 24px;
-    font-size : 80%;
-  }
-
-  #section3_container h1 {
-    opacity : 0;
-  }
-
-  .team1_select {
-    margin-left : 33%;
-    flex-direction : column;
-    text-align: center;
-    align-items: center;
-    width : 30%;
-  }
-
-  .team2_select {
-    margin-left : 33%;
-    flex-direction : column;
-    text-align: center;
-    align-items : center;
-    width : 30%;
-  }
-
-  .team3_select {
-    margin-left : 33%;
-    flex-direction : column;
-    text-align: center;
-    align-items : center;
-    width : 30%;
-  }
-
-  .team4_select {
-    margin-left : 33%;
-    flex-direction : column;
-    text-align: center;
-    align-items : center;
-    width : 30%;
-  }
-
-  .team5_select {
-    margin-left : 33%;
-    flex-direction : column;
-    text-align: center;
-    align-items : center;
-    width : 30%;
-  }
-
-  .team1_select .img1_info {
-    width : 100%;
-    height : 50%;
-  }
-  .team2_select .img2_info {
-    width : 100%;
-    height : 50%;
-  }
-  .team3_select .img3_info {
-    width : 100%;
-    height : 50%;
-  }
-  .team4_select .img4_info {
-    width : 100%;
-    height : 50%;
-  }
-  .team5_select .img5_info {
-    width : 100%;
-    height : 50%;
-  }
-
-  .team1_select .img1_info p{
-    display : none;
-  }
-
-  .team2_select .img2_info p{
-    display : none;
-  }
-
-  .team3_select .img3_info p{
-    display : none;
-  }
-
-  .team4_select .img4_info p{
-    display : none;
-  }
-
-  .team5_select .img5_info p{
-    display : none;
-  }
+#p_52 {
+  position : relative;
+  top : 0;
+  left : 160px;
+  font-weight: bolder;
+  font-size : 24px;
 }
 
 #section4_container {
@@ -597,7 +558,6 @@ body {
   color : rgb(59, 58, 58);
   text-shadow : 2px 2px 5px lightgray;
 }
-
 
 .slider {
   width : 30%;
@@ -637,8 +597,6 @@ ul.imgs li img{
   z-index: 2;
   width : 27%;
 }
-
-
 
 .bullets label{
   display: inline-block;
