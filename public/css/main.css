@@ -357,7 +357,7 @@ body {
 #p_22 {
   position : relative;
   top : 0;
-  left : 210px;
+  left : 220px;
   font-weight: bolder;
   font-size : 24px;
 }
@@ -535,6 +535,7 @@ body {
   position : relative;
   height : 100vh;
   background-color : white;
+  z-index : -1;
 }
 
 #section4_container h1 {
@@ -821,6 +822,92 @@ ul.imgs li img{
   transition: 0.75s;
   z-index:101;
   box-shadow: 14px -5px 35px -21px rgba(0,0,0,0.66);
+}
+
+.section5_container {
+  background-color: rgb(49, 48, 48);
+  height : 50vh;
+  z-index : -1;
+}
+
+.footer_box ul {
+  font-size : 15px;
+  font-weight : bolder;
+}
+
+.footer_wrap {
+  background-color: rgb(49, 48, 48);
+  color : white;
+  display : flex;
+  justify-content: space-evenly;
+}
+
+.footer_box {
+  margin-top: 30px;
+  display : inline-block;
+}
+
+#ula {
+  margin-bottom : 10px;
+}
+
+.footer_box li {
+  font-size : 12px;
+  list-style-type: none;
+  font-weight : lighter;
+}
+
+.etc {
+  background-color: rgb(49, 48, 48);
+  color : white;
+}
+
+.etc ul {
+  display : flex;
+  font-size : 12px;
+  justify-content: center;
+  margin-bottom : 0;
+}
+
+.etc li {
+  width : 130px;
+  margin-left: 30px;
+  list-style-type: none;
+  border-right : 1px solid rgb(35, 34, 34);
+}
+
+.etc li:nth-child(4) {
+  border-right : none;
+}
+
+.etc #sp {
+  font-weight : bold;
+  color : rgb(24, 162, 24);
+}
+
+.etc_info {
+  height : 50px;
+  background-color: rgb(49, 48, 48);
+}
+
+.etc_info ul {
+  display : flex;
+  font-size : 10px;
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+.etc_info li {
+  margin-top : 5px;
+  color : rgb(155, 151, 151);
+  margin-left : 15px;
+  list-style-type: none;
+}
+
+.etc_info p {
+  text-align: center;
+  color : rgb(155, 151, 151);
+  font-size : 10px;
 }
 
 @keyframes typing {
