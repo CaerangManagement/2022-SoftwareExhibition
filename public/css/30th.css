@@ -1,0 +1,45 @@
+body{
+  background-color: rgb(0, 0, 0);
+}
+.nav{
+  background: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 50px;
+  margin-bottom: 50px;
+}
+li{
+  list-style-type: none;
+  float: left;
+  margin-left: 50px;
+  font-size: 1.3rem;
+}
+lu{
+  margin-left: 70px;
+}
+.title{
+  font-size: 2em;
+}
+#logo{
+  width: 33px;
+  height: 33px;
+  
+}
+a {
+  text-decoration: none;
+  color:white
+}
+
+.main{
+  display: flex;
+  flex-direction: column;
+  
+}
+.img{
+  text-align: center;
+  margin: 40px auto;
+  width: 800px;
+  height: 1000px;
+}
