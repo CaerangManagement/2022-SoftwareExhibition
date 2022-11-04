@@ -37,7 +37,17 @@ header {
   color : black;
   line-height : 65px;
   margin-left : 5%;
+  text-transform:uppercase;
 }
+
+.scroll_move:after {
+  display:block;
+  content: '';
+  border-bottom: solid 3px black;  
+  transform: scaleX(0);  
+  transition: transform 250ms ease-in-out;
+}
+.scroll_move:hover:after { transform: scaleX(1); }
 
 @media screen and (min-width:100px) and (max-width:1024px) {
   .header_title {

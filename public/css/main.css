@@ -12,6 +12,7 @@ body {
   height : 160px;
   border-radius: 40px;
   text-align: center;
+  z-index : 99;
 }
 
 .EventBox img {
@@ -675,6 +676,20 @@ body {
   width : 230px;
   height : 330px;
   margin : 10px 0 0 10px;
+}
+
+@media screen and (min-width:200px) and (max-width:1300px) {
+  .box4_wrap {
+    width : 100vw;
+    height : 100vh;
+    display : block;
+  }
+  #img4_1, #img4_2, #img4_3, #img4_4 {
+    width : 100vw;
+    height : 25vh;
+    background-color: white;
+    transform : rotate(0deg);
+  }
 }
 
 
