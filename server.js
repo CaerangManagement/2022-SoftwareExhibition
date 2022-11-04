@@ -43,7 +43,11 @@ app.use('/posts',  require('./routes/posts'));
 app.use('/comments', require('./routes/comments')); // 1
 
 
- app.get('/', (req, res) => {
+app.get('/', (req, res) => {
+   res.render('30th')
+})
+
+app.get('/main', (req, res) => {
    res.render('main')
 })
 
