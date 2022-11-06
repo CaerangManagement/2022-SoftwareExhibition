@@ -33,11 +33,10 @@ a {
 }
 
 .main{
-  position : absolute;
+  position : relative;
   display: flex;
   flex-direction: column;
-  top : 100px;
-  left : 360px
+  top : 10%;
 }
 .img{
   text-align: center;
@@ -52,13 +51,12 @@ a {
   display : flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
   background: #050505;
 }
 .cube1 {
   position : absolute;
-  left : 100px;
-  top : 300px;
+  left : 8%;
+  top : 40%;
   width : 100px;
   height : 100px;
   transform-style: preserve-3d;
@@ -126,13 +124,12 @@ a {
   display : flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
   background: #050505;
 }
 .cube2 {
   position : absolute;
-  left : 1300px;
-  top : 300px;
+  left : 85%;
+  top : 38%;
   width : 100px;
   height : 100px;
   transform-style: preserve-3d;
