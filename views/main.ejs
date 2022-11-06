@@ -4,6 +4,7 @@
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv = "X-UA-Compatible" content = "IE=edge">
   <link rel = "shortcut icon" type = "image/x-icon" href = "/img/TitleLogo.png">
   <link rel = "preconnect" href = "https://fonts.gstatic.com">
@@ -37,7 +38,7 @@
 
 <body>
   <%- include('./partials/main_header') %>
-  <div class = "EventBox"><a href = "30th">
+  <div class = "EventBox"><a href = "/views/30th.ejs">
     <img src = "/img/robot.png">
     <p>30th<br>EVENT</p>
     </a></div>
@@ -54,7 +55,7 @@
 
       <div id = "section2_container">
           <div class = "section2_box1">
-            <div id = "p_main1"><p>Anyone!</p></div>
+            <div id = "p_main1" onmouseover = "change()"><p>Anyone!</p></div>
             <div id = "p_plus1"><p>누구든 방문 및</p><p>참여 가능합니다</p></div>
             <div class = "hash_box1">
               <div id = "box1_hash1"><p>#재학생</p></div>
@@ -154,10 +155,10 @@
           <h3>Work Shop</h3><br>
           <h3 id = "h3_sub">National Hackathon</h3>
           <div class = "box4_wrap">
-            <div id = "img4_1"><img src = "/img/active1.jpg"></div>
-            <div id = "img4_2"><img src = "/img/active2.jpg"></div>
-            <div id = "img4_3"><img src = "/img/active3.jpg"></div>
-            <div id = "img4_4"><img src = "/img/active4.jpg"></div>
+            <img id = "img4_1" src = "/img/active1.jpg">
+            <img id = "img4_2" src = "/img/active2.jpg">
+            <img id = "img4_3" src = "/img/active5.jpg">
+            <img id = "img4_4" src = "/img/active6.jpg">
           </div>
       </div>
       <div id = "section5_container">

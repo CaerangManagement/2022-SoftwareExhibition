@@ -108,3 +108,8 @@ $(document).ready(function() {
     });
   });
 });
+
+function change() {
+  var p = document.getElementById("p_main1");
+  p.style.opacity = "0.5";
+}
