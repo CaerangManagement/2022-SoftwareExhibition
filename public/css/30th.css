@@ -37,12 +37,13 @@ a {
   display: flex;
   flex-direction: column;
   top : 10%;
+  z-index : 99;
 }
 .img{
   text-align: center;
   margin: 40px auto;
-  width: 800px;
-  height: 1000px;
+  width: 50%;
+  height: 80%;
 }
 .cube1_body {
   margin : 0;
@@ -52,6 +53,7 @@ a {
   justify-content: center;
   align-items: center;
   background: #050505;
+  z-index : 1;
 }
 .cube1 {
   position : absolute;
@@ -125,6 +127,7 @@ a {
   justify-content: center;
   align-items: center;
   background: #050505;
+  z-index : 1;
 }
 .cube2 {
   position : absolute;
