@@ -132,7 +132,7 @@ a {
 .cube2 {
   position : absolute;
   left : 85%;
-  top : 38%;
+  top : 40%;
   width : 100px;
   height : 100px;
   transform-style: preserve-3d;
