@@ -28,7 +28,6 @@ app.use(function(req,res,next){
    next();
  });
 
-// 다 완료하고 redirect 주석 풀것
 // app.use(function(req, res, next){
 //    if(!req.secure){
 //       res.redirect("https://"+"caerang.co.kr"+req.url);
