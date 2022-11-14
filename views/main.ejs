@@ -4,7 +4,7 @@
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" user-scaleable = "yes">
   <meta http-equiv = "X-UA-Compatible" content = "IE=edge">
   <link rel = "shortcut icon" type = "image/x-icon" href = "/img/TitleLogo.png">
   <link rel = "preconnect" href = "https://fonts.gstatic.com">
@@ -53,40 +53,67 @@
         <p class="typing-txt">C·AERANG</p>
       </div>
 
-      <div id = "section2_container">
-          <div class = "section2_box1">
-            <div id = "p_main1" onmouseover = "change()"><p>Anyone!</p></div>
-            <div id = "p_plus1"><p>누구든 방문 및</p><p>참여 가능합니다</p></div>
-            <div class = "hash_box1">
-              <div id = "box1_hash1"><p>#재학생</p></div>
-              <div id = "box1_hash2"><p>#휴학생</p></div>
-              <div id = "box1_hash3"><p>#졸업생</p></div>
-              <div id = "box1_hash4"><p>#외부인</p></div>
+    <div id = "section2_container">
+      <div id = "text" data-text="SW FAIR ATC">SW FAIR<br>ATC<br>Feature</div>
+        <script type = "text/javascript">
+            var text = document.getElementById("text");
+            var shadow = '';
+            for (var i = 0; i < 30; i++) {
+                shadow += (shadow? ',':'') + -i*1 + 'px ' + i*1 + 'px 0 #d9d9d9';
+            }
+            text.style.textShadow = shadow;
+        </script>
+      <div class = "container">
+        <div class = "card">
+            <div class = "box">
+                <div>
+                    <div class = "percent">
+                        <svg>
+                            <circle cx = "70" cy = "70" r = "70"></circle>
+                            <circle cx = "70" cy = "70" r = "70"></circle>
+                        </svg>
+                        <div class = "number">
+                            <h2>Anyone!<span><br>&nbsp;&nbsp;&nbsp;#재학생 #휴학생 #졸업생</span></h2>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class = "section2_box2">
-            <div id = "p_title"><p>FAIR'S&nbsp;&nbsp;ATL</p></div>
-            <div id = "p_main2"><p>Together!</p></div>
-            <div id = "p_plus2"><p>혼자가 아닌 여러명이서</p><p>같이 활동 가능합니다</p></div>
-            <div class = "hash_box2">
-              <div id = "box1_hash1"><p>#전시회</p></div>
-              <div id = "box1_hash2"><p>#Project</p></div>
-              <div id = "box1_hash3"><p>#스터디</p></div>
-              <div id = "box1_hash4"><p>#워크숍</p></div>
+            <div class = "text">누구나 참여<br>가능합니다!</div>
+        </div>
+        <div class = "card">
+            <div class = "box">
+                <div>
+                    <div class = "percent">
+                        <svg>
+                            <circle cx = "70" cy = "70" r = "70"></circle>
+                            <circle cx = "70" cy = "70" r = "70"></circle>
+                        </svg>
+                        <div class = "number">
+                            <h2>Together!<span><br>&nbsp;#전시회 #프로젝트 #워크숍</span></h2>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-
-          <div class = "section2_box3">
-            <div id = "p_main3"><p>Let's have chance!</p></div>
-            <div id = "p_plus3"><p>다양한 활동을 통해 목표를 향한</p><p>새로운 기회를 가질 수 있습니다</p></div>
-            <div class = "hash_box3">
-              <div id = "box1_hash1"><p>#대회</p></div>
-              <div id = "box1_hash2"><p>#특강</p></div>
-              <div id = "box1_hash3"><p>#박람회</p></div>
-              <div id = "box1_hash4"><p>#컨설팅</p></div>
+            <div class = "text">협업 활동<br>가능합니다!</div>
+        </div>
+        <div class = "card">
+            <div class = "box">
+                <div>
+                    <div class = "percent">
+                        <svg>
+                            <circle cx = "70" cy = "70" r = "70"></circle>
+                            <circle cx = "70" cy = "70" r = "70"></circle>
+                        </svg>
+                        <div class = "number">
+                            <h2>Chance!<span><br>&nbsp;#포트폴리오 #협업 #컨설팅</span></h2>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-      </div>
+            <div class = "text">새로운 기회를<br>가져 보세요!</div>
+        </div>
+    </div>
+  </div>
 
       <div id = "section3_container">
         <div class = "section3_box1">
@@ -155,10 +182,10 @@
           <h3>Work Shop</h3><br>
           <h3 id = "h3_sub">National Hackathon</h3>
           <div class = "box4_wrap">
-            <img id = "img4_1" src = "/img/active1.jpg">
-            <img id = "img4_2" src = "/img/active2.jpg">
-            <img id = "img4_3" src = "/img/active5.jpg">
-            <img id = "img4_4" src = "/img/active6.jpg">
+            <img id = "img4_1" src = "/img/active11.jpg">
+            <img id = "img4_2" src = "/img/active12.jpg">
+            <img id = "img4_3" src = "/img/active6.jpg">
+            <img id = "img4_4" src = "/img/active10.png">
           </div>
       </div>
       <div id = "section5_container">
