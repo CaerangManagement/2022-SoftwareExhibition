@@ -41,18 +41,24 @@ select{
 }
 
 .submit-btn{
-  width: 8%;
-  height: 40px;
+  width: 85px;
+  height: 45px;
   text-align: center;
   float: right;
-  background-color: blanchedalmond;
+  background-color: lightgray;
+  border-radius: 45%;
+  font-weight: 700;
   border: none;
 }
+
 .back-btn{
-  width: 8%;
-  height: 40px;
-  background-color: blanchedalmond;
-  padding: 10px 15px;
+  width: 85px;
+  height: 45px;
+  background-color: lightgray;
+  border-radius: 45%;
+  font-weight: 700;
+  border: none;
+
 }
 
 /*미디어 쿼리*/
