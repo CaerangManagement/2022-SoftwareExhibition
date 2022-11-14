@@ -808,6 +808,182 @@ svg circle:nth-child(2) {
   }
 }
 
+@media screen and (min-width : 100px) and (max-width : 550px) {
+  .team1_select img{
+    position: relative;
+    top : 200px;
+    left : 22%;
+  }
+  
+  .img1_info {
+    position: relative;
+    bottom : 300px;
+    left: 5%;
+  }
+  
+  .img1_info img{
+    position : relative;
+    top : 44px;
+  }
+  
+  .img1_info h1{
+    position : relative;
+    top : 0;
+    left : 55%;
+  }
+  
+  #p_11 {
+    position : relative;
+    top : 0;
+    left : 25%;
+  }
+  
+  #p_12 {
+    position : relative;
+    top : 0;
+    left : 25%;
+  }
+  .team2_select img{
+    position: relative;
+    top : 200px;
+    left : 25%;
+  }
+  
+  .img2_info {
+    position: relative;
+    bottom : 300px;
+    left: 5%;
+  }
+  
+  .img2_info img{
+    position : relative;
+    top : 44px;
+    left : 28%;
+  }
+  
+  .img2_info h1{
+    position : relative;
+    top : 0;
+    left : 48%;
+  }
+  
+  #p_21 {
+    position : relative;
+    top : 0;
+    left : 30%;
+  }
+  
+  #p_22 {
+    position : relative;
+    top : 0;
+    left : 33%;
+  }
+  .team3_select img{
+    position: relative;
+    top : 200px;
+    left : 27%;
+  }
+  
+  .img3_info {
+    position: relative;
+    bottom : 300px;
+    left: 5%;
+  }
+  
+  .img3_info img{
+    position : relative;
+    top : 44px;
+  }
+  
+  .img3_info h1{
+    position : relative;
+    top : 0;
+    left : 47%;
+  }
+  
+  #p_31 {
+    position : relative;
+    top : 0;
+    left : 19%;
+  }
+  
+  #p_32 {
+    position : relative;
+    top : 0;
+    left : 25%;
+  }
+  .team4_select img{
+    position: relative;
+    top : 200px;
+    left : 26%;
+  }
+  
+  .img4_info {
+    position: relative;
+    bottom : 300px;
+    left: 5%;
+  }
+  
+  .img4_info img{
+    position : relative;
+    top : 44px;
+    left : 28%;
+  }
+  
+  .img4_info h1{
+    position : relative;
+    top : 0;
+    left : 52%;
+  }
+  
+  #p_41 {
+    position : relative;
+    top : 0;
+    left : 37%;
+  }
+  
+  #p_42 {
+    position : relative;
+    top : 0;
+    left : 28%;
+  }
+  .team5_select img{
+    position: relative;
+    top : 200px;
+    left : 26%;
+  }
+  
+  .img5_info {
+    position: relative;
+    bottom : 300px;
+    left: 5%;
+  }
+  
+  .img5_info img{
+    position : relative;
+    top : 44px;
+    left : 28%;
+  }
+  
+  .img5_info h1{
+    position : relative;
+    top : 0;
+    left : 50%;
+  }
+  
+  #p_51 {
+    position : relative;
+    top : 0;
+    left : 33%;
+  }
+  
+  #p_52 {
+    position : relative;
+    top : 0;
+    left : 24%;
+  }
+}
+
 @keyframes typing {
   from {
       visibility : visible;
