@@ -10,3 +10,9 @@ footer {
 span {
     display : flex;
 }
+
+@media screen and (min-width : 100px) and (max-width : 1400px) {
+    footer {
+        display : none;
+    }
+}

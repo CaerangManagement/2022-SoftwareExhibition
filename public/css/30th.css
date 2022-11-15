@@ -34,6 +34,10 @@ a {
   color:white
 }
 
+.meun ul li{
+  font-family: 'Poppins', sans-serif;
+}
+
 .main{
   position : relative;
   display: flex;

@@ -71,7 +71,7 @@ img[src$=".jpg"], img[src$=".png"] {
   height : 30%;
 
   margin : 0 auto;
-  padding-top : 17%;
+  margin-top : 200px;
   z-index : -1;
   opacity : 0.1;
 }
@@ -111,19 +111,6 @@ img[src$=".jpg"], img[src$=".png"] {
   animation-delay : 1s;
   animation-duration : 1s;
   animation-fill-mode : both;
-}
-
-@media screen and (min-width:200px) and (max-width:1100px) {
-  #titlelg img {
-    position : absolute;
-    width : 150px;
-    left : 200px;
-    top : 38%;
-  }
-  .typing-txt {
-    position : absolute;
-    font-size : 220%;
-  }
 }
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap');
@@ -317,6 +304,9 @@ svg circle:nth-child(2) {
   align-items : center;
   font-family : 'NanumSquare';
   z-index : -1;
+  margin : 0;
+  padding : 0;
+  overflow-x: hidden;
 }
 
 .section3_box1 {
@@ -623,6 +613,7 @@ svg circle:nth-child(2) {
   margin : 0;
   padding : 0;
   z-index : -1;
+  overflow: hidden;
 }
 
 #section4_container h1 {
@@ -718,6 +709,7 @@ svg circle:nth-child(2) {
   width : 100vw;
   min-height : 50vh;
   z-index : -1;
+  overflow: hidden;
 }
 
 .footer_box ul {
@@ -808,7 +800,69 @@ svg circle:nth-child(2) {
   }
 }
 
+@media screen and (min-width:100px) and (max-width:1200px) {
+  #titlelg img {
+    position : absolute;
+    width : 150px;
+    left : 230px;
+    top : 38%;
+  }
+  .typing-txt {
+    position : absolute;
+    font-size : 220%;
+  }
+}
+
+@media screen and (min-width : 100px) and (max-width : 300px) {
+  #section1_container {
+    height : 70vh;
+  }
+  .typing-txt {
+    font-size : 120%;
+  }
+}
+
 @media screen and (min-width : 100px) and (max-width : 550px) {
+  #section1_container, #section2_container, #section3_container {
+    overflow-x: hidden;
+  }
+
+  #section1_container {
+    height : 70vh;
+  }
+
+  .EventBox {
+    position : fixed;
+    bottom : 20px;
+    right : 10px;
+    background : linear-gradient(lightgray 60%, gray);
+    width : 60px;
+    height : 140px;
+    border-radius: 40px;
+    text-align: center;
+    z-index : 99;
+  }
+  
+  .EventBox img {
+    margin-top: 10px;
+    width : 40px;
+    height : 50px;
+  }
+  
+  .EventBox a {
+    font-size : 11px;
+  }
+  .typing-txt {
+    font-size : 140%;
+    margin-top : 5%;
+  }
+  #backgr {
+    display : none;
+  }
+  #titlelg {
+    margin-left : 5%;
+  }
+  
   .team1_select img{
     position: relative;
     top : 200px;
@@ -983,7 +1037,6 @@ svg circle:nth-child(2) {
     left : 24%;
   }
 }
-
 @keyframes typing {
   from {
       visibility : visible;

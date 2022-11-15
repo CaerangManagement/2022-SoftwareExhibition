@@ -3,20 +3,20 @@ html, body{
     height: 100%
   }
 
-  seciton {
+section {
     padding: 10% 0;
     display: flex;
     justify-content: center;
 }
 
-.post{
+.post {
   width: 100%;
   padding: 0 15%;
 }
-.title{
+.title {
   font-size: 2.7rem;
 }
-table{
+table {
   width: 100%;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
@@ -25,19 +25,17 @@ table{
 select{
     width: 20%;
     height: 30px;
-  }
-th{
-  padding: 15px 10px;
-  
- 
 }
-td{
+th {
+  padding: 15px 10px;
+}
+td {
   padding: 15px 10px;
   border-left: 1px solid lightgray;
 }
 
 
-#title{
+#title {
   width: 50%;
   height: 25px;
 }
