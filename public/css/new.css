@@ -63,20 +63,26 @@ select{
 
 /*미디어 쿼리*/
 @media (max-width:768px){
-  .post{
-    padding: 0;
-    margin: 10% 20%;
+  td{
+    font-size: 14px;
   }
+
 }
 @media (max-width:415px){
   .post{
-    padding: 15% 5%;
-    
+    padding-top : 10%;
   }
-  table{
-    width: 50%;
+  .title{
+    font-size: 30px;
+  }
+  #title{
+    width: 100%;
+  }
+  #body{
+    width: 100%;
   }
 }
+
 
 
 
