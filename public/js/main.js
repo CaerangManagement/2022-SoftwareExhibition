@@ -9,7 +9,7 @@ $(document).ready(function() {
 
   //section2 스크롤 인지 후 애니메이션
   $(window).scroll( function() {
-    $('.section2_box1').each(function(i){
+    $('.section3_box1').each(function(i){
       var bottom_of_object = $(this).offset().top + $(this).outerHeight();
       var bottom_of_window = $(window).scrollTop() + $(window).height();
       
@@ -20,7 +20,7 @@ $(document).ready(function() {
   }); 
   
   $(window).scroll( function() {
-    $('.section2_box2').each(function(i){
+    $('.section3_box2').each(function(i){
       var bottom_of_object = $(this).offset().top + $(this).outerHeight();
       var bottom_of_window = $(window).scrollTop() + $(window).height();
       
@@ -31,7 +31,7 @@ $(document).ready(function() {
   }); 
    
   $(window).scroll( function() {
-    $('.section2_box3').each(function(i){
+    $('.section3_box3').each(function(i){
       var bottom_of_object = $(this).offset().top + $(this).outerHeight();
       var bottom_of_window = $(window).scrollTop() + $(window).height();
       
