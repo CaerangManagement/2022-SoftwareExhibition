@@ -1,7 +1,7 @@
 <header>
   <nav id="login">
     <div class = "header_title">C AERANG</div>
-    <span><div class = "login_delete"><a href="#section1_container" class = "scroll_move">HOME</a></div></span>
+    <span><div class = "login_delete"><a href="#section1_container" class="scroll_move">HOME</a></div></span>
     <span><div class = "login_delete"><a href="#section2_container" class="scroll_move">INTRODUCE</a></div></span>
     <span><div class = "login_delete"><a href="#section3_container" class="scroll_move">TEAM</a></div></span>
     <span><div class = "login_delete"><a href="#section4_container" class="scroll_move">ACTIVITIES</a></div></span>
@@ -9,10 +9,10 @@
     <%if(isAuthenticated) {%>
 
     <span><div class = "login_user">안녕하세요! <%=currentUser.user.nickname%>님</div></span>
-    <span><a href="/auth/logout" id = "log">LogOut</a></span>
+    <span id = "log"><a href="/auth/logout" >LogOut</a></span>
 
     <%} else{%>
-    <span><a href="/auth/kakao" id = "log">LOGIN</a></span>
+    <span id = "log"><a href="/auth/kakao">LOGIN</a></span>
     <%}%>
   </nav>
 </header>
