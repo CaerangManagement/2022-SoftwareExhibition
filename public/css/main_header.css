@@ -69,13 +69,14 @@ header {
     overflow-x: hidden;
   }
   .header_title {
+    margin-top : 2.5%;
     display : block;
     font-size : 80%;
     float: left;
-    font-size : 30px;
+    font-size : 20px;
   }
-  #log a{
-    font-size : 22px;
+  .login_user{
+    display : none;
   }
 
   .login_delete {

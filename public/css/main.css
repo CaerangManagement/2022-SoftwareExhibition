@@ -306,7 +306,7 @@ svg circle:nth-child(2) {
   z-index : -1;
   margin : 0;
   padding : 0;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .section3_box1 {
@@ -799,7 +799,7 @@ svg circle:nth-child(2) {
   #section4_container h3{
     display: none;
   }
-  #section1_container, #section2_container, #section3_container {
+  #section1_container, #section2_container {
     overflow-x: hidden;
   }
 }
