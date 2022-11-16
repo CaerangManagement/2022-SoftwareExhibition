@@ -9,107 +9,18 @@ $(document).ready(function() {
 
   //section2 스크롤 인지 후 애니메이션
   $(window).scroll( function() {
-    $('.section3_box1').each(function(i){
+    $('#section5_container').each(function(i){
       var bottom_of_object = $(this).offset().top + $(this).outerHeight();
       var bottom_of_window = $(window).scrollTop() + $(window).height();
       
       if( bottom_of_window > bottom_of_object/2 ){
-          $(this).animate({'opacity':'1'},2000);
-      }
-    });
-  }); 
-  
-  $(window).scroll( function() {
-    $('.section3_box2').each(function(i){
-      var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-      var bottom_of_window = $(window).scrollTop() + $(window).height();
-      
-      if( bottom_of_window > bottom_of_object/2 ){
-          $(this).animate({'opacity':'1'},2000);
-      }
-    });
-  }); 
-   
-  $(window).scroll( function() {
-    $('.section3_box3').each(function(i){
-      var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-      var bottom_of_window = $(window).scrollTop() + $(window).height();
-      
-      if( bottom_of_window > bottom_of_object/2 ){
-          $(this).animate({'opacity':'1'},2000);
-      }
-    });
-  }); 
-
-  //section3 스크롤 인지 후 애니메이션
-  $(window).scroll( function() {
-    $('.team1_select').each(function(i){
-      var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-      var bottom_of_window = $(window).scrollTop() + $(window).height();
-      
-      if( bottom_of_window > bottom_of_object ){
-          $(this).animate({'opacity':'1'},1000);
-      }
-    });
-  }); 
-
-  $(window).scroll( function() {
-    $('.team2_select').each(function(i){
-      var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-      var bottom_of_window = $(window).scrollTop() + $(window).height();
-      
-      if( bottom_of_window > bottom_of_object ){
-          $(this).animate({'opacity':'1'},1000);
-      }
-    });
-  }); 
-
-  $(window).scroll( function() {
-    $('.team3_select').each(function(i){
-      var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-      var bottom_of_window = $(window).scrollTop() + $(window).height();
-      
-      if( bottom_of_window > bottom_of_object ){
-          $(this).animate({'opacity':'1'},1000);
-      }
-    });
-  }); 
-
-  $(window).scroll( function() {
-    $('.team4_select').each(function(i){
-      var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-      var bottom_of_window = $(window).scrollTop() + $(window).height();
-      
-      if( bottom_of_window > bottom_of_object ){
-          $(this).animate({'opacity':'1'},1000);
-      }
-    });
-  }); 
-
-  $(window).scroll( function() {
-    $('.team5_select').each(function(i){
-      var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-      var bottom_of_window = $(window).scrollTop() + $(window).height();
-      
-      if( bottom_of_window > bottom_of_object ){
-          $(this).animate({'opacity':'1'},1000);
-      }
-    });
-  }); 
-
-  $(window).scroll(function() {
-    $('.s3_title').each(function(i){
-      var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-      var bottom_of_window = $(window).scrollTop() + $(window).height();
-
-      if(bottom_of_window > bottom_of_object) {
-        $(this).animate({'transition':'20px'}, 1000);
+          $(this).animate({'opacity':'1'},3300);
       }
     });
   });
 });
 
-function change() {
-  var p = document.getElementById("p_main1");
-  p.style.opacity = "0.5";
-}
+AOS.init({
+  easing: 'ease-out-back',
+  duration: 2000
+});

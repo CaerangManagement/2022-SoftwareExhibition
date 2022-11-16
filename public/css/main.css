@@ -306,7 +306,7 @@ svg circle:nth-child(2) {
   z-index : -1;
   margin : 0;
   padding : 0;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .section3_box1 {
@@ -704,12 +704,13 @@ svg circle:nth-child(2) {
   object-fit: cover;
 }
 
-.section5_container {
+#section5_container {
   background-color: rgb(49, 48, 48);
   width : 100vw;
   min-height : 50vh;
   z-index : -1;
   overflow: hidden;
+  opacity: 0;
 }
 
 .footer_box ul {
@@ -802,17 +803,14 @@ svg circle:nth-child(2) {
     overflow-x: hidden;
   }
 }
-@media screen and (min-width : 100px) and (max-width : 1100px) {
+
+@media screen and (min-width:100px) and (max-width:1200px) {
+  #section3_container {
+    height : 350vh;
+  }
   #section4_container {
     display: none;
   }
-  #section5_container {
-    display : none;
-  }
-  
-}
-
-@media screen and (min-width:100px) and (max-width:1200px) {
   #titlelg img {
     position : absolute;
     width : 150px;
@@ -1044,6 +1042,17 @@ svg circle:nth-child(2) {
     position : relative;
     top : 0;
     left : 24%;
+  }
+
+  .footer_box ul li {
+    font-size: 70%;
+  }
+
+  .etc ul li {
+    font-size : 50%;
+  }
+  .etc_info ul li {
+    font-size : 50%;
   }
 }
 @keyframes typing {

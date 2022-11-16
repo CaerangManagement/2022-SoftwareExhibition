@@ -19,6 +19,10 @@
   <link rel="stylesheet" type="text/css" href="./css/main_header.css">
   <link rel="stylesheet" type="text/css" href="./css/footer.css">
 
+  <!-- Scroll Animation Library -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
   <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -50,11 +54,11 @@
         <div id = "titlelg">
           <img src="/img/TitleLogo.png" alt="씨애랑 로고 이미지">
         </div>
-        <p class="typing-txt">C·AERANG</p>
+        <p class="typing-txt">C &nbsp;AERANG</p>
       </div>
 
     <div id = "section2_container">
-      <div id = "text" data-text="SW FAIR ATC">SW FAIR<br>ATC<br>Feature</div>
+      <div id = "text" data-text="SW FAIR ATC">SW FAIR<br>ATC<br>FEATURE</div>
         <script type = "text/javascript">
             var text = document.getElementById("text");
             var shadow = '';
@@ -64,7 +68,7 @@
             text.style.textShadow = shadow;
         </script>
       <div class = "container">
-        <div class = "card">
+        <div class = "card" data-aos="fade-up">
             <div class = "box">
                 <div>
                     <div class = "percent">
@@ -80,7 +84,7 @@
             </div>
             <div class = "text">누구나 참여<br>가능합니다!</div>
         </div>
-        <div class = "card">
+        <div class = "card" data-aos="fade-up">
             <div class = "box">
                 <div>
                     <div class = "percent">
@@ -96,7 +100,7 @@
             </div>
             <div class = "text">협업 활동<br>가능합니다!</div>
         </div>
-        <div class = "card">
+        <div class = "card" data-aos="fade-up">
             <div class = "box">
                 <div>
                     <div class = "percent">
@@ -116,7 +120,7 @@
   </div>
 
       <div id = "section3_container">
-        <div class = "section3_box1">
+        <div class = "section3_box1" data-aos="fade-up">
           <div class = "team1_select">
             <a href="/posts/tag"><img src="/img/TagLogo.png" alt="태그 로고 이미지" ></a>
             <div class = "img1_info">
@@ -127,7 +131,7 @@
             </div>
           </div>
         </div>
-        <div class = "section3_box2">
+        <div class = "section3_box2" data-aos="fade-up">
           <div class = "team2_select">
             <div class = "team2_img">
               <a href="/posts/latte"><img src="/img/LatteLogo.png" alt="라떼 로고 이미지" ></a>
@@ -151,7 +155,7 @@
             </div>
           </div>
         </div>
-        <div class = "section3_box3">
+        <div class = "section3_box3" data-aos="fade-up">
           <div class = "team4_select">
             <div class = "team4_img">
               <a href="/posts/raon"><img src="/img/RaonLogo.png" alt="라온 로고 이미지" ></a>
@@ -178,10 +182,10 @@
       </div>
 
       <div id="section4_container">
-          <h1>ACTIVITIES</h1>
-          <h3>Work Shop</h3><br>
-          <h3 id = "h3_sub">National Hackathon</h3>
-          <div class = "box4_wrap">
+          <h1 data-aos="fade-left">ACTIVITIES</h1>
+          <h3 data-aos="fade-left">Work Shop</h3><br>
+          <h3 id = "h3_sub" data-aos="fade-left">National Hackathon</h3>
+          <div class = "box4_wrap" data-aos="fade-right">
             <img id = "img4_1" src = "/img/active11.jpg" alt = "워크숍1 이미지">
             <img id = "img4_2" src = "/img/active12.jpg" alt = "워크숍2 이미지">
             <img id = "img4_3" src = "/img/active6.jpg" alt = "전국 해커톤 대회 이미지1">
@@ -218,14 +222,15 @@
           </div>
           <div class = "footer_box">
             <ul id = "ula"><p>Web Manager</p>
-              <li>28th 박주영(BackEnd)</li>
-              <li>31th 하승진(FrontEnd)</li>
-              <li>31th 김나은(FrontEnd</li>
+              <li>28th 박주영(Back-End)</li>
+              <li>27th 하승진(Front-End)</li>
+              <li>27th 김나은(Front-End</li>
             </ul><br><br><br>
             <ul><p>Technology</p>
               <li>HTML</li>
               <li>CSS</li>
               <li>JavaScript</li>
+              <li>jQuery</li>
               <li>Node.js</li>
               <li>Express</li>
               <li>MongoDB Atlas</li>
