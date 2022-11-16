@@ -8,11 +8,11 @@
       <%if(isAuthenticated) {%>
 
       <span><div class = "login_user">안녕하세요! <%=currentUser.user.nickname%>님</div></span>
-      <span><a href="/auth/logout">LogOut</a></span>
+      <span id = "log"><a href="/auth/logout">LogOut</a></span>
   
   
       <%} else{%>
-      <span><a href="/auth/kakao">LOGIN</a></span>
+      <span id = "log"><a href="/auth/kakao">LOGIN</a></span>
       <%}%>
     </nav>
 </header>

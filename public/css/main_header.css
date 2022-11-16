@@ -60,14 +60,9 @@ header {
 }
 .login_user:hover::after { transform: scaleX(1); }
 
-#log::after {
-  display:block;
-  content: '';
-  border-bottom: solid 3px black;  
-  transform: scaleX(0);
-  transition: transform 250ms ease-in-out;
+#log a:hover{
+  color : gold;
 }
-#login #log:hover::after { transform: scaleX(1); }
 
 @media screen and (max-width:1024px) {
   header {

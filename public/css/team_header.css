@@ -20,7 +20,7 @@ header {
   
   .login_user {
     margin-bottom: 30px;
-    font-size : 70%;
+    font-size : 100%;
     color : black;
     font-weight : bold;
     font-family : 'Poppins' sans-serif;
@@ -41,6 +41,9 @@ header {
     line-height : 65px;
     margin-left : 5%;
     margin-bottom : 30px;
+  }
+  #log a:hover {
+    color : gold;
   }
   
   @media screen and (min-width:100px) and (max-width:414px) {
