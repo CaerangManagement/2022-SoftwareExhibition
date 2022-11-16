@@ -46,45 +46,64 @@ header {
     color : gold;
   }
   
-  @media screen and (min-width:100px) and (max-width:414px) {
+  @media screen and (max-width:1024px) {
     header {
-      position : fixed;
-      width: 100%;
-      height: 5%;
-      color: white;
-      background-color : white;
-      opacity : 1;
-      z-index : 1;
-      border-bottom : 2px solid whitesmoke;
+      overflow: hidden;
     }
     .header_title {
-      color : black;
-      font-size : 15px;
-      font-family: 'Pacifico', cursive;
-      font-weight : bold;
+      margin-top : 2.5%;
+      display : block;
+      font-size : 80%;
+      float: left;
+      font-size : 20px;
     }
-
+    .login_user{
+      display : none;
+    }
+  }
+  
+  @media screen and (max-width:500px) {
+    header {
+      height : 8vh;
+      overflow: hidden;
+    }
+    #log {
+      font-size : 90%;
+    }
+  
     .login_user {
-      font-size : 70%;
-      color : black;
-      font-weight : bold;
-      font-family : 'Poppins' sans-serif;
+      font-size : 65%;
+    }
+  @media screen and (max-width:1024px) {
+    header {
+      overflow: hidden;
+    }
+    .header_title {
+      margin-top : 2.5%;
+      display : block;
+      font-size : 80%;
+      float: left;
+      font-size : 20px;
+    }
+    .login_user{
+      display : none;
     }
     
-    #login {
-      padding-left : 1%;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      height : 70px;
+    .login_delete {
+      display : none;
     }
+  }
     
-    #login span a {
-      font-family : 'Arial';
-      text-decoration : none;
-      display : flex;
-      color : black;
-      line-height : 65px;
-      margin-left : 5%;
+    @media screen and (max-width:500px) {
+      header {
+        height : 8vh;
+      }
+      #log {
+        font-size : 90%;
+      }
+    
+      .login_user {
+        font-size : 65%;
+      }
     }
   }
