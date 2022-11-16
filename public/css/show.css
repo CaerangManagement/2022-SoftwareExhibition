@@ -112,6 +112,12 @@ td{
     td{
       font-size: 14px;
     }
+    .author{
+        width: 80px;
+    }
+    section{
+        margin-top: 500px;
+    }
   
   }
   @media (max-width:415px){

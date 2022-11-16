@@ -61,10 +61,24 @@ select{
 
 }
 
+#body{
+  width: 70%;
+}
+
 /*미디어 쿼리*/
 @media (max-width:768px){
+  html, body{
+    width: 100%;
+  }
+  table { 
+    width: 100%;
+  }
+
   td{
     font-size: 14px;
+  }
+  th{ 
+    width: 10%;
   }
 
 }
