@@ -11,7 +11,7 @@ header {
   }
   
   .header_title {
-    margin-bottom: 30px;
+    margin-top : 10px;
     color : black;
     font-size : 30px;
     font-family: 'Pacifico';
@@ -19,32 +19,53 @@ header {
   }
   
   .login_user {
-    margin-bottom: 30px;
+    margin-top: 10px;
     font-size : 100%;
     color : black;
     font-weight : bold;
     font-family : 'Poppins' sans-serif;
   }
+
+  #log {
+    margin-bottom : 5px;
+  }
   
   #login {
-    padding-left : 1%;
     display: flex;
     justify-content: space-around;
     align-items: center;
   }
   
   #login span a {
+    margin-top : 15px;
     font-family : 'Arial';
     text-decoration : none;
     display : flex;
     color : black;
-    line-height : 65px;
-    margin-left : 5%;
-    margin-bottom : 30px;
+    line-height : 15px;
+    height : 15px;
   }
   #log a:hover {
     color : gold;
   }
+
+  .login_item::after {
+    display:block;
+    content: '';
+    border-bottom: solid 3px black;  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+  }
+  .login_item:hover::after { transform: scaleX(1); }
+
+  .login_user::after {
+    display:block;
+    content: '';
+    border-bottom: solid 3px black;  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+  }
+  .login_user:hover::after { transform: scaleX(1); }
   
   @media screen and (max-width:1024px) {
     header {
