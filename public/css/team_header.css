@@ -48,7 +48,7 @@ header {
   
   @media screen and (max-width:1024px) {
     header {
-      overflow-y: hidden;
+      overflow: hidden;
     }
     .header_title {
       margin-top : 2.5%;
@@ -76,7 +76,7 @@ header {
     }
   @media screen and (max-width:1024px) {
     header {
-      overflow-x: hidden;
+      overflow: hidden;
     }
     .header_title {
       margin-top : 2.5%;

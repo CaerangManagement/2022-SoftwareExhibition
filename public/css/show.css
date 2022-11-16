@@ -7,7 +7,6 @@ section {
     padding: 10% 0;
     display: flex;
     justify-content: center;
-    overflow: hidden;
 }
 .card{
     width: 100%;
