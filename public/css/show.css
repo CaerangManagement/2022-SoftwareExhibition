@@ -115,17 +115,19 @@ td{
       font-size: 14px;
     }
     .author{
-        width: 80px;
+        width: 100px;
     }
     section{
         margin-top: 150px;
     }
     .date{
-        width: 370px;
+        width: 100%;
     }
     #top{
         padding-top: 500px;
     }
+    
+   
    
   
   }
@@ -146,6 +148,12 @@ td{
     }
     .card{
         padding: 0 5%;
+    }
+    .date{
+        width: 90%;
+    }
+    section{
+        margin-top : 65px;
     }
     
      

@@ -66,7 +66,7 @@ select{
 }
 
 /*미디어 쿼리*/
-@media (max-width:768px){
+@media (max-width:820px){
   html, body{
     width: 100%;
   }
