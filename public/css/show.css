@@ -114,8 +114,8 @@ td{
     td{
       font-size: 14px;
     }
-    .author{
-        width: 100px;
+    th .author{
+        width: 50px;
     }
     section{
         margin-top: 150px;
@@ -125,6 +125,12 @@ td{
     }
     #top{
         padding-top: 500px;
+    }
+    .text{
+        word-break: break-all;
+    }
+    td #author_title{
+        width: 50px;
     }
     
    
