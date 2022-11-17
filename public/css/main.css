@@ -319,7 +319,7 @@ svg circle:nth-child(2) {
 .team1_select {
   width : 700px;
   height : 500px;
-  background-color: black;
+  background-color: white;
 }
 
 .team1_select img{
@@ -336,7 +336,7 @@ svg circle:nth-child(2) {
   left: 60px;
   width: 500px;
   height : 150px;
-  background-color: black;
+  background-color: white;
 }
 
 .img1_info img{
@@ -348,7 +348,7 @@ svg circle:nth-child(2) {
 }
 
 .img1_info h1{
-  color: white;
+  color: black;
   position : relative;
   top : 0;
   left : 300px;
@@ -366,7 +366,7 @@ svg circle:nth-child(2) {
 }
 
 #p_12 {
-  color: white;
+  color: black;
   position : relative;
   top : 0;
   left : 190px;
@@ -438,7 +438,7 @@ svg circle:nth-child(2) {
 .team3_select {
   width : 700px;
   height : 500px;
-  background-color: whitesmoke;
+  background-color: white;
 }
 
 .team3_select img{
@@ -500,7 +500,7 @@ svg circle:nth-child(2) {
 .team4_select {
   width : 700px;
   height : 500px;
-  background-color: whitesmoke;
+  background-color: white;
 }
 
 .team4_select img{
