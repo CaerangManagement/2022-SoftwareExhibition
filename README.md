@@ -21,4 +21,6 @@
 
 <br>
 
-# 22-09-11 기준 반응형을 제외한 기본 사항들 완료한 상태.
+### 판넬사진
+![image](https://user-images.githubusercontent.com/52206904/202366433-26452c38-33fe-44ef-bbff-d74281d9bc6b.png)
+
