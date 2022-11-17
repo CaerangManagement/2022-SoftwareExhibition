@@ -88,11 +88,32 @@ header {
   header {
     height : 8vh;
   }
+  .header_title {
+    margin-top : 4%;
+  }
   #log {
-    font-size : 90%;
+    font-size : 80%;
   }
 
   .login_user {
     font-size : 65%;
+  }
+}
+
+@media screen and (max-width:920px) {
+  header {
+    height : 8vh;
+  }
+  .header_title {
+    margin-top : 5%;
+  }
+  #log {
+    margin-top : 3%;
+    font-size : 100%;
+  }
+
+  .login_user {
+    margin-top : 3%;
+    font-size : 90%;
   }
 }
