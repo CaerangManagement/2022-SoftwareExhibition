@@ -1,18 +1,18 @@
 <header>
   <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css" rel="stylesheet">
-    <nav id="login">
-      <span><div class = "header_title">C AERANG</div></span>
-      <span><div class = "login_item"><a href="/main">HOME</a></div></span>
+    <nav id="login2">
+      <span><div class = "header_title2">C AERANG</div></span>
+      <span><div class = "login_item2"><a href="/main">HOME</a></div></span>
       
       
       <%if(isAuthenticated) {%>
 
-      <span><div class = "login_user">안녕하세요! <%=currentUser.user.nickname%>님</div></span>
-      <span id = "log"><a href="/auth/logout">LogOut</a></span>
+      <span><div class = "login_user2">안녕하세요! <%=currentUser.user.nickname%>님</div></span>
+      <span id = "log2"><a href="/auth/logout">LogOut</a></span>
   
   
       <%} else{%>
-      <span id = "log"><a href="/auth/kakao">LOGIN</a></span>
+      <span id = "log2"><a href="/auth/kakao">LOGIN</a></span>
       <%}%>
     </nav>
 </header>

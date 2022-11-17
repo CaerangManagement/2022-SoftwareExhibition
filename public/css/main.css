@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
 body {
   z-index : -3;
   overflow-x: hidden;
@@ -106,7 +107,7 @@ img[src$=".jpg"], img[src$=".png"] {
   overflow : hidden;
   font-weight : bold;
   text-shadow : 2px 2px 4px black;
-  font-family: 'Arial';
+  font-family: 'Poppins';
   font-size : 500%;
   animation-delay : 1s;
   animation-duration : 1s;
@@ -343,8 +344,8 @@ svg circle:nth-child(2) {
   position : relative;
   top : 44px;
   margin-left : 10px;
-  width : 50px;
-  height: 50px;
+  width : 40px;
+  height: 40px;
 }
 
 .img1_info h1{
@@ -406,8 +407,8 @@ svg circle:nth-child(2) {
 .img2_info img{
   position : relative;
   top : 44px;
-  width : 50px;
-  height: 50px;
+  width : 40px;
+  height: 40px;
 }
 
 .img2_info h1{
@@ -461,8 +462,8 @@ svg circle:nth-child(2) {
   position : relative;
   top : 44px;
   left : 170px;
-  width : 50px;
-  height: 50px;
+  width : 40px;
+  height: 40px;
 }
 
 .img3_info h1{
@@ -522,8 +523,8 @@ svg circle:nth-child(2) {
 .img4_info img{
   position : relative;
   top : 44px;
-  width : 50px;
-  height: 50px;
+  width : 40px;
+  height: 40px;
 }
 
 .img4_info h1{
@@ -576,8 +577,8 @@ svg circle:nth-child(2) {
 .img5_info img{
   position : relative;
   top : 44px;
-  width : 50px;
-  height: 50px;
+  width : 40px;
+  height: 40px;
 }
 
 .img5_info h1{

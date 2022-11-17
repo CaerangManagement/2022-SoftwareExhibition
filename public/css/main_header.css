@@ -12,8 +12,7 @@ header {
 .header_title {
   color : black;
   font-size : 200%;
-  font-family: 'Pacifico', cursive;
-  font-weight: bold;
+  font-family: 'Poppins';
   height : 35px;
 }
 
@@ -86,7 +85,7 @@ header {
 
 @media screen and (max-width:500px) {
   header {
-    height : 8vh;
+    height : 9vh;
   }
   .header_title {
     margin-top : 4%;
@@ -102,13 +101,13 @@ header {
 
 @media screen and (max-width:920px) {
   header {
-    height : 8vh;
+    height : 9vh;
   }
   .header_title {
     margin-top : 5%;
   }
   #log {
-    margin-top : 3%;
+    margin-top : 1%;
     font-size : 100%;
   }
 
