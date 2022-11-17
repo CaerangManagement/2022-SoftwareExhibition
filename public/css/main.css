@@ -806,7 +806,7 @@ svg circle:nth-child(2) {
 
 @media screen and (min-width:100px) and (max-width:1200px) {
   #section3_container {
-    height : 350vh;
+    height : auto;
   }
   #section4_container {
     display: none;
