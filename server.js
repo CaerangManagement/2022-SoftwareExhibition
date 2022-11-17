@@ -8,6 +8,14 @@ const methodOverride = require('method-override');
 const flash = require('connect-flash')
 const util = require('./util');
 
+app.use(function(req, res, next){
+   if(!req.secure){
+      res.redirect("https://"+"caerang.co.kr"+req.url);
+   } else{
+      next()
+   }
+})
+
 app.use(methodOverride('_method'));
 require('dotenv').config()
 
@@ -17,9 +25,12 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(session({ secret: 'MySecret', resave: false, saveUninitialized: true }));
 app.use(flash());
 
+
+
 //passport
 app.use(passport.initialize());
 app.use(passport.session());
+
 
 app.use(function(req,res,next){
    res.locals.isAuthenticated = req.isAuthenticated();
@@ -28,14 +39,7 @@ app.use(function(req,res,next){
    next();
  });
 
- //그냥 빼기로..
-// app.use(function(req, res, next){
-//    if(!req.secure){
-//       res.redirect("https://"+"caerang.co.kr"+req.url);
-//    } else{
-//       next()
-//    }
-// })
+
 
 // Routes
 app.use('/auth', require('./routes/auth'))
