@@ -55,15 +55,15 @@ a {
 
 .backimg {
   position : fixed;
-  top : 6%;
-  left : 25%;
+  top : 4%;
+  left : 15%;
   z-index : 5;
   opacity: 0.5;
 }
 
 .backimg img {
-  width : 750px;
-  height : 500px;
+  width : 210%;
+  height : 150%;
 }
 .cube1_body {
   margin : 0;
