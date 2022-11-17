@@ -18,14 +18,25 @@ router.get('/kakao', passport.authenticate('kakao'));
 router.get('/kakao/callback', passport.authenticate('kakao', {
   failureRedirect: '/',
 }), (req, res) => {
-  res.redirect('/main');
+  if(req.secure){
+        // --- https
+        next();
+    }else{
+        if(req.headers.host == 'localhost') return res.redirect('/main')
+        else{
+        // -- http
+        let to = "https://" + req.headers.host + '/main';
+        console.log("to ==> " + to);
+
+        return res.redirect("https://" + req.headers.host + '/main');
+        }
+    }
 });
 
 passport.serializeUser((data, done) => {
   // console.log('시리얼라이즈 유저', data); // user는 tokenUser다.
   // 로그인 시, 사용자 데이터를 세션에 저장하는데
   done(null, { id: data.user.id, accessToken: data.accessToken });
-
 });
 
 passport.deserializeUser((user, done) => {
