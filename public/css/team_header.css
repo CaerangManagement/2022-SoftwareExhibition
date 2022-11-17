@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
 header {
     top : 0;
     position : fixed;
@@ -10,15 +11,14 @@ header {
     border-bottom : 2px solid whitesmoke;
   }
   
-  .header_title {
+  .header_title2 {
     margin-top : 10px;
     color : black;
     font-size : 30px;
-    font-family: 'Pacifico';
-    font-weight : bold;
+    font-family: 'Poppins';
   }
   
-  .login_user {
+  .login_user2 {
     margin-top: 10px;
     font-size : 100%;
     color : black;
@@ -26,17 +26,17 @@ header {
     font-family : 'Poppins' sans-serif;
   }
 
-  #log {
+  #log2 {
     margin-bottom : 5px;
   }
   
-  #login {
+  #login2 {
     display: flex;
     justify-content: space-around;
     align-items: center;
   }
   
-  #login span a {
+  #login2 span a {
     margin-top : 15px;
     font-family : 'Arial';
     text-decoration : none;
@@ -45,86 +45,78 @@ header {
     line-height : 15px;
     height : 15px;
   }
-  #log a:hover {
+  #log2 a:hover {
     color : gold;
   }
 
-  .login_item::after {
+  .login_item2::after {
     display:block;
     content: '';
     border-bottom: solid 3px black;  
     transform: scaleX(0);  
     transition: transform 250ms ease-in-out;
   }
-  .login_item:hover::after { transform: scaleX(1); }
+  .login_item2:hover::after { transform: scaleX(1); }
 
-  .login_user::after {
+  .login_user2::after {
     display:block;
     content: '';
     border-bottom: solid 3px black;  
     transform: scaleX(0);  
     transition: transform 250ms ease-in-out;
   }
-  .login_user:hover::after { transform: scaleX(1); }
+  .login_user2:hover::after { transform: scaleX(1); }
   
   @media screen and (max-width:1024px) {
     header {
-      overflow: hidden;
+      overflow-x: hidden;
     }
-    .header_title {
+    .header_title2 {
       margin-top : 2.5%;
       display : block;
       font-size : 80%;
       float: left;
       font-size : 20px;
     }
-    .login_user{
+    .login_user2 {
+      display : none;
+    }
+  
+    .login_delete2 {
       display : none;
     }
   }
   
   @media screen and (max-width:500px) {
     header {
-      height : 8vh;
-      overflow: hidden;
+      height : 9vh;
     }
-    #log {
-      font-size : 90%;
+    .header_title2 {
+      margin-top : 4%;
+    }
+    #log2 {
+      font-size : 80%;
     }
   
-    .login_user {
+    .login_user2 {
       font-size : 65%;
     }
-  @media screen and (max-width:1024px) {
-    header {
-      overflow: hidden;
-    }
-    .header_title {
-      margin-top : 2.5%;
-      display : block;
-      font-size : 80%;
-      float: left;
-      font-size : 20px;
-    }
-    .login_user{
-      display : none;
-    }
-    
-    .login_delete {
-      display : none;
-    }
   }
-    
-    @media screen and (max-width:500px) {
-      header {
-        height : 8vh;
-      }
-      #log {
-        font-size : 90%;
-      }
-    
-      .login_user {
-        font-size : 65%;
-      }
+  
+  @media screen and (max-width:920px) {
+    header {
+      height : 9vh;
+    }
+    .header_title2 {
+      margin-top : 5%;
+    }
+    #log2 {
+      margin-top : 1%;
+      font-size : 100%;
+    }
+  
+    .login_user2 {
+      margin-top : 3%;
+      font-size : 90%;
     }
   }
