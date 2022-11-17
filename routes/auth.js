@@ -109,7 +109,7 @@ passport.use(
 //관리자 권한 신청 
 router.post('/role', (req, res) => {
   const pw = req.body.pw
-  if (pw == 'cr30') {
+  if (pw == 'cr') {
     
     User.findOneAndUpdate({ id: req.user.user.id },
       {
@@ -133,7 +133,7 @@ router.post('/role', (req, res) => {
 //일반 권한 신청
 router.post('/back', (req, res) => {
   const pw = req.body.pw
-  if (pw == process.env.role_password) {
+  if (pw == 'cr') {
     
     User.findOneAndUpdate({ id: req.user.user.id },
       {
