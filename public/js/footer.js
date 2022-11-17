@@ -10,7 +10,7 @@ $(document).ready(function($) {
           }
         }).done(function (결과) {
           alert('관리자 계정으로 전환 되었습니다.')
-          location.href = '/'
+          location.href = '/main'
         }).fail(function (a, b, c) {
           alert('비밀번호가 일치하지 않습니다.')
         });
@@ -28,7 +28,7 @@ $(document).ready(function($) {
           }
         }).done(function (결과) {
           alert('일반 계정으로 전환 되었습니다.')
-          location.href = '/'
+          location.href = '/main'
         }).fail(function (a, b, c) {
           alert('비밀번호가 일치하지 않습니다.')
         });

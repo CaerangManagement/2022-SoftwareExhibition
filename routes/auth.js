@@ -18,15 +18,25 @@ router.get('/kakao', passport.authenticate('kakao'));
 router.get('/kakao/callback', passport.authenticate('kakao', {
   failureRedirect: '/',
 }), (req, res) => {
-  //로그인 성공시 직전페이지로 이동
-  res.redirect('/main')
+  if(req.secure){
+        // --- https
+        next();
+    }else{
+        if(req.headers.host == 'localhost') return res.redirect('/main')
+        else{
+        // -- http
+        let to = "https://" + req.headers.host + '/main';
+        console.log("to ==> " + to);
+
+        return res.redirect("https://" + req.headers.host + '/main');
+        }
+    }
 });
 
 passport.serializeUser((data, done) => {
   // console.log('시리얼라이즈 유저', data); // user는 tokenUser다.
   // 로그인 시, 사용자 데이터를 세션에 저장하는데
   done(null, { id: data.user.id, accessToken: data.accessToken });
-
 });
 
 passport.deserializeUser((user, done) => {
@@ -110,7 +120,7 @@ passport.use(
 //관리자 권한 신청 
 router.post('/role', (req, res) => {
   const pw = req.body.pw
-  if (pw == process.env.role_password) {
+  if (pw == 'cr') {
     
     User.findOneAndUpdate({ id: req.user.user.id },
       {
@@ -134,7 +144,7 @@ router.post('/role', (req, res) => {
 //일반 권한 신청
 router.post('/back', (req, res) => {
   const pw = req.body.pw
-  if (pw == process.env.role_password) {
+  if (pw == 'cr') {
     
     User.findOneAndUpdate({ id: req.user.user.id },
       {
