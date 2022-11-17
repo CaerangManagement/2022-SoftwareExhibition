@@ -18,8 +18,7 @@ router.get('/kakao', passport.authenticate('kakao'));
 router.get('/kakao/callback', passport.authenticate('kakao', {
   failureRedirect: '/',
 }), (req, res) => {
-  //로그인 성공시 직전페이지로 이동
-  res.redirect('/main')
+  res.redirect('/main');
 });
 
 passport.serializeUser((data, done) => {
