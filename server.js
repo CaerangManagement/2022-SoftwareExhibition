@@ -32,20 +32,20 @@ app.use(function(req,res,next){
  });
 
 
-// app.get("*", (req, res, next) => {
-//    console.log("req.secure == " + req.secure);
+app.get("*", (req, res, next) => {
+   console.log("req.secure == " + req.secure);
    
-//    if(req.secure){
-//        // --- https
-//        next();
-//    }else{
-//        // -- http
-//        let to = "https://" + req.headers.host + req.url;
-//        console.log("to ==> " + to);
+   if(req.secure){
+       // --- https
+       next();
+   }else{
+       // -- http
+       let to = "https://" + req.headers.host + req.url;
+       console.log("to ==> " + to);
 
-//        return res.redirect("https://" + req.headers.host + req.url);
-//    }
-// })
+       return res.redirect("https://" + req.headers.host + req.url);
+   }
+})
 
 
 // Routes
