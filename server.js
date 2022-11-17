@@ -28,13 +28,14 @@ app.use(function(req,res,next){
    next();
  });
 
-app.use(function(req, res, next){
-   if(!req.secure){
-      res.redirect("https://"+"caerang.co.kr"+req.url);
-   } else{
-      next()
-   }
-})
+ //그냥 빼기로..
+// app.use(function(req, res, next){
+//    if(!req.secure){
+//       res.redirect("https://"+"caerang.co.kr"+req.url);
+//    } else{
+//       next()
+//    }
+// })
 
 // Routes
 app.use('/auth', require('./routes/auth'))
