@@ -32,20 +32,19 @@ app.use(function(req,res,next){
  });
 
 
- app.get("*", (req, res, next) => {
-   console.log("middleware sercure app2 ==> " + req.headers['X-Forwarded-Proto']);
-   console.log("req.protocol == " + req.protocol);
-
-   let protocol = req.headers['X-Forwarded-Proto'] || req.protocol;
-   console.log("protocol == " + protocol);
+app.get("*", (req, res, next) => {
+   console.log("req.secure == " + req.secure);
    
-   if(protocol == 'http'){
+   if(req.secure){
+       // --- https
+       next();
+   }else{
+       // -- http
        let to = "https://" + req.headers.host + req.url;
        console.log("to ==> " + to);
 
-       return res.redirect(to);
+       return res.redirect("https://" + req.headers.host + req.url);
    }
-   next();
 })
 
 
