@@ -32,7 +32,7 @@ router.get('/:team', function (req, res) {
   Post.find({ team: req.params.team })                  // 1
     .sort('-createdAt')            // 1
     .exec(function (err, posts) {    // 1
-      if (err) return res.json(err);
+      if (err) return res.render('/main')
       res.render('posts/index', { posts: posts, team: req.params.team.toUpperCase() });
     });
 });
@@ -40,7 +40,7 @@ router.get('/:team', function (req, res) {
 // show
 router.get('/detail/:id', util.로그인여부, function (req, res) {
   Post.findOne({ _id: req.params.id }, function (err, post) {
-    if (err) return res.json(err);
+    if (err) return res.render('/main');
 
     post.contents = post.contents.replace(/(\r\n|\n|\n\n)/gim, '<br>');
     Check.findOne({id:req.params.id+req.user.user.id}, (err, check)=>{
@@ -90,7 +90,7 @@ router.post('/', util.로그인여부, util.관리자여부, upload.single("imag
 // edit
 router.get('/edit/:id', util.로그인여부, util.관리자여부, function (req, res) {
   Post.findOne({ _id: req.params.id }, function (err, post) {
-    if (err) return res.json(err);
+    if (err) return res.render('/main')
     post.contents = post.contents.replace(/(<br>|<br\/>|<br \/>)/gim, '\r\n');
     post.contents = post.contents.replace(/(&nbsp;)/gim, ' ');
     res.render('posts/edit', { post: post, team: post.team });
@@ -113,7 +113,7 @@ router.put('/:id', util.로그인여부, util.관리자여부, upload.single("im
 
   req.body.contents = setTextareaReplace(req.body.contents) 
   Post.findOneAndUpdate({ _id: req.params.id }, req.body, function (err, post) {
-    if (err) return res.json(err);
+    if (err) return res.render('/main')
     res.redirect(`/posts/detail/${req.params.id}`);
   });
 });
@@ -121,7 +121,7 @@ router.put('/:id', util.로그인여부, util.관리자여부, upload.single("im
 // destroy
 router.delete('/:team/:id', util.로그인여부, util.관리자여부, function (req, res) {
   Post.deleteOne({ _id: req.params.id }, function (err) {
-    if (err) return res.json(err);
+    if (err) return res.render('/main')
     res.redirect('/posts/' + req.params.team);
   });
 });
