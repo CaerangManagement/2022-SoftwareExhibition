@@ -79,7 +79,7 @@ img[src$=".jpg"], img[src$=".png"] {
 
 #section1_container p {
   position : absolute;
-  top : 45%;
+  top : 40%;
   left : 53%;
   z-index : 0;
   width : 40%;
@@ -103,9 +103,15 @@ img[src$=".jpg"], img[src$=".png"] {
   cursor : pointer;
 }
 
+.typing-txt span {
+  margin-top : 30px;
+  margin-bottom : 30px;
+  margin-right : 10px;
+}
+
 .typing-txt span:nth-child(1) {
   margin-left: 30px;
-  transition: 0.5s;
+  transition: 2s;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap');
@@ -835,13 +841,18 @@ svg circle:nth-child(2) {
     height : 70vh;
   }
   .typing-txt {
-    font-size : 120%;
+    font-size : 100%;
   }
 }
 
 @media screen and (min-width : 100px) and (max-width : 550px) {
   #section1_container {
     height : 70vh;
+  }
+
+  .typing-txt span{
+    font-size : 90%;
+    margin : 30px 0 0 0px;
   }
 
   .EventBox {
@@ -1048,8 +1059,12 @@ svg circle:nth-child(2) {
     left : 24%;
   }
 
+  .footer_box ul {
+    font-size: 12px;
+  }
+
   .footer_box ul li {
-    font-size: 70%;
+    font-size: 8px;
   }
 
   .etc ul li {

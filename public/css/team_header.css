@@ -72,7 +72,7 @@ header {
       overflow-x: hidden;
     }
     .header_title2 {
-      margin-top : 2.5%;
+      padding-top : 13px;
       display : block;
       font-size : 80%;
       float: left;
@@ -80,6 +80,10 @@ header {
     }
     .login_user2 {
       display : none;
+    }
+
+    .login_item2 {
+      padding-top : 4px;
     }
   
     .login_delete2 {

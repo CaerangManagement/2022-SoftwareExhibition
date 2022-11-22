@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
 html, body{
+    
+    font-family: 'NanumSquare';
     width: 100%;
     height: 100%
 }
@@ -18,6 +21,7 @@ section {
     margin: auto;
 }
 .detailTitle {
+    font-family: 'Poppins';
     text-align: left;
     width: 85%;
    
@@ -33,6 +37,7 @@ section {
    
 }
 .date{
+    font-family : 'NanumSquare';
     text-align: right;
 }
 .menu{

@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
 html, body{
+    font-family: 'NanumSquare';
     width: 100%;
     height: 100%
+    
   }
 
   section{
@@ -14,6 +17,7 @@ html, body{
   padding: 0 15%;
 }
 .title{
+  font-family : 'Poppins';
   font-size: 2.7rem;
 }
 table{
