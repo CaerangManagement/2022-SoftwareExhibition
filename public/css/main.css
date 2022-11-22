@@ -47,23 +47,8 @@ img[src$=".jpg"], img[src$=".png"] {
   height : 90vh;
   margin : auto;
   z-index : -2;
-  background: linear-gradient(45deg, #FFF, #bbb8b8, #6c6a6a, rgb(39, 39, 39));
-  background-repeat: no-repeat;
-  background-size: 400% 400%;
-  animation: backgroundChange 6s ease-in-out infinite;
+  background: rgb(19, 19, 19);
   overflow: hidden;
-}
-
-@keyframes backgroundChange {
-  0% {
-    background-position : 0 50%;
-  }
-  50% {
-    background-position : 100% 50%;
-  }
-  100% {
-    background-position : 0 50%;
-  }
 }
 
 #section1_container #backgr img {
@@ -101,17 +86,26 @@ img[src$=".jpg"], img[src$=".png"] {
 }
 
 .typing-txt {
+  display : flex;
   visibility : hidden;
   animation : typing 2s steps(22), blink .5s step-start infinite alternate;
   white-space : nowrap;
   overflow : hidden;
   font-weight : bold;
-  text-shadow : 2px 2px 4px black;
+  text-shadow : 0 0 10px #fff,
+  0 0 20px #fff;
   font-family: 'Poppins';
+  letter-spacing: 2px;
   font-size : 500%;
   animation-delay : 1s;
   animation-duration : 1s;
   animation-fill-mode : both;
+  cursor : pointer;
+}
+
+.typing-txt span:nth-child(1) {
+  margin-left: 30px;
+  transition: 0.5s;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap');
@@ -663,8 +657,9 @@ svg circle:nth-child(2) {
   height : 20rem;
   z-index : 50;
   transform : rotate(-10deg);
-  border-radius: 10px;
-  border : 10px solid antiquewhite;
+  border-radius: 15px;
+  
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
 }
 
 #img4_2 {
@@ -675,8 +670,9 @@ svg circle:nth-child(2) {
   height : 20rem;
   z-index : 50;
   transform : rotate(10deg);
-  border-radius: 10px;
-  border : 10px solid antiquewhite;
+  border-radius: 15px;
+  
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
 }
 
 #img4_3 {
@@ -687,9 +683,9 @@ svg circle:nth-child(2) {
   height : 20rem;
   z-index : 50;
   transform : rotate(-7deg);
-  border-radius: 10px;
-  border : 10px solid antiquewhite;
+  border-radius: 15px;
   
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
 }
 
 #img4_4 {
@@ -700,8 +696,8 @@ svg circle:nth-child(2) {
   height : 20rem;
   z-index : 50;
   transform : rotate(20deg);
-  border-radius: 10px;
-  border : 10px solid antiquewhite;
+  border-radius: 15px;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
   object-fit: cover;
 }
 
@@ -806,6 +802,11 @@ svg circle:nth-child(2) {
 }
 
 @media screen and (min-width:100px) and (max-width:1200px) {
+
+  #backgr {
+    display : none;
+  }
+
   #section2_container {
     overflow-y: hidden;
   }
@@ -867,9 +868,6 @@ svg circle:nth-child(2) {
   .typing-txt {
     font-size : 140%;
     margin-top : 5%;
-  }
-  #backgr {
-    display : none;
   }
   #titlelg {
     margin-left : 5%;
