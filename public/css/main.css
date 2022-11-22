@@ -806,7 +806,12 @@ svg circle:nth-child(2) {
 }
 
 @media screen and (min-width:100px) and (max-width:1200px) {
+  #section2_container {
+    overflow-y: hidden;
+  }
+
   #section3_container {
+    overflow-y: hidden;
     height : auto;
   }
   #section4_container {
