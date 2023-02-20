@@ -62,9 +62,9 @@ app.get('/', (req, res) => {
    res.render('main')
 })
 
-// app.listen(process.env.PORT, (요청, 응답) => {
-//    console.log('server on! http://localhost:'+process.env.PORT);
-// })
+app.listen(process.env.PORT, (요청, 응답) => {
+   console.log('server on! http://localhost:'+process.env.PORT);
+})
 
 const options = {
    key : fs.readFileSync('./private.key'),
