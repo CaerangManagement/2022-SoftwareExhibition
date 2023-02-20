@@ -34,16 +34,15 @@ app.use(function(req,res,next){
  });
 
 app.get("*", (req, res, next) => {
-   console.log("req.secure == " + req.secure);
-   
    if(req.secure){
        // --- https
        next();
    }else{
        // -- http
+       if(req.headers.host == 'local') {
+         return res.redirect("http://" + req.headers.host + req.url);
+      }
        let to = "https://" + req.headers.host + req.url;
-       console.log("to ==> " + to);
-
        return res.redirect("https://" + req.headers.host + req.url);
    }
 })
@@ -62,9 +61,9 @@ app.get('/', (req, res) => {
    res.render('main')
 })
 
-app.listen(process.env.PORT, (요청, 응답) => {
-   console.log('server on! http://localhost:'+process.env.PORT);
-})
+// app.listen(process.env.PORT, (요청, 응답) => {
+//    console.log('server on! http://localhost:'+process.env.PORT);
+// })
 
 const options = {
    key : fs.readFileSync('./private.key'),
