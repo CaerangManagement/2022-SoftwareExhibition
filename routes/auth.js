@@ -20,15 +20,15 @@ router.get('/kakao/callback', passport.authenticate('kakao', {
 }), (req, res) => {
   if(req.secure){
         // --- https
-        next();
+        return res.redirect("https://" + req.headers.host + '/');
     }else{
-        if(req.headers.host == 'localhost') return res.redirect('/main')
+        if(req.headers.host == 'localhost') return res.redirect('/')
         else{
         // -- http
-        let to = "https://" + req.headers.host + '/main';
+        let to = "https://" + req.headers.host + '/';
         console.log("to ==> " + to);
 
-        return res.redirect("https://" + req.headers.host + '/main');
+        return res.redirect("https://" + req.headers.host + '/');
         }
     }
 });
@@ -64,7 +64,7 @@ router.get('/logout', (req, res) => {
         if (err)
           console.log(err)
         else {
-          res.redirect('/main');
+          res.redirect('/');
         }
       })
     }
